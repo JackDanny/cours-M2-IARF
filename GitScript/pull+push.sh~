@@ -1,0 +1,26 @@
+#!/bin/bash
+# pause2.sh : appuyer sur une touche pour continuer un script
+
+#on se place dans le repertoire principal
+cd ..
+#on fait un pull pour mettre à jour
+git pull origin master
+
+#on ajoute tous les fichiers à l'index
+git add -A
+
+
+echo "Appuyer la touche <Entrée> pour continuer..."
+read touche
+case $touche in
+*)	echo "Reprise du script..."
+	;;
+esac
+
+#on fait un commit pour valider les changements
+git commit -m "Message de validation"
+
+#on envoie les changement
+git push origin master
+
+
