@@ -1,5 +1,5 @@
 #!/bin/bash
-# pull+push_mac.sh : pour enregistrer des commits facilement sur mac
+# pause2.sh : appuyer sur une touche pour continuer un script
 
 #on se place dans le repertoire principal
 cd /Users/Wedge/Desktop/M2/cours-M2-IARF

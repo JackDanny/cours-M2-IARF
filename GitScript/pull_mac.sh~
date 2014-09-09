@@ -1,5 +1,5 @@
 #!/bin/bash
-# pull_mac.sh : pour faire un pull facilement depuis mon mac
+# pull_mac.sh : pour faire un pull depuis mon mac
 
 #on se place dans le repertoire principal
 cd /Users/Wedge/Desktop/M2/cours-M2-IARF
