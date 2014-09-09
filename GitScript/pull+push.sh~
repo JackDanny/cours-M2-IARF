@@ -1,5 +1,5 @@
 #!/bin/bash
-# pause2.sh : appuyer sur une touche pour continuer un script
+#pull+push.sh: pour enregistrer des commits facilement
 
 #on se place dans le repertoire principal
 cd ..
@@ -9,16 +9,13 @@ git pull origin master
 #on ajoute tous les fichiers à l'index
 git add -A
 
+echo "Entrez un nom de commit"
 
-echo "Appuyer la touche <Entrée> pour continuer..."
-read touche
-case $touche in
-*)	echo "Reprise du script..."
-	;;
-esac
+#on recupère le nom du commit saisi dans la variable nomCommit
+read -r nomCommit
 
 #on fait un commit pour valider les changements
-git commit -m "Message de validation"
+git commit -m "$nomCommit"
 
 #on envoie les changement
 git push origin master

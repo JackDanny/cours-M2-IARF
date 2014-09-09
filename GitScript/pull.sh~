@@ -1,5 +1,5 @@
 #!/bin/bash
-#pull+push.sh: pour enregistrer des commits facilement
+#pull.sh: pour faire des pulls facilement
 
 #on se place dans le repertoire principal
 cd ..
