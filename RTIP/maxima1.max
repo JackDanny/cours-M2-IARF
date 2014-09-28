@@ -1,0 +1,62 @@
+/*on definit la matrice de Denavit Hartenberg*/
+
+dhmatrix(a,alpha,r,theta) :=
+matrix(
+ [cos(theta)           , -sin(theta)          , 0          , a], 
+ [sin(theta)*cos(alpha), cos(theta)*cos(alpha), -sin(alpha), -r*sin(alpha)], 
+ [sin(theta)*sin(alpha), cos(theta)*sin(alpha), cos(alpha) , r*cos(alpha)], 
+ [0                    , 0                    , 0          , 1]
+) $
+
+/*on definit toutes les matrices de changements*/
+
+T01:dhmatrix(0, 0     , 0 , q1);
+T12:dhmatrix(0, %pi/2 , 0 , q2);
+T23:dhmatrix(0, %pi/2 , q3, 0 );
+T34:dhmatrix(0, 0     , 0 , q4);
+T45:dhmatrix(0, -%pi/2, 0 , q5);
+T56:dhmatrix(0, %pi/2 , 0 , q6);
+
+/*calcul de T06*/
+
+T06: T01.T12.T23.T34.T45.T56;
+
+/*on substitue par les valeurs q1,...,qn*/
+T06:subst(%pi/2,q1,T06)$
+T06:subst(%pi/2,q2,T06)$
+T06:subst(O2O3,q3,T06)$
+T06:subst(0,q4,T06)$
+T06:subst(0,q5,T06)$
+T06:subst(0,q6,T06)$
+
+/*calcul de T06*/
+T06;
+
+/*annales septembre 2013*/
+
+"T01";
+T01:dhmatrix(0 , 0     , 0  , q1);
+"T12";
+T12:dhmatrix(L2, 0     , q2 , 0 );
+"T23";
+T23:dhmatrix(0 , %pi/2 , 0  , q3);
+"T34";
+T34:dhmatrix(0 , %pi/2 , L3 , q4);
+"T45";
+T45:dhmatrix(0 , %pi/2 , 0  , q5);
+"T56";
+T56:dhmatrix(0 ,-%pi/2 , 0  , q6);
+
+"T06";
+T06: T01.T12.T23.T34.T45.T56;
+
+T06:subst( %pi/2,q1 ,T06)$
+T06:subst( L1   ,q2 ,T06)$
+T06:subst( %pi/2,q3,T06)$
+T06:subst( %pi/2,q4,T06)$
+T06:subst(0     ,q5,T06)$
+T06:subst(0     ,q6,T06)$
+
+T06;
+
+
