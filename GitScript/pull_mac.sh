@@ -7,3 +7,4 @@ cd /Users/Wedge/Desktop/M2/cours-M2-IARF
 #on fait un pull pour mettre à jour
 git pull origin master
 
+

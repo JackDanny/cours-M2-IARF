@@ -6,3 +6,5 @@ cd ..
 #on fait un pull pour mettre à jour
 git pull origin master
 
+read touche
+

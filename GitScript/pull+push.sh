@@ -20,4 +20,4 @@ git commit -m "$nomCommit"
 #on envoie les changement
 git push origin master
 
-
+read touche
