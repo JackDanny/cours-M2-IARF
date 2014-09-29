@@ -1,0 +1,62 @@
+public class House{
+
+    public static void main(String[] args) {
+        House h1 = new House("rue Paumé","Toulouse");
+        House h2 = new House("rue street","New-York");
+        /*
+        System.out.println("h1");
+        System.out.println("adresse: " + h1.getAddress());
+        System.out.println("ville: " + h1.getCity()+"\n");
+        System.out.println("h2");
+        System.out.println("adresse: " + h2.getAddress());
+        System.out.println("ville: " + h2.getCity()+"\n");
+
+        */
+        
+        h1.setNumberOfRoom(5);
+        h2.setNumberOfRoom(6);
+        
+        System.out.println("nb de chambre h1: " + h1.getNumberOfRoom());
+        System.out.println("nb de chambre h2: " + h2.getNumberOfRoom());		
+        
+        System.out.println("nb de chambre total: " + (h1.getNumberOfRoom()+h2.getNumberOfRoom()));
+
+    }
+
+
+	//OPERATIONS
+	public House(String anAddress, String aCity){
+    this.theAddress = anAddress;
+    this.theCity = aCity;
+    }
+    
+    public House(){
+        
+    }
+
+
+
+	public String getAddress(){
+        return this.theAddress;
+
+    }
+	public String getCity(){
+        return this.theCity;
+    }
+
+    public int getNumberOfRoom(){
+        return this.theNumberOfRoom;
+    }
+    public void setNumberOfRoom(int newNumber){
+        this.theNumberOfRoom = newNumber;
+
+    }
+
+
+	//ATTRIBUTES
+	private String theAddress;
+	private String theCity;
+	private int theNumberOfRoom;
+}
+
+
