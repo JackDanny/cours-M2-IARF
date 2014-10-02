@@ -1,0 +1,29 @@
+package p;
+
+
+public class Company {
+	
+	//attributs
+	
+	//nom de l'entreprise
+	String name;
+	
+	//methodes
+	
+	//constructeurs
+	
+	public Company(){
+		
+	}
+	
+	public Company(String nom){
+		this.name=nom;	
+	}
+	
+	public void addEmploye(Employe emp){
+		
+	}
+	
+	
+
+}

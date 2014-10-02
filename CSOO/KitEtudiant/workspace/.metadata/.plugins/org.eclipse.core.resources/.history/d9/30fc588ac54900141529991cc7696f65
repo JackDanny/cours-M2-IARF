@@ -1,0 +1,23 @@
+package p;
+
+public class Employe {
+
+	/**attributs*/
+	
+	String nom;
+	int num;
+	String salaryBase;
+	String langage;
+	
+	/** methodes*/
+	
+	Employe(String nom,int num, float salaryB){
+	
+		this.nom=nom;
+		this.num=num;
+		this.salaryBase=slaryB
+		
+	}
+	}
+	
+}

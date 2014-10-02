@@ -1,0 +1,16 @@
+package p;
+
+public class Employe {
+
+	/**attributs*/
+	
+	String nom;
+	int num;
+	String salaryBase;
+	String langage;
+	
+	/** methodes*/
+	
+	
+	
+}

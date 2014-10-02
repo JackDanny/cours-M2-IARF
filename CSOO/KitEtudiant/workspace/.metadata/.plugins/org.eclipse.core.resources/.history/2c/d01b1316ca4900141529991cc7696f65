@@ -1,0 +1,52 @@
+package p;
+
+public abstract class Employe {
+
+	/** attributs */
+
+	String nom;
+	int num;
+	float salaryBase;
+	String langage;
+
+	/** methodes */
+
+	Employe(String nom,int num, float salaryB){
+
+		this.nom=nom;
+		this.num=num;
+		this.salaryBase=salaryB;
+
+	}
+	
+	Employe(){
+		
+	}
+	/** pour mettre à jour la specialité du langage de l'Employe*/
+	public void setLangage(String langage){
+		this.langage=langage;
+	}
+	/** pour acceder au langage*/
+	
+	public String getLangage(){
+		return this.langage;
+	}
+	
+	/**pour acceder au numero de paiement */
+	
+	public int getNum(){
+		return this.num;
+	}
+	
+	
+	
+	/** pour calculer le bonus*/
+	abstract public float bonus();
+	
+	/**pour calculer le salaire*/
+	abstract public float getSalary();
+	
+	/**pour afficher les infos d'un employe*/
+	abstract public void display();
+	
+}
