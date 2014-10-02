@@ -1,0 +1,46 @@
+package p;
+
+import java.util.HashSet;
+
+public class Mentor extends Employe {
+
+	/** attributs */
+
+	/** ensemble des Mentees dirigés par le mentor */
+	private HashSet<Mentee> Mentees = new HashSet<Mentee>();
+
+
+	/** constructeurs */
+
+	public Mentor() {
+		super();
+	}
+
+	Mentor(String nom, int num, float salaryB) {
+
+		super(nom, num, salaryB);
+
+	}
+
+	/** methodes */
+
+	public void addMentee(Mentee me) {
+		if (this.Mentees.add(me) == false) {
+			System.out.println("Ce Mentee est deja associé à ce Mentor");
+		}
+		;
+
+	}
+
+	public float bonus() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float getSalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

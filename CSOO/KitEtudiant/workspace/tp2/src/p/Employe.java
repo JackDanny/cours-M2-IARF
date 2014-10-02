@@ -52,13 +52,13 @@ public abstract class Employe {
 
 	/** pour afficher les infos d'un employe */
 	public void display() {
-		System.out.println("Numéro de paie :" + this.getNum());
+		System.out.println("Numéro de paie : " + this.getNum());
 		System.out.println("Langage : " + this.getLangage());
 		System.out.println("Salaire de base : " + this.getSalaryB());
 	};
 
 	/** pour calculer le bonus */
-	abstract public float bonus();
+	abstract public int bonus();
 
 	/** pour calculer le salaire */
 	abstract public float getSalary();

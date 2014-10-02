@@ -1,0 +1,74 @@
+package p;
+
+import java.util.HashSet;
+
+public class Mentor extends Employe {
+
+	/** attributs */
+
+	// ensemble des Mentees dirigés par le mentor
+	private HashSet<Mentee> Mentees = new HashSet<Mentee>();
+
+	/** constructeurs */
+
+	public Mentor() {
+		super();
+	}
+
+	Mentor(String nom, int num, float salaryB) {
+
+		super(nom, num, salaryB);
+
+	}
+
+	/** methodes */
+
+	public void addMentee(Mentee me) {
+		if (this.Mentees.add(me) == false) {
+			System.out
+					.println("\nCe Mentee (" + me.getName()
+							+ ") est deja associé à ce Mentor("
+							+ this.getName() + "\n");
+		}
+		;
+
+	}
+
+	/** bonus = 10% si java + 5% * Mentoree */
+	public int bonus() {
+		int b = 0;
+		if ((this.getLangage()).equals("Java")) {
+			b = 10;
+		}
+		b = b + (this.Mentees.size()) * 5;
+		return b;
+	}
+
+	public float getSalary() {
+		return (this.salaryBase) * (1 + (this.bonus() / 100));
+	}
+	
+	public display(){
+		if(this.Mentees == null){
+		System.out.println("Nom : " + this.getName() + " // Mentor");
+		}
+		
+		
+		
+		
+		
+		super.display();
+
+		if (this.getMentor() != null) {
+			System.out.println("son Mentor est " + this.getMentor().getName()
+					+ " avec le numero de paie " + this.getMentor().getNum());
+		} else {
+			System.out.println("Il n'a pas de Mentor");
+		}
+		System.out.println("Salaire du mois : " + this.getSalary() + "\n");
+
+	
+	}
+	}
+
+}

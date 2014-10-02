@@ -1,0 +1,17 @@
+package p;
+
+public class Mentor extends Employe {
+
+	
+	public float bonus() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float getSalary() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

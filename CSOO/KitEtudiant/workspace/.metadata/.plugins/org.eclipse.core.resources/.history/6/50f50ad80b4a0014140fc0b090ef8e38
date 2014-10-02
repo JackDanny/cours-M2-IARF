@@ -1,0 +1,30 @@
+package p;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("hello world");
+		Company c = new Company("Nestlé");
+		System.out.println(c.toString());
+
+		Mentee me1 = new Mentee("Vincent", 5201, 1000.f);
+		
+		Mentor mo2 = new Mentor("Marc",5203,1210.f);
+		
+		mo2.setLangage("java");
+		
+		me1.setLangage("Java");
+		
+		c.addEmploye(mo2);
+		c.addEmploye(me1);
+		
+		c.addEmploye(me1,mo2);
+		c.addEmploye(me1,mo2);
+		
+		me1.display();
+		mo2.display();
+
+	}
+
+}

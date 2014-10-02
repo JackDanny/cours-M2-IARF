@@ -1,0 +1,31 @@
+package p;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Company c = new Company("Nestlé");		
+
+		Mentee me1= new Mentee("Jean",5200,1000.f);
+		me1.setLangage("C++");
+		
+		
+		Mentee me2 = new Mentee("Vincent", 5201, 1000.f);
+
+		Mentor mo2 = new Mentor("Marc", 5203, 1210.f);
+
+		mo2.setLangage("Java");
+
+		me1.setLangage("Java");
+
+		c.addEmploye(mo2);
+		c.addEmploye(me1);
+
+		// c.addEmploye(me1,mo2);
+
+		me1.display();
+		mo2.display();
+
+	}
+
+}

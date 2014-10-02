@@ -1,6 +1,7 @@
 package p;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Company {
 
@@ -29,23 +30,29 @@ public class Company {
 
 	public void addEmploye(Mentee me, Mentor mo) {
 		this.hsEmp.add(me);
+		this.hsEmp.add(mo);
 		me.setMentor(mo);
-		// TODO
-		// rajouter Mentee dans les Mentee du Mentor
-		// this.hsEmp.
+		mo.addMentee(me);
+	}
+	
+	public String getName(){
+		return this.name;
 	}
 
 	public void displayEmployes() {
-		// TODO
+		System.out.println("Calcul des salaires mensuels des employés de " + this.getName());
+		Iterator<Employe> i = this.hsEmp.iterator();
+		
+		while(i.hasNext()){
+			i.next().display();
+		}
+		
 	}
 
 	public void displayReports(String theFile) {
 		// TODO
 	}
 
-	@Override
-	public String toString() {
-		return "Company [name=" + name + ", hsEmp=" + hsEmp + "]";
-	}
+	
 
 }
