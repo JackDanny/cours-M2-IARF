@@ -1,5 +1,7 @@
 package p;
 
+import java.io.PrintWriter;
+
 public class Mentee extends Employe {
 
 	/** attributs */
@@ -44,11 +46,11 @@ public class Mentee extends Employe {
 
 	public void display() {
 
-		if(this.mentor == null){
-			System.out.println("Nom : " + this.getName() + " // Mentoré qui n'a pas de mentor");
-		}
-		else{
-		System.out.println("Nom : " + this.getName() + " // Mentoré");
+		if (this.mentor == null) {
+			System.out.println("Nom : " + this.getName()
+					+ " // Mentoré qui n'a pas de mentor");
+		} else {
+			System.out.println("Nom : " + this.getName() + " // Mentoré");
 		}
 		super.display();
 
@@ -59,6 +61,25 @@ public class Mentee extends Employe {
 			System.out.println("pas de Mentor");
 		}
 		System.out.println("Salaire du mois : " + this.getSalary() + "\n");
+
+	}
+
+	public void displayReports(PrintWriter fic) {
+		if (this.mentor == null) {
+			fic.println("Nom : " + this.getName()
+					+ " // Mentoré qui n'a pas de mentor");
+		} else {
+			fic.println("Nom : " + this.getName() + " // Mentoré");
+		}
+		super.displayReports(fic);
+
+		if (this.getMentor() != null) {
+			fic.println("son Mentor est " + this.getMentor().getName()
+					+ " avec le numero de paie " + this.getMentor().getNum());
+		} else {
+			fic.println("pas de Mentor");
+		}
+		fic.println("Salaire du mois : " + this.getSalary() + "\n");
 
 	}
 

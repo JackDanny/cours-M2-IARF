@@ -1,5 +1,7 @@
 package p;
 
+import java.io.PrintWriter;
+
 public abstract class Employe {
 
 	/** attributs */
@@ -56,11 +58,21 @@ public abstract class Employe {
 		System.out.println("Langage : " + this.getLangage());
 		System.out.println("Salaire de base : " + this.getSalaryB());
 	};
+	
+	public void displayReports(PrintWriter fic) {
+		fic.println("Numéro de paie : " + this.getNum());
+		fic.println("Langage : " + this.getLangage());
+		fic.println("Salaire de base : " + this.getSalaryB());
+		
+	}
 
 	/** pour calculer le bonus */
 	abstract public int bonus();
 
 	/** pour calculer le salaire */
 	abstract public float getSalary();
+
+
+	
 
 }
