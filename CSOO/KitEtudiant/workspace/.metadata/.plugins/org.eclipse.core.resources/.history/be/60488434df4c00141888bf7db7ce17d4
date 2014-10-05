@@ -46,7 +46,13 @@ public class Main {
 		// me3.display();
 		// mo4.display();
 		// si on veut lire à partir d'init.txt
-
+		
+		
+		
+		
+		
+		
+		
 		Main.lireinfo(c);
 		Main.menu(c);
 
@@ -131,7 +137,6 @@ public class Main {
 		System.out.println("5: ajouter des employés");
 
 		BufferedReader br = null;
-		
 		br = new BufferedReader(new InputStreamReader(System.in));
 		int choix = 0;
 		try {
@@ -195,18 +200,21 @@ public class Main {
 		BufferedReader br = null;
 		br = new BufferedReader(new InputStreamReader(System.in));
 		int numPay = 0;
-
-		try {
-			numPay = Integer.parseInt(br.readLine());
-		} catch (NumberFormatException e1) {
-			System.out.println("\nENTIER NECESSAIRE");
-			Main.menu(c);
-
-			e1.printStackTrace();
-		} catch (IOException e1) {
-
-			e1.printStackTrace();
-		}
+		
+			try {
+				numPay = Integer.parseInt(br.readLine());
+			} catch (NumberFormatException e1) {
+				// TODO Auto-generated catch block
+				System.out.println("aha");
+				e1.printStackTrace();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				System.out.println("oho");
+				e1.printStackTrace();
+			}
+		
+		
+		
 
 		System.out.println("Entrez le nouveau langage");
 
@@ -217,6 +225,7 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 
 		Employe e = null;
 		e = c.findEmploye(numPay);
@@ -225,10 +234,11 @@ public class Main {
 		}
 
 	}
-
+	
 	static void addEmploye(Company c) {
-		// TODO
-
+		//TODO
+		
+		
 	}
 
 }
