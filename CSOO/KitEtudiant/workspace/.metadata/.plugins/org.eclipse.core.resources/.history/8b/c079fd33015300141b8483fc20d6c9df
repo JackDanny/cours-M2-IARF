@@ -1,0 +1,10 @@
+package window;
+
+public class FileExitAction {
+
+
+	public FileExitAction(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

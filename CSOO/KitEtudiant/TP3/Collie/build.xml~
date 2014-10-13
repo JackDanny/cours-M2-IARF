@@ -1,0 +1,41 @@
+<project name="Collie" default="build" basedir="/home/jackdanny/Bureau/M2/cours-M2-IARF/CSOO/KitEtudiant/TP3/Collie" >
+
+    <!-- ========== named properties ====================== -->
+    <property name="COLLIE"	value="/home/valbert/Documents/enseignement/Java/TP3/Collie" />
+    <property name="DEST"	value="classes" />
+    <property name="SRC"	value="src" />
+    
+    
+    <!-- ========== init ================================== -->
+    <!-- Initialise the date/time stamp and create the      -->
+    <!-- output directory.                                  -->
+    <target name="init" >
+        <tstamp />
+        <mkdir dir="${COLLIE}\${DEST}" />
+    </target >
+    
+    
+    
+    <!-- ========== build ================================= -->
+    <!-- Build the application by compiling all the program -->
+    <!-- files.                                             -->
+    <target name="build" depends="init" >
+        <javac classpath="${SRC}" srcdir="${SRC}" destdir="${COLLIE}\${DEST}" />
+    </target >
+    
+    <!-- ========== run ================================= -->
+    <!-- Run the application                                -->
+    <target name="run"  >
+        <java fork="true" classpath="${COLLIE}\${DEST}" classname="colliec.Collie"  />
+    </target >
+
+   
+
+  
+    <!-- ========== clean ================================= -->
+    <!-- Remove the output directory.                       -->
+    <target name="clean" >
+        <delete dir="${COLLIE}\${DEST}" />
+    </target >
+    
+</project >

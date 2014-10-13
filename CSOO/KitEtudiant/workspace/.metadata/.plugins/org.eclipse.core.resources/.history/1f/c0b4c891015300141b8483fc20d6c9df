@@ -1,0 +1,12 @@
+package window;
+
+import javax.swing.ImageIcon;
+import javax.swing.AbstractAction;
+
+public class FileNewAction extends AbstractAction {
+
+	public FileNewAction(String string, ImageIcon imageIcon) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

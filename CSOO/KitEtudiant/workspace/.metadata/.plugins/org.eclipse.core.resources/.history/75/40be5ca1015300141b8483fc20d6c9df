@@ -1,0 +1,8 @@
+package window;
+
+import javax.swing.AbstractAction;
+
+public class FileExitAction extends AbstractAction {
+
+	
+}

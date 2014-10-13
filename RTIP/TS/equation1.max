@@ -1,0 +1,4 @@
+f(x1,x2) := 3*(x2-x1²)² + (1-x1)²
+load(vect);
+gradef(f(x1,x2))
+gradef(3*(x2-x1²)² + (1-x1)²)

@@ -1,0 +1,26 @@
+package window;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.ImageIcon;
+
+public class FileSaveAction extends AbstractAction{
+
+	public FileSaveAction(String string, ImageIcon imageIcon) {
+		// TODO Auto-generated constructor stub
+		super(string,imageIcon);
+	}
+
+	public void setEnabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println(e.getActionCommand());
+		
+	}
+
+}

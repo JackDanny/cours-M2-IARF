@@ -1,0 +1,16 @@
+package window;
+
+import javax.swing.ImageIcon;
+
+public class FileSaveAction {
+
+	public FileSaveAction(String string, ImageIcon imageIcon) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void setEnabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

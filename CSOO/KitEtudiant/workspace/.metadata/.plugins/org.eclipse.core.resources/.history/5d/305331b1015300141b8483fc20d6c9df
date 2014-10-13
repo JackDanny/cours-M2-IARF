@@ -1,0 +1,11 @@
+package window;
+
+import javax.swing.ImageIcon;
+
+public class FileOpenAction {
+
+	public FileOpenAction(String string, ImageIcon imageIcon) {
+		// TODO Auto-generated constructor stub
+	}
+
+}
