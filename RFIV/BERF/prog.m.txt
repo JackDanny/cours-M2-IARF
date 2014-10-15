@@ -1,0 +1,11 @@
+%moyenne matrice covariance
+function [mi,ci] = apprend()
+
+classes = {'aa','ee','eh','eu','ii','oe','oh','oo','uu','yy'}
+
+L1=[1,2,3];
+L2=[4,5,6];
+
+mean(L1,L2)
+
+ 

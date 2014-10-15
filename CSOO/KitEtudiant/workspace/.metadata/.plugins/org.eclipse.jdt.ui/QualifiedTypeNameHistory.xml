@@ -11,4 +11,6 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
+<fullyQualifiedTypeName name="window.CollieFrame"/>
+<fullyQualifiedTypeName name="window.CollieDiagramPanel"/>
 </qualifiedTypeNameHistroy>

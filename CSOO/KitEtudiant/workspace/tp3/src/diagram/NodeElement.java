@@ -43,6 +43,7 @@ public abstract class NodeElement extends ModelElement {
 
 	public void setLocation(int x, int y) {
 		bounds.setLocation(x, y);
+		
 	}
 
 	public void setLocation(Point point) {
@@ -92,7 +93,10 @@ public abstract class NodeElement extends ModelElement {
 	 * record the mouse point as the start point of the dragging activity.
 	 */
 	public void doLeftMousePressed(MouseEvent event, Graphics graphicsContext) {
-		
+		this.setLocation(event.getPoint());
+		//this.updateRelations(event.getX(),event.getY());
+		this.draw(graphicsContext);
+		CollieModelPanel.getCollieModelPanel().repaint();
 	}
 
 	/*
@@ -100,8 +104,13 @@ public abstract class NodeElement extends ModelElement {
 	 * the new mouse location.
 	 */
 	public void doLeftMouseReleased(MouseEvent event, Graphics graphicsContext) {
-
-		this.setSelected(false);
+		this.setLocation(event.getPoint());
+		this.updateRelations(event.getX(),event.getY());
+		
+		this.draw(graphicsContext);
+		CollieModelPanel.getCollieModelPanel().repaint();
+		
+		
 		
 	}
 
@@ -112,10 +121,15 @@ public abstract class NodeElement extends ModelElement {
 	public void doLeftMouseDragged(MouseEvent event, Graphics graphicsContext) {
 
 		this.setLocation(event.getPoint());
+		//this.updateRelations(event.getX(),event.getY());
+		
 		
 		this.draw(graphicsContext);
 		CollieModelPanel.getCollieModelPanel().repaint();
+		
+		//this.updateRelations((int)this.getLocation().getX(), (int)this.getLocation().getY());
 	}
+	
 
 	public void updateRelations(int offsetX, int offsetY) {
 		final int size = theRelations.size();
@@ -228,7 +242,7 @@ public abstract class NodeElement extends ModelElement {
 
 	protected boolean showFlag;
 
-	protected ArrayList theRelations = new ArrayList(8);
+	protected ArrayList<LinkageElement> theRelations = new ArrayList<LinkageElement>(8);
 
 	protected Point theMousePoint; // during dragging
 	protected Point theStartMousePoint;
