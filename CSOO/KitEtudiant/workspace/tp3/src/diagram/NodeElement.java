@@ -43,7 +43,7 @@ public abstract class NodeElement extends ModelElement {
 
 	public void setLocation(int x, int y) {
 		bounds.setLocation(x, y);
-		
+
 	}
 
 	public void setLocation(Point point) {
@@ -85,7 +85,37 @@ public abstract class NodeElement extends ModelElement {
 
 	public void doRightMousePressed(MouseEvent event, Graphics graphicsContext) {
 
+		System.out.println("j'appuie");
+		JPopupMenu jpm = new JPopupMenu();
+
+		ActionListener a1Listener = new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				System.out.println("Popup menu item ["
+						+ event.getActionCommand() + "] was pressed.");
+			}
+		};
+
+		JMenuItem item;
+		jpm.add(item = new JMenuItem("a1"));
+		item.addActionListener(a1Listener);
+
+		jpm.add(CollieModelPanel.getCollieModelPanel());
+
+		jpm.setLocation(this.getLocation());
+		jpm.setVisible(true);
+
+		CollieModelPanel.getCollieModelPanel().setComponentPopupMenu(jpm);
+
+		if (event.isPopupTrigger()) {
+		//jpm.show(CollieModelPanel.getCollieModelPanel(), event.getX(),event.getY());
+		}
 	}
+
+	// jpm.setLocation(event.getPoint());
+	// if (event.isPopupTrigger()) {
+	// jpm.show(CollieModelPanel.getCollieModelPanel(), event.getX(),
+	// event.getY());
+	// //}
 
 	/*
 	 * Pseudo mouse button event handlers for the start of dragging a node. We
@@ -94,9 +124,10 @@ public abstract class NodeElement extends ModelElement {
 	 */
 	public void doLeftMousePressed(MouseEvent event, Graphics graphicsContext) {
 		this.setLocation(event.getPoint());
-		//this.updateRelations(event.getX(),event.getY());
+		// this.updateRelations(event.getX(),event.getY());
 		this.draw(graphicsContext);
 		CollieModelPanel.getCollieModelPanel().repaint();
+
 	}
 
 	/*
@@ -105,13 +136,11 @@ public abstract class NodeElement extends ModelElement {
 	 */
 	public void doLeftMouseReleased(MouseEvent event, Graphics graphicsContext) {
 		this.setLocation(event.getPoint());
-		this.updateRelations(event.getX(),event.getY());
-		
+		this.updateRelations(event.getX(), event.getY());
+
 		this.draw(graphicsContext);
 		CollieModelPanel.getCollieModelPanel().repaint();
-		
-		
-		
+
 	}
 
 	/*
@@ -121,15 +150,14 @@ public abstract class NodeElement extends ModelElement {
 	public void doLeftMouseDragged(MouseEvent event, Graphics graphicsContext) {
 
 		this.setLocation(event.getPoint());
-		//this.updateRelations(event.getX(),event.getY());
-		
-		
+		// this.updateRelations(event.getX(),event.getY());
+
 		this.draw(graphicsContext);
 		CollieModelPanel.getCollieModelPanel().repaint();
-		
-		//this.updateRelations((int)this.getLocation().getX(), (int)this.getLocation().getY());
+
+		// this.updateRelations((int)this.getLocation().getX(),
+		// (int)this.getLocation().getY());
 	}
-	
 
 	public void updateRelations(int offsetX, int offsetY) {
 		final int size = theRelations.size();
@@ -242,7 +270,8 @@ public abstract class NodeElement extends ModelElement {
 
 	protected boolean showFlag;
 
-	protected ArrayList<LinkageElement> theRelations = new ArrayList<LinkageElement>(8);
+	protected ArrayList<LinkageElement> theRelations = new ArrayList<LinkageElement>(
+			8);
 
 	protected Point theMousePoint; // during dragging
 	protected Point theStartMousePoint;

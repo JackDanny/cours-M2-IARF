@@ -24,7 +24,7 @@ import diagram.*;
 import tool.*;
 
 public final class CollieModelPanel extends JPanel implements
-PropertyChangeListener {
+		PropertyChangeListener {
 
 	public static CollieModelPanel getCollieModelPanel() {
 		return collieModelPanel;
@@ -128,32 +128,32 @@ PropertyChangeListener {
 	private AbstractAction[] theActions = {
 			new AddInstanceAction(ADD_INSTANCE, new ImageIcon(
 					Collie.class
-					.getResource("/images/instanceButton_large.gif")),
+							.getResource("/images/instanceButton_large.gif")),
 					theInstanceNodeFactory),
-					new AddInstanceAction(ADD_MULTI_INSTANCE, new ImageIcon(
-							Collie.class.getResource("/images/multiButton_large.gif")),
-							theMultiInstanceNodeFactory),
-							new AddInstanceAction(ADD_ACTOR, new ImageIcon(
-									Collie.class.getResource("/images/actorButton_large.gif")),
-									theActorNodeFactory),
-									null,
-									new AddNoteAction(ADD_NOTE, new ImageIcon(
-											Collie.class.getResource("/images/noteButton_large.gif"))),
-											null,
-											new RelationToolAction(SELECTION_TOOL, new ImageIcon(
-													Collie.class
-													.getResource("/images/selectionButton_large.gif")),
-													theSelectionTool, Cursor.DEFAULT_CURSOR),
-													new RelationToolAction(
-															ASSOCIATION_TOOL,
-															new ImageIcon(Collie.class
-																	.getResource("/images/associationButton_large.gif")),
-																	theAssociationTool, Cursor.CROSSHAIR_CURSOR),
-																	new RelationToolAction(
-																			AGGREGATION_TOOL,
-																			new ImageIcon(Collie.class
-																					.getResource("/images/aggregationButton_large.gif")),
-																					theAggregationTool, Cursor.CROSSHAIR_CURSOR) };
+			new AddInstanceAction(ADD_MULTI_INSTANCE, new ImageIcon(
+					Collie.class.getResource("/images/multiButton_large.gif")),
+					theMultiInstanceNodeFactory),
+			new AddInstanceAction(ADD_ACTOR, new ImageIcon(
+					Collie.class.getResource("/images/actorButton_large.gif")),
+					theActorNodeFactory),
+			null,
+			new AddNoteAction(ADD_NOTE, new ImageIcon(
+					Collie.class.getResource("/images/noteButton_large.gif"))),
+			null,
+			new RelationToolAction(SELECTION_TOOL, new ImageIcon(
+					Collie.class
+							.getResource("/images/selectionButton_large.gif")),
+					theSelectionTool, Cursor.DEFAULT_CURSOR),
+			new RelationToolAction(
+					ASSOCIATION_TOOL,
+					new ImageIcon(Collie.class
+							.getResource("/images/associationButton_large.gif")),
+					theAssociationTool, Cursor.CROSSHAIR_CURSOR),
+			new RelationToolAction(
+					AGGREGATION_TOOL,
+					new ImageIcon(Collie.class
+							.getResource("/images/aggregationButton_large.gif")),
+					theAggregationTool, Cursor.CROSSHAIR_CURSOR) };
 
 	//
 	// Curent tool.
@@ -281,7 +281,7 @@ PropertyChangeListener {
 					.hitTest(event.getPoint());
 			if (CollieModelPanel.this.selectedElement != null) {
 				CollieModelPanel.this.diagram
-				.relocateElement(CollieModelPanel.this.selectedElement);
+						.relocateElement(CollieModelPanel.this.selectedElement);
 				CollieModelPanel.this.selectedElement.setSelected(true);
 			}
 			CollieModelPanel.this.graphicsContext = CollieModelPanel.this
