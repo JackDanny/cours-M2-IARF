@@ -8,3 +8,4 @@ cd /Users/Wedge/Desktop/M2/cours-M2-IARF
 git pull origin master
 
 
+read touche
