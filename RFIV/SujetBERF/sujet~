@@ -1,0 +1,10 @@
+Bureau d'étude sur la Reconnaissance des formes. Test de deux méthodes de classification : par loi normal multidimentionnelle et par K-Plus Proche Voisins. Déposez une archive compressée avec votre fichier .PDF correspondant au rapport et vos programmes .m utilisés.
+
+Barème de notation (sur 20 pts)  :
+
+Présentation théorique de méthodes de classification par lois normales et kppv (présentation des principes, méthode de décision, notations) = /6 pts
+Présentation du protocole expérimental (description du corpus, méthodologie appliquée) = 4 pts
+Nombre et qualité des expériences choisies afin de différencier les deux méthodes = 3 pts
+Interprétation des résultats (présentation des résultats, faits tirés de ces résultats) = 4 pts
+Conclusion (exactitude des propos, richesse des conclusions) = 2 pts
+Présentation (respect du modèle, orthographe, grammaire, typographie) = 1 pt

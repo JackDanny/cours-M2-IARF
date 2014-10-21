@@ -13,4 +13,5 @@
 <fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
 <fullyQualifiedTypeName name="window.CollieFrame"/>
 <fullyQualifiedTypeName name="window.CollieDiagramPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 </qualifiedTypeNameHistroy>

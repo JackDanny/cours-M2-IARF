@@ -100,7 +100,7 @@ public abstract class NodeElement extends ModelElement {
 		item.addActionListener(a1Listener);
 
 		jpm.add(CollieModelPanel.getCollieModelPanel());
-		
+
 		jpm.setLocation(this.getLocation());
 		jpm.setVisible(true);
 
