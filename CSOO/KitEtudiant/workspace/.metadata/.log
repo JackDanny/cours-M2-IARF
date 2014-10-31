@@ -1666,3 +1666,149 @@ Binding(CTRL+D,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2014-10-19 21:37:49.004 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Wedge/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -product org.eclipse.epp.package.java.product -keyring /Users/Wedge/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-19 21:39:33.686
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.team.core 4 0 2014-10-19 21:39:47.820
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-10-19 21:39:47.903
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+
+!ENTRY org.eclipse.team.core 4 0 2014-10-19 21:39:47.964
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-10-19 21:39:47.964
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
+
+!ENTRY org.eclipse.mylyn.tasks.index.core 4 0 2014-10-19 21:39:48.855
+!MESSAGE Failed to update task list index
+!STACK 1
+org.eclipse.core.runtime.CoreException: Unexpected exception: Unknown format version: -11
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.maintainIndex(TaskListIndex.java:1066)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.access$0(TaskListIndex.java:1033)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex$MaintainIndexJob.run(TaskListIndex.java:162)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.lucene.index.CorruptIndexException: Unknown format version: -11
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:247)
+	at org.apache.lucene.index.IndexFileDeleter.<init>(IndexFileDeleter.java:173)
+	at org.apache.lucene.index.IndexWriter.init(IndexWriter.java:1609)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1074)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.rebuildIndexCompletely(TaskListIndex.java:1174)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.maintainIndex(TaskListIndex.java:1052)
+	... 3 more
+!SUBENTRY 1 org.eclipse.mylyn.tasks.index.core 4 0 2014-10-19 21:39:48.855
+!MESSAGE Unexpected exception: Unknown format version: -11
+!STACK 0
+org.apache.lucene.index.CorruptIndexException: Unknown format version: -11
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:247)
+	at org.apache.lucene.index.IndexFileDeleter.<init>(IndexFileDeleter.java:173)
+	at org.apache.lucene.index.IndexWriter.init(IndexWriter.java:1609)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1074)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.rebuildIndexCompletely(TaskListIndex.java:1174)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.maintainIndex(TaskListIndex.java:1052)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.access$0(TaskListIndex.java:1033)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex$MaintainIndexJob.run(TaskListIndex.java:162)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.mylyn.tasks.index.core 4 0 2014-10-19 21:39:48.856
+!MESSAGE Unexpected exception: Unknown format version: -11
+!STACK 0
+org.apache.lucene.index.CorruptIndexException: Unknown format version: -11
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:247)
+	at org.apache.lucene.index.IndexFileDeleter.<init>(IndexFileDeleter.java:173)
+	at org.apache.lucene.index.IndexWriter.init(IndexWriter.java:1609)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1074)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.rebuildIndexCompletely(TaskListIndex.java:1174)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.maintainIndex(TaskListIndex.java:1052)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.access$0(TaskListIndex.java:1033)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex$MaintainIndexJob.run(TaskListIndex.java:162)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jdt.launching 4 105 2014-10-19 21:40:31.519
+!MESSAGE The specified JRE installation does not exist
+!SESSION 2014-10-20 07:02:29.194 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Wedge/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -product org.eclipse.epp.package.java.product -keyring /Users/Wedge/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-10-20 07:02:57.154
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.team.core 4 0 2014-10-20 07:03:20.221
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-10-20 07:03:20.256
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp2.
+
+!ENTRY org.eclipse.team.core 4 0 2014-10-20 07:03:20.332
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
+!STACK 1
+org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
+	at org.eclipse.team.core.RepositoryProvider.mapNewProvider(RepositoryProvider.java:165)
+	at org.eclipse.team.core.RepositoryProvider.mapExistingProvider(RepositoryProvider.java:235)
+	at org.eclipse.team.core.RepositoryProvider.getProvider(RepositoryProvider.java:507)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.isMappedToCVS(CVSLightweightDecorator.java:192)
+	at org.eclipse.team.internal.ccvs.ui.CVSLightweightDecorator.decorate(CVSLightweightDecorator.java:147)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:263)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.team.core 4 0 2014-10-20 07:03:20.333
+!MESSAGE Could not instantiate provider org.eclipse.egit.core.GitProvider for project tp3.
