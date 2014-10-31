@@ -1,9 +1,0 @@
-package window;
-
-public class FileSaveAsAction {
-
-	public FileSaveAsAction(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-}
