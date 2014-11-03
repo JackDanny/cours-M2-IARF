@@ -2,20 +2,27 @@ package window;
 
 import java.awt.event.ActionEvent;
 
-import javax.swing.ImageIcon;
 import javax.swing.AbstractAction;
+import javax.swing.ImageIcon;
 
-public class FileNewAction extends AbstractAction {
+
+public class FileNewAction extends AbstractAction{
 
 	public FileNewAction(String string, ImageIcon imageIcon) {
-		super(string,imageIcon);
+		// TODO Auto-generated constructor stub
+		super(string, imageIcon);
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		System.out.println(arg0.getActionCommand());
-		
+		// TODO Auto-generated method stub
+		CollieModelPanel.getCollieModelPanel().getDiagram().getModelList().clear();
+		ColliePropertyPanel.getColliePropertyPanel().getNom().setText("");
+		ColliePropertyPanel.getColliePropertyPanel().getClasse().setText("");
+		ColliePropertyPanel.getColliePropertyPanel().getAttributeField().setText("");
+		ColliePropertyPanel.getColliePropertyPanel().getList().removeAllItems();
+		CollieModelPanel.getCollieModelPanel().repaint();
 	}
 
-
-
+	
 }

@@ -14,16 +14,14 @@ import window.*;
 
 public class Collie {
 
-	public static void			main(String[] args) {
+    public static void			main(String[] args) {
+    
+        System.out.println("PROGRAM START...");
 
-		System.out.println("PROGRAM START...");
-
-
-
-		CollieFrame.getCollieFrame();
-
-		System.out.println("PROGRAM END");
-	}
+        CollieFrame.getCollieFrame();
+        
+        System.out.println("PROGRAM END");
+    }
 
 }	// class Collie
 

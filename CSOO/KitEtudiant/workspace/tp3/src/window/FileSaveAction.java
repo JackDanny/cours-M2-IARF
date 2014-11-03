@@ -7,20 +7,22 @@ import javax.swing.ImageIcon;
 
 public class FileSaveAction extends AbstractAction{
 
+	String comment;
+	ImageIcon image;
 	public FileSaveAction(String string, ImageIcon imageIcon) {
-
-		super(string,imageIcon);
+		// TODO Auto-generated constructor stub
+		super(string, imageIcon);
 	}
-	
-	public void setEnabled(boolean newValue){
-		super.setEnabled(newValue);
-		
-	}
-	
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		System.out.println(e.getActionCommand());
-		
 	}
 
+	public void setEnabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

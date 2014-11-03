@@ -1,9 +1,0 @@
-package window;
-
-public class FileExitAction implements AbstractAction {
-
-	public FileExitAction(String string) {
-		// TODO Auto-generated constructor stub
-	}
-
-}

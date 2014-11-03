@@ -1,9 +1,0 @@
-package diagram;
-
-public class PopupMenu {
-
-	public PopupMenu() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
