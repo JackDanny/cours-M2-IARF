@@ -14,6 +14,7 @@ import window.*;
 
 public class Collie {
 
+<<<<<<< HEAD
     public static void			main(String[] args) {
     
         System.out.println("PROGRAM START...");
@@ -22,6 +23,18 @@ public class Collie {
         
         System.out.println("PROGRAM END");
     }
+=======
+	public static void	main(String[] args) {
+
+		System.out.println("PROGRAM START...");
+
+
+
+		CollieFrame.getCollieFrame();
+
+		System.out.println("PROGRAM END");
+	}
+>>>>>>> 99fc712f4bc1f005ecf31a9f4e3b1d3d46a2f0f3
 
 }	// class Collie
 
