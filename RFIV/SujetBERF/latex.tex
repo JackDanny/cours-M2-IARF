@@ -25,7 +25,7 @@
 
 \begin{document}
 %%%%%Pas de date
-\date{3 novembre 2014}
+\date{\today}
 %%%%% Titre gras 14 points
 \title{\Large\bf BE reconnaissance des formes
        }
@@ -41,16 +41,15 @@
 %%%% pour quatre auteurs
 %%%%\author{\begin{tabular}[t]{c@{\extracolsep{4em}}c@{\extracolsep{4em}}c@{\extracolsep{4em}}c}
 %%%%pour plus d\'ebrouillez-vous !
-Veysseire Daniel${}^1$  & Fabre Michaël${}^2$ \\
+Veysseire Daniel & Fabre Michaël \\
 \end{tabular}
-{} \\
  \\
-${}^1$        Université Paul Sabatier   \\
-${}^2$        Université Paul Sabatier
-{} \\
+     \\
+        Université Paul Sabatier  \\
  \\
-Mon adresse compl\`ete \\
-Mon adresse \'electronique
+ \\
+ \\
+\\
 }
 \maketitle
 %%%%  Pas de num\'erotation sur la page de titre
@@ -71,12 +70,20 @@ Methodes de classification, reconnaisance de la parole, loi normale, K plus proc
 
 \subsection*{Abstract}
 {\em
-It's the English version of the abstract. Exactly as in French it must
-be short. It must speak of the same topics...
+This paper aims to compare the efficiency of two methods of classification (method of classification with normal distribution multidimensional and Nearest neighbor search (NNS)),
+and the choice of parameterization (FFT,
+cepstrum, MFCC), mainly in the context of the speech recognition.
+Primary, we will make a theoretical presentation
+of these methods and parameterizations. in
+Secondly, we present the experimental protocol
+implemented to compare their efficiencies.
+Finally we interpret the results then
+finish with a conclusion on the efficiency of these different
+methods and parameterizations.
 }
 \subsection*{Keywords}
 {
-Example, model, template.
+methods of classification, speech recognition, normal distribution, Nearest neighbor search, NNS, parameterization, FFT, Cepstrum, MFCC, Supervised learning.
 }
 \section{Introduction}
 
@@ -107,11 +114,13 @@ Nous allons utiliser différentes paramétrisations des données et conserver celle
 \textbf{Transformé de Fourrier Rapide (FFT)}
 
 La transformée de Fourrier Rapide est un algorithme permettant de traiter un signal afin d'obtenir son spectre.
-Le spectre d'un signal nous fournit l'intensité de chacune des plages de fréquences pendant un intervalle de temps t. Elle s'effectue sur un certain nombre de point, et la taille des plages de fréquences diminue et le nombre de plages augmentent en augmetant ce nombre de points.
+Le spectre d'un signal nous fournit l'intensité de chacune des plages de fréquences pendant un intervalle de temps t. Elle s'effectue sur un certain nombre de points; augmenter ce nombre de points diminue
+la taille des plages de fréquences, et augmente le nombre de plages.
+On ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres complexes.
 
-En générale on effectue plusieurs FFT sur signal, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t, puis on utilise des algos comme le DTW (Dynamic time warping). Mais dans le cas qui nous intéresse ici, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante serait inneficace. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles pronocées dans un temps très court. Une simple FFT est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. Il faudra par la suite comparer ses vecteurs entre eux (e.g par distance euclidienne) 
-On effectue souvent un lissage du signal par Hamming lorsequ'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Il serait donc une erreur de vouloir faire un lissage par Hamming ici car on a pas utilisé de fenêtres glissante.
-De plus on ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres complexes.
+
+En générale on effectue plusieurs FFT sur le signal partitionné, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t. Puis on utilise des algorithmes comme le DTW (Dynamic time warping). Mais dans le cas présent dans cette étude, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante ne s'avère pas nécessaire. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles prononcées dans un temps très court. Une simple FFT sur tout le signal est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. On comparera par la suite ces vecteurs entre eux (e.g par distance euclidienne).
+On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Ce serait donc une erreur de faire un lissage par Hamming ici, puisqu'on n'a pas utilisé de fenêtres glissante.
 
 \vspace{1\baselineskip}
 \textbf{Le cepstre et les MFCC}
@@ -127,12 +136,23 @@ Le cepstre est obtenu à partir du spectre. On effectue la transformée inverse du
 
 
 Comme dit précédement nous allons comparer les deux méthodes de classifications
-
+Pour classifier des données, il faut effectuer au préalable un apprentissage supervisé à partir de données de références. Il y a donc une phase d'apprentissage et une phase de reconnaissance.
 
 
 \vspace{1\baselineskip}
 
-\textbf{classification par loi normal multidimensionnel}
+\textbf{classification par loi normale multidimensionnel}
+
+Pour utiliser la méthode de classification par loi normale (ou loi gaussienne) multidimensionnel, on suppose que chacune des composantes des vecteurs obtenus par paramétrisation suit une distribution aléatoire. Cette classification prend en paramètre la moyenne et la matrice de variance-covariance des données d'apprentissage. 
+La matrice de variance covariance est une matrice carrée de taille N*N (N le nombre de composante du vecteur).
+Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la digonal on a les variances de chaque composante. La covariance se calcule à l'aide de la formule suivante:
+
+(mettre la formule E(XY) - E(X)E(Y))
+
+La matrice de covariance permet de prendre en compte l'éloignement des données à la moyenne.
+
+
+
 
 \includegraphics[scale=0.469]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/exemple.png}
 
@@ -168,6 +188,10 @@ r\'ecup\'erer.
 
 \subsection*{Annexe}
 Merci de votre participation.
+
+
+\subsection*{nous concacter}
+wedg@hotmail.fr
 
 \begin{thebibliography}{9}
 \bibitem{foo:baz}

@@ -1,0 +1,58 @@
+
+
+function [signaux] = supermain(parametrisation,methodeClassif)
+
+% les différentes valeurs de parametrisation sont :
+% 'FFT'
+% 'cepstre'
+% 'MFCC'
+
+% les différentes valeurs de methodeClassif sont :
+% 'loi normale'
+% 'KPPV'
+
+
+%on a 10 classes de son
+classes = {'aa','ee','eh','eu','ii','oe','oh','oo','uu','yy'};
+
+matscore={};
+
+signaux={};
+%on recupère tous les signaux dans une cellule 10*100
+%la cellule signaux{i}{j} renverra donc le jieme signal de la classe i 
+
+L=length(classes);
+
+
+for c=1:L 
+    %pour chaque classe on recupere les 100 signaux
+    for numero=1:100
+        %on recupere les donnees
+        %a partir du repertoire Signal
+        v=['Signal/' classes{c} num2str(numero-1,'%.2d') '.wav'];
+        s=wavread(v);
+        signaux{c}{numero}=s;
+        
+        switch parametrisation
+            case 'FFT'
+            
+            case 'cepstre'
+
+            case 'MFCC'
+
+            otherwise
+                
+        end
+        
+        
+
+        
+    end
+end
+
+
+
+
+
+
+
