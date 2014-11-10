@@ -11,6 +11,7 @@
 \usepackage{times}
 \usepackage{tipa}
 \usepackage{graphicx}
+\usepackage{amsmath}
 
 %%%% Pour \LaTeXe sans babel
 %%%% \documentclass[a4paper,twoside]{article}
@@ -25,7 +26,7 @@
 
 \begin{document}
 %%%%%Pas de date
-\date{3 novembre 2014}
+\date{\today}
 %%%%% Titre gras 14 points
 \title{\Large\bf BE reconnaissance des formes
        }
@@ -41,16 +42,15 @@
 %%%% pour quatre auteurs
 %%%%\author{\begin{tabular}[t]{c@{\extracolsep{4em}}c@{\extracolsep{4em}}c@{\extracolsep{4em}}c}
 %%%%pour plus d\'ebrouillez-vous !
-Veysseire Daniel${}^1$  & Fabre Michaël${}^2$ \\
+Veysseire Daniel & Fabre Michaël \\
 \end{tabular}
-{} \\
  \\
-${}^1$        Université Paul Sabatier   \\
-${}^2$        Université Paul Sabatier
-{} \\
+     \\
+        Université Paul Sabatier  \\
  \\
-Mon adresse compl\`ete \\
-Mon adresse \'electronique
+ \\
+ \\
+\\
 }
 \maketitle
 %%%%  Pas de num\'erotation sur la page de titre
@@ -71,12 +71,20 @@ Methodes de classification, reconnaisance de la parole, loi normale, K plus proc
 
 \subsection*{Abstract}
 {\em
-It's the English version of the abstract. Exactly as in French it must
-be short. It must speak of the same topics...
+This paper aims to compare the efficiency of two methods of classification (method of classification with normal distribution multidimensional and Nearest neighbor search (NNS)),
+and the choice of parameterization (FFT,
+cepstrum, MFCC), mainly in the context of the speech recognition.
+Primary, we will make a theoretical presentation
+of these methods and parameterizations. in
+Secondly, we present the experimental protocol
+implemented to compare their efficiencies.
+Finally we interpret the results then
+finish with a conclusion on the efficiency of these different
+methods and parameterizations.
 }
 \subsection*{Keywords}
 {
-Example, model, template.
+methods of classification, speech recognition, normal distribution, Nearest neighbor search, NNS, parameterization, FFT, Cepstrum, MFCC, Supervised learning.
 }
 \section{Introduction}
 
@@ -89,9 +97,11 @@ On se place ici dans le cas où on essaye de reconnaître chaque syllabe individue
 correspondant aux classes :
 
 {'aa','ee','eh','eu','ii','oe','oh','oo','uu','yy'};
+\section{paramétrisations et méthodes}
+
 \subsection{Les différentes paramétrisations}
 
-Nous allons utiliser différentes paramétrisations des données et conserver celles qui offrent les meilleurs résultats.
+Nous allons utiliser différentes paramétrisations des données et les comparer pour ne conserver que celles qui offrent les meilleurs résultats.
 
 
 
@@ -107,17 +117,22 @@ Nous allons utiliser différentes paramétrisations des données et conserver celle
 \textbf{Transformé de Fourrier Rapide (FFT)}
 
 La transformée de Fourrier Rapide est un algorithme permettant de traiter un signal afin d'obtenir son spectre.
-Le spectre d'un signal nous fournit l'intensité de chacune des plages de fréquences pendant un intervalle de temps t. Elle s'effectue sur un certain nombre de point, et la taille des plages de fréquences diminue et le nombre de plages augmentent en augmetant ce nombre de points.
+Le spectre d'un signal nous fournit l'intensité de chacune des plages de fréquences pendant un intervalle de temps t. Elle s'effectue sur un certain nombre de points; augmenter ce nombre de points diminue
+la taille des plages de fréquences, et augmente le nombre de plages.
+On ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres complexes.
 
-En générale on effectue plusieurs FFT sur signal, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t, puis on utilise des algos comme le DTW (Dynamic time warping). Mais dans le cas qui nous intéresse ici, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante serait inneficace. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles pronocées dans un temps très court. Une simple FFT est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. Il faudra par la suite comparer ses vecteurs entre eux (e.g par distance euclidienne) 
-On effectue souvent un lissage du signal par Hamming lorsequ'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Il serait donc une erreur de vouloir faire un lissage par Hamming ici car on a pas utilisé de fenêtres glissante.
-De plus on ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres complexes.
+
+En générale on effectue plusieurs FFT sur le signal partitionné, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t. Puis on utilise des algorithmes comme le DTW (Dynamic time warping). Mais dans le cas présent dans cette étude, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante ne s'avère pas nécessaire. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles prononcées dans un temps très court. Une simple FFT sur tout le signal est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. On comparera par la suite ces vecteurs entre eux (e.g par distance euclidienne).
+On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Ce serait donc une erreur de faire un lissage par Hamming ici, puisqu'on n'a pas utilisé de fenêtres glissante.
 
 \vspace{1\baselineskip}
 \textbf{Le cepstre et les MFCC}
 
 Le cepstre est obtenu à partir du spectre. On effectue la transformée inverse du logarithme de la transformée de Fourrier (ou spectre) obtenu précedement. En pratique on ne garde que la valeur absolue du résultat. On obtient ainsi une transformation du signal dans un domaine analogue au domaine temporel.
 "Les MFCC (Mel-Frequency Cepstral Coefficients) sont des coefficients cepstraux calculés par une transformée en cosinus discrète appliquée au spectre de puissance d'un signal. Les bandes de fréquence de ce spectre sont espacées logarithmement selon l'échelle Mel" (wikipédia). Les MFCC sont proches du cepstre, mais diffère par l'utilisation de l'échelle Mel, échelle basée sur la perception humaine.
+Pour calculer ces MFCC j'ai utilisé la fonction MELCEPST disponible sur la toolbox voicebox. On réalise une RFFT  (DFT of real data, DFT = Discrete Fourier Transform)  sur le signal lissé par une fonction hanning adapté à la fréquence d'échantillonage. 
+Une fois la DFT appliqué, on multiplie la partie réel avec la partie conjugué obtenue par la DFT. On prend la racice carrée de ce résultat. Puis on refait une RDCT (Discrete cosine transform of real data).
+La fonction MELBANKM sert ensuite à calculer la matrice de passage à l'échelle MEL.
 
 
 
@@ -127,17 +142,33 @@ Le cepstre est obtenu à partir du spectre. On effectue la transformée inverse du
 
 
 Comme dit précédement nous allons comparer les deux méthodes de classifications
+Pour classifier des données, il faut effectuer au préalable un apprentissage supervisé à partir de données de références. Il y a donc une phase d'apprentissage et une phase de reconnaissance.
 
 
 
 \vspace{1\baselineskip}
 
-\textbf{classification par loi normal multidimensionnel}
+\textbf{classification par loi normale multidimensionnel}
 
+Pour utiliser la méthode de classification par loi normale (ou loi gaussienne) multidimensionnel, on suppose que chacune des composantes des vecteurs obtenus par paramétrisation suit une distribution aléatoire. Cette classification prend en paramètre la moyenne et la matrice de variance-covariance des données d'apprentissage. 
+La matrice de variance-covariance est une matrice carrée de taille N*N (N le nombre de composante du vecteur).
+Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la diagonal se situent les variances de chaque composante du vecteur. La covariance se calcule à l'aide de la formule suivante:
+\begin{center}
+ Cov(x,y) = E(XY) -E(X)E(Y)
+\end{center}
+La matrice de covariance permet de prendre en compte l'éloignement des données à la moyenne, leur dispersion.
 
+%\includegraphics[scale=0.469]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/exemple.png}
 
 \vspace{1\baselineskip}
 \textbf{classification par les K-plus proche voisin}
+
+La méthode de classification des K-Plus proche voisin est relativement simple. Pour chaque vecteur de test, nous allons trier tous les vecteurs d'apprentissages en fonction de leur distance à ce vecteur. Puis on ne conserve que les K plus proche (K étant un entier choisis au préalable), et si une classe est représenté majoritairement on attribue cette classe à ce vecteur. Sinon on rajoute à la liste le prochain vecteur d'apprentissage le plus proche.
+
+
+
+
+
 
 
 Les en-t\^etes sont \'egalement en 12 points gras.
@@ -168,6 +199,10 @@ r\'ecup\'erer.
 
 \subsection*{Annexe}
 Merci de votre participation.
+
+
+\subsection*{nous concacter}
+wedg@hotmail.fr
 
 \begin{thebibliography}{9}
 \bibitem{foo:baz}

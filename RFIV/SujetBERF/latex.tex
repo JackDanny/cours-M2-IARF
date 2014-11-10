@@ -11,6 +11,7 @@
 \usepackage{times}
 \usepackage{tipa}
 \usepackage{graphicx}
+\usepackage{amsmath}
 
 %%%% Pour \LaTeXe sans babel
 %%%% \documentclass[a4paper,twoside]{article}
@@ -96,9 +97,11 @@ On se place ici dans le cas où on essaye de reconnaître chaque syllabe individue
 correspondant aux classes :
 
 {'aa','ee','eh','eu','ii','oe','oh','oo','uu','yy'};
+\section{paramétrisations et méthodes}
+
 \subsection{Les différentes paramétrisations}
 
-Nous allons utiliser différentes paramétrisations des données et conserver celles qui offrent les meilleurs résultats.
+Nous allons utiliser différentes paramétrisations des données et les comparer pour ne conserver que celles qui offrent les meilleurs résultats.
 
 
 
@@ -126,7 +129,12 @@ On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvreme
 \textbf{Le cepstre et les MFCC}
 
 Le cepstre est obtenu à partir du spectre. On effectue la transformée inverse du logarithme de la transformée de Fourrier (ou spectre) obtenu précedement. En pratique on ne garde que la valeur absolue du résultat. On obtient ainsi une transformation du signal dans un domaine analogue au domaine temporel.
-"Les MFCC (Mel-Frequency Cepstral Coefficients) sont des coefficients cepstraux calculés par une transformée en cosinus discrète appliquée au spectre de puissance d'un signal. Les bandes de fréquence de ce spectre sont espacées logarithmement selon l'échelle Mel" (wikipédia). Les MFCC sont proches du cepstre, mais diffère par l'utilisation de l'échelle Mel, échelle basée sur la perception humaine.
+"Les MFCC (Mel-Frequency Cepstral Coefficients) sont des coefficients cepstraux calculés par une transformée en cosinus discrète appliquée au spectre de puissance d'un signal. Les bandes de fréquence de ce spectre sont espacées logarithmement selon l'échelle Mel" (wikipédia). Les MFCC sont proches du cepstre, mais diffèrent par l'utilisation de l'échelle Mel, échelle basée sur la perception humaine.
+Pour calculer ces MFCC j'ai utilisé la fonction MELCEPST disponible sur la toolbox voicebox. Elle réalise une RFFT  (DFT of real data, DFT = Discrete Fourier Transform) sur le signal lissé par une fonction hanning adapté à la fréquence d'échantillonage. 
+Une fois la DFT appliqué, on multiplie la partie réel avec la partie conjugué obtenue .
+La fonction MELBANKM sert ensuite à calculer la matrice de passage à l'échelle MEL.
+
+On applique un log adapté à la valeur max des données sur ces données obtenues après passge à l'échelle MEL. Puis on refait une RDCT (Discrete cosine transform of real data). On obtiens ainsi les différents coefficients cepstraux de Mel (ce sont des vecteurs).
 
 
 
@@ -139,25 +147,30 @@ Comme dit précédement nous allons comparer les deux méthodes de classifications
 Pour classifier des données, il faut effectuer au préalable un apprentissage supervisé à partir de données de références. Il y a donc une phase d'apprentissage et une phase de reconnaissance.
 
 
+
 \vspace{1\baselineskip}
 
 \textbf{classification par loi normale multidimensionnel}
 
 Pour utiliser la méthode de classification par loi normale (ou loi gaussienne) multidimensionnel, on suppose que chacune des composantes des vecteurs obtenus par paramétrisation suit une distribution aléatoire. Cette classification prend en paramètre la moyenne et la matrice de variance-covariance des données d'apprentissage. 
-La matrice de variance covariance est une matrice carrée de taille N*N (N le nombre de composante du vecteur).
-Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la digonal on a les variances de chaque composante. La covariance se calcule à l'aide de la formule suivante:
+La matrice de variance-covariance est une matrice carrée de taille N*N (N le nombre de composante du vecteur).
+Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la diagonal se situent les variances de chaque composante du vecteur. La covariance se calcule à l'aide de la formule suivante:
+\begin{center}
+ Cov(x,y) = E(XY) -E(X)E(Y)
+\end{center}
+La matrice de covariance permet de prendre en compte l'éloignement des données à la moyenne, leur dispersion.
 
-(mettre la formule E(XY) - E(X)E(Y))
-
-La matrice de covariance permet de prendre en compte l'éloignement des données à la moyenne.
-
-
-
-
-\includegraphics[scale=0.469]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/exemple.png}
+%\includegraphics[scale=0.469]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/exemple.png}
 
 \vspace{1\baselineskip}
 \textbf{classification par les K-plus proche voisin}
+
+La méthode de classification des K-Plus proche voisin est relativement simple. Pour chaque vecteur de test, nous allons trier tous les vecteurs d'apprentissages en fonction de leur distance à ce vecteur. Puis on ne conserve que les K plus proche (K étant un entier choisis au préalable), et si une classe est représenté majoritairement on attribue cette classe à ce vecteur. Sinon on rajoute à la liste le prochain vecteur d'apprentissage le plus proche.
+
+
+
+\section{protocole expérimental}
+
 
 
 Les en-t\^etes sont \'egalement en 12 points gras.

@@ -1,4 +1,12 @@
 
+% vectClasse les vecteurs d'apprentissage
+% y vecteur à comparer
+% k nb de voisins
+
+
+
+
+
 function [classe] = reconnaitKppv(y,vectClasse,k)
 	%longueur des vecteurs d'apprentissages
 	L=length(vectClasse);
@@ -11,7 +19,7 @@ function [classe] = reconnaitKppv(y,vectClasse,k)
 
 	for i=1:L
 	
-		vectClasse{i,:};
+		vectClasse{i,:}
 	
 		distance=sqrt(sum((y - (vectClasse{i,1})).^2));
 		
@@ -32,7 +40,7 @@ function [classe] = reconnaitKppv(y,vectClasse,k)
 	
 	
 	while(length(C{1})>1)
-		'egalite'
+		
 		k=k+1;
 		listeVectClassDistk=listeVectClassDist2(1:k);
 		[M,F,C]=mode(listeVectClassDistk);

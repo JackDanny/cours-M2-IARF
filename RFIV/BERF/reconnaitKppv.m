@@ -1,4 +1,12 @@
 
+% vectClasse les vecteurs d'apprentissage
+% y vecteur à comparer
+% k nb de voisins
+
+
+
+
+
 function [classe] = reconnaitKppv(y,vectClasse,k)
 	%longueur des vecteurs d'apprentissages
 	L=length(vectClasse);

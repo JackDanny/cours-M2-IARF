@@ -1,0 +1,16 @@
+function parametres = parametrisation_cepstre(signal)
+
+fen = hamming(length(signal));
+
+% Calcul de la TF du sinal (partie reelle)
+r_fft_signal = abs(fft(signal.*fen,64));
+
+r_cpstre_signal = ifft(log(r_fft_signal),64);
+
+
+
+parametres =  r_cpstre_signal(1:32);   
+
+  
+
+                                         

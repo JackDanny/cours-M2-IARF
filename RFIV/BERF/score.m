@@ -1,4 +1,11 @@
 %calcul du score pour une loi normale
+
+%ci matrice de covariance
+
+%mi vecteur moyenne
+
+%vi vecteur a comparer
+
 function[sc] = score(mi,ci,vi)
 
 
