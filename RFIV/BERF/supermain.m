@@ -1,6 +1,6 @@
 %[signaux,signauxParam,donneesApp,donneesTest,listeMean,listeCov,arrayDonneesApp,matScores,listeScore,result,valeur] = supermain('FFT','loi normale')
 
-% function [signaux,signauxParam,donneesApp,donneesTest,listeMean,listeCov,arrayDonneesApp,matScores,listeScore,result,valeur] = supermain(parametrisation,methodeClassif)
+ %function [signaux,signauxParam,donneesApp,donneesTest,listeMean,listeCov,arrayDonneesApp,matScores,listeScore,result,valeur] = supermain(parametrisation,methodeClassif,kval)
 
 % result = supermain(parametrisation,methodeClassif,k)
 
@@ -114,13 +114,28 @@ switch methodeClassif
     case 'loi normale'
         
         for c=1:L
-
-            
                 
+                %1
                 donneesApp{c}=signauxParam{c}(1:80,1);
                 donneesTest{c}=signauxParam{c}(81:end,1);
            
+                %2
+                %donneesApp{c}=signauxParam{c}(21:100,1);
+                %donneesTest{c}=signauxParam{c}(1:20,1);
 
+                %3%
+                %donneesApp{c}=[signauxParam{c}(41:100,1);signauxParam{c}(1:20,1)];
+                %donneesTest{c}=signauxParam{c}(21:40,1);
+                
+                %4
+                %donneesApp{c}=[signauxParam{c}(61:100,1);signauxParam{c}(1:40,1)];
+                %donneesTest{c}=signauxParam{c}(41:60,1);
+
+                %5
+                %donneesApp{c}=[signauxParam{c}(81:100,1);signauxParam{c}(1:60,1)];
+                %donneesTest{c}=signauxParam{c}(61:80,1);
+
+                
 
             
 
@@ -129,6 +144,8 @@ switch methodeClassif
             % colonne   
             % plutôt qu'en ligne) de sorte que la fonction cell2mat renvoie bien la bonne matrice
    
+            
+
             listeMean{c}=mean(cell2mat([donneesApp{c}]));
             listeCov{c}=cov(cell2mat([donneesApp{c}]));
         end
@@ -138,9 +155,28 @@ switch methodeClassif
     case 'KPPV'
        
         for c=1:L
+            
+                %1
+                donneesApp{c}=signauxParam{c}(1:80,1);
+                donneesTest{c}=signauxParam{c}(81:end,1);
+           
+                %2
+                %donneesApp{c}=signauxParam{c}(21:100,1);
+                %donneesTest{c}=signauxParam{c}(1:20,1);
 
-            donneesApp{c}=signauxParam{c}(1:80,1);
-            donneesTest{c}=signauxParam{c}(81:end,1);
+                %3%
+                %donneesApp{c}=[signauxParam{c}(41:100,1);signauxParam{c}(1:20,1)];
+                %donneesTest{c}=signauxParam{c}(21:40,1);
+                
+                %4
+                %donneesApp{c}=[signauxParam{c}(61:100,1);signauxParam{c}(1:40,1)];
+                %donneesTest{c}=signauxParam{c}(41:60,1);
+
+                %5
+                %donneesApp{c}=[signauxParam{c}(81:100,1);signauxParam{c}(1:60,1)];
+                %donneesTest{c}=signauxParam{c}(61:80,1);
+
+                
 
         end
    

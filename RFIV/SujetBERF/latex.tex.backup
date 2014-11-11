@@ -59,7 +59,7 @@ Veysseire Daniel & Fabre Michaël \\
 \subsection*{Résumé}
 {\em
 
-Cet article vise à comparer l'efficacité de deux méthodes de classification (méthode de classification par loi normal multidimensionnel et méthode des K-Plus Proche voisin), ainsi que les choix de paramétrisation des données (FFT, cepstre, MFCC), principalement dans le cadre de la reconnaisance de la parole.
+Cet article vise à comparer l'efficacité de deux méthodes de classification (méthode de classification par loi normal multidimensionnel et méthode des K Plus Proche voisin), ainsi que les choix de paramétrisation des données (FFT, cepstre, MFCC), principalement dans le cadre de la reconnaisance de la parole.
 
 Dans un premier temps, nous ferons une présentation théorique de ces méthodes et paramétrisations. Dans un deuxième temps nous présenterons le protocole expérimental mis en place afin de comparer leurs éfficacités.
 
@@ -89,8 +89,14 @@ methods of classification, speech recognition, normal distribution, Nearest neig
 \section{Introduction}
 
 	    La reconnaissance automatique de la parole est une technique informatique qui permet d'analyser un signal de parole.
+	    Voici un schéma qui illustre les différentes étapes de la chaîne de reconnaissance.
+	    
+	    \includegraphics[scale=0.25]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/chaine_reco.png}
 
-On se place ici dans le cas où on essaye de reconnaître chaque syllabe individuellement. On dispose d'une référence de 1000 éléments sonore de 64ms échantillonés à 16KHz et quantifiés sur 16 bits. On a ainsi 100 échantillons pour chacune des dix syllabes suivantes:
+Dans le cas qui nous intéresse ici le capteur est un microphone, il transforme le signal physique en un signal numérique. Le prétraitement est une représentation allégée du signal numérique. Il consiste à réduire la dimension de l'espace, décoréler les paramètres et rechercher les paramètres discriminants. La décision assigne une classe à un vecteur par rapport aux formes acquises par apprentissage. L'apprentissage est constitué de références type. Dans notre cas l'apprentissage est supervisé car nous connaissons le nombre de classe et nous savons à quelle classe appartiens quel vecteur.
+	    
+
+On se place ici dans le cas où on classifie chaque syllabe individuellement. On dispose d'une référence de 1000 éléments sonore de 64ms échantillonés à 16KHz et quantifiés sur 16 bits. On a ainsi 100 échantillons pour chacune des dix syllabes suivantes:
 
 [\textipa{A}],[\textipa{e}],[\textipa{E}],[\textipa{@}],[\textipa{I}],[\textipa{\o}],[\textipa{O}],[\textipa{o}],[\textipa{u}],[\textipa{y}]
 
@@ -104,14 +110,6 @@ correspondant aux classes :
 Nous allons utiliser différentes paramétrisations des données et les comparer pour ne conserver que celles qui offrent les meilleurs résultats.
 
 
-
-
-
-
-
-
-
-
 \vspace{1\baselineskip}
 
 \textbf{Transformé de Fourrier Rapide (FFT)}
@@ -123,16 +121,17 @@ On ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres 
 
 
 En générale on effectue plusieurs FFT sur le signal partitionné, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t. Puis on utilise des algorithmes comme le DTW (Dynamic time warping). Mais dans le cas présent dans cette étude, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante ne s'avère pas nécessaire. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles prononcées dans un temps très court. Une simple FFT sur tout le signal est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. On comparera par la suite ces vecteurs entre eux (e.g par distance euclidienne).
-On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Ce serait donc une erreur de faire un lissage par Hamming ici, puisqu'on n'a pas utilisé de fenêtres glissante.
+On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Il n'est pas nécessaire de faire un lissage par Hamming ici, puisqu'on n'a pas utilisé de fenêtres glissante.
 
 \vspace{1\baselineskip}
 \textbf{Le cepstre et les MFCC}
 
 Le cepstre est obtenu à partir du spectre. On effectue la transformée inverse du logarithme de la transformée de Fourrier (ou spectre) obtenu précedement. En pratique on ne garde que la valeur absolue du résultat. On obtient ainsi une transformation du signal dans un domaine analogue au domaine temporel.
-"Les MFCC (Mel-Frequency Cepstral Coefficients) sont des coefficients cepstraux calculés par une transformée en cosinus discrète appliquée au spectre de puissance d'un signal. Les bandes de fréquence de ce spectre sont espacées logarithmement selon l'échelle Mel" (wikipédia). Les MFCC sont proches du cepstre, mais diffère par l'utilisation de l'échelle Mel, échelle basée sur la perception humaine.
-Pour calculer ces MFCC j'ai utilisé la fonction MELCEPST disponible sur la toolbox voicebox. On réalise une RFFT  (DFT of real data, DFT = Discrete Fourier Transform)  sur le signal lissé par une fonction hanning adapté à la fréquence d'échantillonage. 
-Une fois la DFT appliqué, on multiplie la partie réel avec la partie conjugué obtenue par la DFT. On prend la racice carrée de ce résultat. Puis on refait une RDCT (Discrete cosine transform of real data).
-La fonction MELBANKM sert ensuite à calculer la matrice de passage à l'échelle MEL.
+"Les MFCC (Mel-Frequency Cepstral Coefficients) sont des coefficients cepstraux calculés par une transformée en cosinus discrète appliquée au spectre de puissance d'un signal. Les bandes de fréquence de ce spectre sont espacées logarithmement selon l'échelle Mel" (wikipédia). Les MFCC sont proches du cepstre, mais diffèrent par l'utilisation de l'échelle Mel, échelle basée sur la perception humaine.
+Pour calculer ces MFCC j'ai utilisé la fonction MELCEPST disponible sur la toolbox voicebox. Elle réalise une RFFT  (DFT of real data, DFT = Discrete Fourier Transform) sur le signal lissé par une fonction hanning adapté à la fréquence d'échantillonage. 
+Une fois la DFT appliqué, on multiplie la partie réel avec la partie conjugué obtenue.
+
+On applique ensuite sur ces données obtenues après passage à l'échelle MEL(à l'aide de la fonction MELBANKM qui sert à calculer la matrice de passage à l'échelle MEL), un log adapté à la valeur max des données . Puis on refait une RDCT (Discrete cosine transform of real data). On obtiens ainsi les différents coefficients cepstraux de Mel (ce sont des vecteurs).
 
 
 
@@ -141,7 +140,7 @@ La fonction MELBANKM sert ensuite à calculer la matrice de passage à l'échelle M
 \subsection{Les différentes méthodes de classifications}
 
 
-Comme dit précédement nous allons comparer les deux méthodes de classifications
+Comme dit précédement nous allons comparer les deux méthodes de classifications.
 Pour classifier des données, il faut effectuer au préalable un apprentissage supervisé à partir de données de références. Il y a donc une phase d'apprentissage et une phase de reconnaissance.
 
 
@@ -158,50 +157,122 @@ Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec 
 \end{center}
 La matrice de covariance permet de prendre en compte l'éloignement des données à la moyenne, leur dispersion.
 
+\vspace{1\baselineskip}
+
+On utilise ensuite la règle du maximum de vraissemblance pour la décision. Si on observe y et qu'on nomme k les 10 classes:
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }}\mathbb{P}(k_{i}/y)
+\end{equation}
+
+En effet on observe y et on choisit donc la classe la plus probable. En utilisant Bayes:
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }} \frac {\mathbb{P}(y/k_{i})\mathbb{P}(k_{i})} {\mathbb{P}(y)}
+\end{equation}
+
+Or P(y) est une constante et $P(k_i)$ = 1/10 car on a 10 classes considérées comme équiprobable. On peut donc simplifier l'équation en:
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }}\mathbb{P}(y/k_i)
+\end{equation}
+
+En utilisant la loi gaussienne multidimenssionelle on obtient:
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }} \frac {exp((-1/2)(y-\mu_i)^t\Sigma^{-1}_i(y-\mu_i))}{2\pi^{d/2}\mid\Sigma_i\mid^{1/2} } 
+\end{equation}
+
+Avec d la dimension des données, $\Sigma_{i}$ matrice de variance-covariance de la classe i et $\mu_{i}$ vecteur moyenne de la classe i.
+On suppose par la suite que \mid $\Sigma_{i}$ \mid \ne 0.
+
+Le terme $2\pi^{d/2}$ étant une constante positive, on peut simplifier l'équation puis appliquer le logarithme.
+Le log étant une fonction croissante et continue sur $R^{+}$, en l'utilisant sur la formule (on peut car exp(x) >0) on obtient:
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }}log(\frac {1}{\mid\Sigma_i\mid^{1/2}}) -(1/2)(y-\mu_i)^t\Sigma^{-1}_i(y-\mu_i)}
+\end{equation}
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmax }}-(1/2)log(\mid\Sigma_i\mid) -(1/2)(y-\mu_i)^t\Sigma^{-1}_i(y-\mu_i)
+\end{equation}
+la fonction y=-(1/2)x étant décroissante et continue sur R, en divisant la formule par -1/2 on arrive à
+
+\begin{equation}
+{c^*} = \underset{k_{i}}{\text{argmin }}log(\mid\Sigma_i\mid) +(y-\mu_i)^t\Sigma^{-1}_i(y-\mu_i)
+\end{equation}
+
+C'est cette formule (7) qui sera appliqué pour la décision.
+
+
+
 %\includegraphics[scale=0.469]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/exemple.png}
 
 \vspace{1\baselineskip}
-\textbf{classification par les K-plus proche voisin}
+\textbf{classification par les K plus proche voisin}
 
-La méthode de classification des K-Plus proche voisin est relativement simple. Pour chaque vecteur de test, nous allons trier tous les vecteurs d'apprentissages en fonction de leur distance à ce vecteur. Puis on ne conserve que les K plus proche (K étant un entier choisis au préalable), et si une classe est représenté majoritairement on attribue cette classe à ce vecteur. Sinon on rajoute à la liste le prochain vecteur d'apprentissage le plus proche.
-
-
+La méthode de classification des K Plus proche voisin est relativement simple. Pour chaque vecteur de test, nous allons trier tous les vecteurs d'apprentissages en fonction de leur distance à ce vecteur. Puis on ne conserve que les K plus proche (K étant un entier choisis au préalable), et si une classe est représenté majoritairement on attribue cette classe à ce vecteur. Sinon on rajoute à la liste les prochains vecteur d'apprentissage les plus proches jusqu'à obtenir une classe majoritaire.
 
 
 
+\section{protocole expérimental}
 
 
-Les en-t\^etes sont \'egalement en 12 points gras.
+Nous allons utiliser une méthodologie simple et naturel pour comparer nos résultats. Du fait du manque de données (nous n'avons qu'un échantillon de 100 signaux pour chacune des 10 classe) nous utiliserons la validation croisé et rappelerons brièvement son principe.
 
-Il n'y a pas n\'ecessairement d'espacement entre les paragraphes.
+\subsection{principe de la validation croisée}
 
-Les r\'ef\'erences \`a la Bibliographie peuvent \^etre de la forme
- \cite{key:foo} o\`u \cite{foo:baz}.  Les num\'eros correspondent \`a
- l'ordre d'apparition dans la bibliographie, pas dans le texte.
- L'ordre alphab\'etique est conseill\'e.
+Nous allons réaliser une validation croisé. C'est à dire que nous allons faire varier nos échantillons d'apprentissage et nos échantillons de test et faire une moyenne avec les résultats trouvés. Notre premier échantillon d'apprentissage est composé des 80 premiers échantillons de chaque classe et les 20 restants pour les tests. On refait une validation mais cette fois ci en prenant les échantillons de 21 à 100 pour l'apprentissage et 1 à 20 pour les tests. Puis 41 à 100 et 1 à 20 pour l'apprentissage et 21 à 40 pour les test, et on continue ainsi en décalant de 20.
 
-\section{Le coin \LaTeX}
-Pour les utilisateurs de \LaTeX,
-ce patron est minimaliste et vous aurez besoin de votre manuel \LaTeX
-pour ins\'erer \'equations et images.
+\includegraphics[scale=0.28]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/validationcroise.png}
 
-Pour les images le << paquet >> \verb|graphicx| est tr\`es bien.
 
-Les fichiers de style n\'ecessaires pour la compilation \LaTeX\ sont :
-\begin{itemize}
-  \item \verb|a4.sty|  (pour \LaTeX, mais pas \LaTeXe)
-  \item \verb|french.sty| (ou Babel fran\c{c}ais)
-  \item \verb|rfia2000.sty|
-\end{itemize}
-Vous devriez avoir les deux premiers dans votre instalation de
-\LaTeX. Le dernier contient la d\'efinition des marges et vous devrez le
-r\'ecup\'erer.
+Ensuite on fait une moyenne sur les résultats obtenus.
+
+
+
+
+
+\vspace{1\baselineskip}
+\subsection{pour la loi normale}
+
+On effectue des tests sur chaque paramétrisation pour évaluer l'efficacité de la classification par loi normale. On effectue ainsi 15 tests car on a découpé les données en 5 choix d'échantillonage possible comme expliqué ci-dessus.
+\includegraphics[scale=0.18]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/test_Loi_normal.png}
+
+On observe que la loi normale offre une moyenne de 96,9\% de réussite avec la paramétrisation FFT, 94,3\% avec le cepstre, et 100\% avec les MFCC.
+
+\vspace{1\baselineskip}
+\subsection{pour les-K Plus Proche Voisin}
+
+Il y a un paramètre en plus à prendre en compte pour les KPPV. La valeur de K correspondant au nombre de voisins observés. En générale K ne doit pas être trop grand, sinon le taux de reconnaissance diminue beaucoup. Exemple sur le graphique ci-dessous obtenu avec le spectre en paramétrisation.
+K est en abcisse et le taux de reconnaisance est en ordonnées.
+
+\includegraphics[scale=0.16]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/valeurs_kspectre.png}
+
+On choisit donc une valeur de K arbitraire, on prend ici K=3.
+
+On obtient les résultats suivants:
+
+\includegraphics[scale=0.18]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/test_KPPV.png}
+
+On observe que la loi normale offre une moyenne de 93,8\% de réussite avec la paramétrisation FFT, 94,5\% avec le cepstre, et 100\% avec les MFCC.
+
+
+\subsection{interprétation des résultats}
+
+Les MFCC sont redoutablement efficace et ont bien classé toutes les observations dans chaque situation.
+D'après le résultat de notre évaluation, la méthode de classification par loi normal multidimenssionelle offre de meilleurs résultats avec la transformée de fourrier qu'avec la paramétrisation cepstral, alors que la méthode de classification des K plus proche voisin offre de meilleur résultat pour la paramétrisation cepstral. Cependant les résultats peuvent être faussé, on observe dans le cas de K Plus proche voisins que pour l'échantillon 2, la paramétrisation par transformée de Fourrier a produit un résultat anormalement décevant par rapport aux autres échantillons, ce qui a descendu de beaucoup la moyenne finale, alors que pour le même échantillon, la paramétrisation cepstral a fournit de bons résultats. Dans la majorité des cas la parémétrisation FFT semble être plus efficace que la paramétrisation spectral.
+\section{conclusion}
+
+ On ne peut pas encore se prononcer sur quelle méthode de classification est meilleur que telle autre car nous n'avons pas un échantillon assez grand. En revanche, on peut affirmer que la paramétrisation par MFCC est très efficace dans ces conditions d'évaluation peu importe la méthode de classification.
+
+
+
 
 \subsection*{Annexe}
 Merci de votre participation.
 
 
-\subsection*{nous concacter}
+\subsection*{nous contacter}
 wedg@hotmail.fr
 
 \begin{thebibliography}{9}
