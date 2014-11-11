@@ -42,7 +42,7 @@
 %%%% pour quatre auteurs
 %%%%\author{\begin{tabular}[t]{c@{\extracolsep{4em}}c@{\extracolsep{4em}}c@{\extracolsep{4em}}c}
 %%%%pour plus d\'ebrouillez-vous !
-Veysseire Daniel & Fabre Michaël \\
+Veysseire Daniel & Fabre Mickael \\
 \end{tabular}
  \\
      \\
@@ -63,7 +63,7 @@ Cet article vise à comparer l'efficacité de deux méthodes de classification (mét
 
 Dans un premier temps, nous ferons une présentation théorique de ces méthodes et paramétrisations. Dans un deuxième temps nous présenterons le protocole expérimental mis en place afin de comparer leurs éfficacités.
 
-Nous intèrprèterons ensuite les résultats obtenus puis nous finirons par une conclusion sur l'efficacité des différentes méthodes et paramétrisations.
+Nous interprèterons ensuite les résultats obtenus puis nous finirons par une conclusion sur l'efficacité des différentes méthodes et paramétrisations.
 
 }
 \subsection*{Mots Clef}
@@ -89,9 +89,13 @@ methods of classification, speech recognition, normal distribution, Nearest neig
 \section{Introduction}
 
 	    La reconnaissance automatique de la parole est une technique informatique qui permet d'analyser un signal de parole.
-	    Voici un schéma qui illustre les différentes étapes de la chaîne de reconnaissance.
+	   Ci-dessous un schéma illustrant les différentes étapes de la chaîne de reconnaissance:
+	   \vspace{1\baselineskip}
+
 	    
 	    \includegraphics[scale=0.25]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/chaine_reco.png}
+
+	    \vspace{1\baselineskip}
 
 Dans le cas qui nous intéresse ici le capteur est un microphone, il transforme le signal physique en un signal numérique. Le prétraitement est une représentation allégée du signal numérique. Il consiste à réduire la dimension de l'espace, décoréler les paramètres et rechercher les paramètres discriminants. La décision assigne une classe à un vecteur par rapport aux formes acquises par apprentissage. L'apprentissage est constitué de références type. Dans notre cas l'apprentissage est supervisé car nous connaissons le nombre de classe et nous savons à quelle classe appartiens quel vecteur.
 	    
@@ -107,12 +111,13 @@ correspondant aux classes :
 
 \subsection{Les différentes paramétrisations}
 
-Nous allons utiliser différentes paramétrisations des données et les comparer pour ne conserver que celles qui offrent les meilleurs résultats.
+Nous allons comparer différentes paramétrisations de données et ne conserver que celles qui offrent les meilleurs résultats.
 
 
 \vspace{1\baselineskip}
+\vspace{1\baselineskip}
 
-\textbf{Transformé de Fourrier Rapide (FFT)}
+\textbf{Transformée de Fourrier Rapide (FFT)}
 
 La transformée de Fourrier Rapide est un algorithme permettant de traiter un signal afin d'obtenir son spectre.
 Le spectre d'un signal nous fournit l'intensité de chacune des plages de fréquences pendant un intervalle de temps t. Elle s'effectue sur un certain nombre de points; augmenter ce nombre de points diminue
@@ -120,7 +125,7 @@ la taille des plages de fréquences, et augmente le nombre de plages.
 On ne garde que la valeur absolue du résultat pour ne pas manipuler des nombres complexes.
 
 
-En générale on effectue plusieurs FFT sur le signal partitionné, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t. Puis on utilise des algorithmes comme le DTW (Dynamic time warping). Mais dans le cas présent dans cette étude, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante ne s'avère pas nécessaire. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles prononcées dans un temps très court. Une simple FFT sur tout le signal est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. On comparera par la suite ces vecteurs entre eux (e.g par distance euclidienne).
+En générale on effectue plusieurs FFT sur le signal partitionné, à l'aide de fenêtres glissantes, afin d'obtenir l'intensité des fréquences à plusieurs instants t. Puis on utilise des algorithmes comme le DTW (Dynamic Time Warping). Mais dans cette étude, les échantillons sont extremement courts (64ms avec une fréquence d'échantillonage de 16KHz). Utiliser une fenêtre glissante ne s'avère pas nécessaire. On est donc dans un cas simplifié, on ne cherche qu'à comparer des voyelles prononcées dans un temps très court. Une simple FFT sur tout le signal est donc suffisante, on obtient ainsi un vecteur de taille variable selon le nombre de point sur lesquels on a réalisé la FFT. On comparera par la suite ces vecteurs entre eux (e.g par distance euclidienne).
 On effectue souvent un lissage du signal par Hamming lorsqu'il y a un recouvrement de fenêtre pour éviter de trop grandes discontinuités entre les fenêtres. Il n'est pas nécessaire de faire un lissage par Hamming ici, puisqu'on n'a pas utilisé de fenêtres glissante.
 
 \vspace{1\baselineskip}
@@ -151,7 +156,7 @@ Pour classifier des données, il faut effectuer au préalable un apprentissage sup
 
 Pour utiliser la méthode de classification par loi normale (ou loi gaussienne) multidimensionnel, on suppose que chacune des composantes des vecteurs obtenus par paramétrisation suit une distribution aléatoire. Cette classification prend en paramètre la moyenne et la matrice de variance-covariance des données d'apprentissage. 
 La matrice de variance-covariance est une matrice carrée de taille N*N (N le nombre de composante du vecteur).
-Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la diagonal se situent les variances de chaque composante du vecteur. La covariance se calcule à l'aide de la formule suivante:
+Chaque élément placé ligne i et colonne j dans la matrice vaut cov(Xi, Xj) avec Xi la ieme composante du vecteur. Ainsi sur la diagonale se situent les variances de chaque composante du vecteur. La covariance se calcule à l'aide de la formule suivante:
 \begin{center}
  Cov(x,y) = E(XY) -E(X)E(Y)
 \end{center}
@@ -176,7 +181,7 @@ Or P(y) est une constante et $P(k_i)$ = 1/10 car on a 10 classes considérées com
 {c^*} = \underset{k_{i}}{\text{argmax }}\mathbb{P}(y/k_i)
 \end{equation}
 
-En utilisant la loi gaussienne multidimenssionelle on obtient:
+En utilisant la densité de probabilité de la loi normale multidimenssionelle on obtient:
 
 \begin{equation}
 {c^*} = \underset{k_{i}}{\text{argmax }} \frac {exp((-1/2)(y-\mu_i)^t\Sigma^{-1}_i(y-\mu_i))}{2\pi^{d/2}\mid\Sigma_i\mid^{1/2} } 
@@ -217,11 +222,13 @@ La méthode de classification des K Plus proche voisin est relativement simple. P
 \section{protocole expérimental}
 
 
-Nous allons utiliser une méthodologie simple et naturel pour comparer nos résultats. Du fait du manque de données (nous n'avons qu'un échantillon de 100 signaux pour chacune des 10 classe) nous utiliserons la validation croisé et rappelerons brièvement son principe.
+Nous allons utiliser une méthodologie simple et naturelle pour comparer nos résultats. Du fait du manque de données (nous n'avons qu'un échantillon de 100 signaux pour chacune des 10 classe) nous utiliserons la validation croisée et rappelerons brièvement son principe.
 
 \subsection{principe de la validation croisée}
 
-Nous allons réaliser une validation croisé. C'est à dire que nous allons faire varier nos échantillons d'apprentissage et nos échantillons de test et faire une moyenne avec les résultats trouvés. Notre premier échantillon d'apprentissage est composé des 80 premiers échantillons de chaque classe et les 20 restants pour les tests. On refait une validation mais cette fois ci en prenant les échantillons de 21 à 100 pour l'apprentissage et 1 à 20 pour les tests. Puis 41 à 100 et 1 à 20 pour l'apprentissage et 21 à 40 pour les test, et on continue ainsi en décalant de 20.
+Nous allons réaliser une validation croisée. C'est à dire que nous allons faire varier nos échantillons d'apprentissage et nos échantillons de test et faire une moyenne avec les résultats trouvés. Notre premier échantillon d'apprentissage est composé des 80 premiers échantillons de chaque classe et les 20 restants pour les tests. On refait une validation mais cette fois ci en prenant les échantillons de 21 à 100 pour l'apprentissage et 1 à 20 pour les tests. Puis 41 à 100 et 1 à 20 pour l'apprentissage et 21 à 40 pour les test, et on continue ainsi en décalant de 20.
+
+\vspace{1\baselineskip}
 
 \includegraphics[scale=0.28]{/home/jackdanny/Bureau/M2/cours-M2-IARF/RFIV/BERF/Rapports/validationcroise.png}
 
@@ -260,20 +267,30 @@ On observe que la loi normale offre une moyenne de 93,8\% de réussite avec la pa
 \subsection{interprétation des résultats}
 
 Les MFCC sont redoutablement efficace et ont bien classé toutes les observations dans chaque situation.
-D'après le résultat de notre évaluation, la méthode de classification par loi normal multidimenssionelle offre de meilleurs résultats avec la transformée de fourrier qu'avec la paramétrisation cepstral, alors que la méthode de classification des K plus proche voisin offre de meilleur résultat pour la paramétrisation cepstral. Cependant les résultats peuvent être faussé, on observe dans le cas de K Plus proche voisins que pour l'échantillon 2, la paramétrisation par transformée de Fourrier a produit un résultat anormalement décevant par rapport aux autres échantillons, ce qui a descendu de beaucoup la moyenne finale, alors que pour le même échantillon, la paramétrisation cepstral a fournit de bons résultats. Dans la majorité des cas la parémétrisation FFT semble être plus efficace que la paramétrisation cepstral.
+D'après le résultat de notre évaluation, la méthode de classification par loi normal multidimenssionelle offre de meilleurs résultats avec la transformée de Fourrier qu'avec la paramétrisation cepstral, alors que la méthode de classification des K plus proche voisin offre de meilleur résultat pour la paramétrisation cepstral. Cependant les résultats peuvent être faussé, on observe dans le cas de K Plus proche voisins que pour l'échantillon 2, la paramétrisation par transformée de Fourrier a produit un résultat anormalement décevant par rapport aux autres échantillons, ce qui a diminué de beaucoup son efiicacité finale, alors que pour le même échantillon, la paramétrisation cepstral a fournit de bons résultats. Dans la majorité des cas la parémétrisation FFT semble toutefois être plus efficace que la paramétrisation cepstral.
 \section{conclusion}
 
- On ne peut pas encore se prononcer sur quelle méthode de classification est meilleur que telle autre car nous ne disposons pas d'un échantillon assez grand. En revanche, on peut affirmer que la paramétrisation par MFCC est très efficace dans ces conditions d'évaluation peu importe la méthode de classification, elle n'a même souffert d'aucune erreur. Nous nous sommes placé, dans cet article, dans des conditions idéales, tous les échantillons sonores font la même taille, et seuls des voyelles sont identifiées. Il pourait être intéressant de tester la parametrisation MFCC avec des conditions moins idéales pour tester ses limites.
+ L'échantillon dont nous diposons n'est pas assez grand pour se prononcer clairement sur la meilleur méthode de classification. En revanche, on peut affirmer que la paramétrisation par MFCC est très efficace dans ces conditions d'évaluation; quelque soit la méthode de classification, elle n'a même souffert d'aucune erreur. 
+ 
+ Nous nous sommes placé, dans le cas de cet article, dans des conditions idéales, tous les échantillons sonores font la même taille, et seuls des voyelles sont identifiées. Il pourait être intéressant de tester la parametrisation MFCC avec des conditions moins idéales pour tester ses limites. On peut aussi se tourner vers un mélange de loi gaussienne pour la méthode de classification afin d'obtenir de meilleurs résultats.
 
+\subsection*{Annexe}
 
+Programmes utilisés:
+Matlab, voicebox, \LaTeX
+\vspace{1\baselineskip}
+
+\subsection*{Remerciements}
+Merci à Jérôme Farinas pour ses explications et son aide,
+et à Régine André-Obrecht pour ses cours sur les méthodes de décision et sur la classification automatique.
 
 \subsection*{nous contacter}
   Pour tout commentaires, erreurs, remarques, ajouts à faire, etc. Veuillez nous contacter à ces adresses:
 \vspace{1\baselineskip}
   
-wedg@hotmail.fr (Veysseire Daniel)
+Veysseire Daniel : wedg@hotmail.fr
 
-mickaelfabre@free.fr (Fabre Mickael)
+Fabre Mickael : mickaelfabre@free.fr
 \end{document}
 
 
