@@ -12,185 +12,185 @@ using namespace std;
 
 /*-----------------------------------------------------------------------------*/
 class Activity
-/*-----------------------------------------------------------------------------*/
+        /*-----------------------------------------------------------------------------*/
 {
 public:
-  /*==========================================*/
-  /*=                ATTRIBUTS               =*/
-  /*==========================================*/
-  int i,n_p,n_s; // No de l'activit et nombre de prdecesseurs et successeurs
-  int di_max,di_min; // Dure max et min de l'activit
-  vector <int> Pred; // Liste des prdecesseurs
-  vector <int> Succ; // Liste des successeurs
+    /*==========================================*/
+    /*=                ATTRIBUTS               =*/
+    /*==========================================*/
+    int i,n_p,n_s; // No de l'activit et nombre de prdecesseurs et successeurs
+    int di_max,di_min; // Dure max et min de l'activit
+    vector <int> Pred; // Liste des prdecesseurs
+    vector <int> Succ; // Liste des successeurs
 
-  /*==========================================*/
-  /*=                METHODES                =*/
-  /*==========================================*/
-  Activity(void) // Constructeur
-  {
-    i=-1; di_max=0; di_min=0; n_p=0;n_s=n_p=0;
-  };
-  ~Activity(void) // Destructeur
-  {};
-  void AddPred(int i) // Ajoute i dans la liste des prdecesseurs de la tche
-  {
-    n_p++;Pred.push_back(i);
-  };
-  friend ostream & operator << (ostream &f, Activity *a) // Affichage des caractristiques de la tche
-  {
-    f<<"Activity "<<a->i<<" with duration ["<<a->di_min<<", "<<a->di_max<<"], having "<<a->n_p<<" predecessor(s) (";
-    vector<int>::iterator it;
-    for(it=a->Pred.begin();it<a->Pred.end();it++)
-      f<<*it<<" ,";
-    f<<") and "<<a->n_s<<" successor(s) (";
-    for(it=a->Succ.begin();it<a->Succ.end();it++)
-      f<<*it<<" ,";
-    f<<")\n";
-    f.flush();
-    return f;
-  };
+    /*==========================================*/
+    /*=                METHODES                =*/
+    /*==========================================*/
+    Activity(void) // Constructeur
+    {
+        i=-1; di_max=0; di_min=0; n_p=0;n_s=n_p=0;
+    };
+    ~Activity(void) // Destructeur
+    {};
+    void AddPred(int i) // Ajoute i dans la liste des prdecesseurs de la tche
+    {
+        n_p++;Pred.push_back(i);
+    };
+    friend ostream & operator << (ostream &f, Activity *a) // Affichage des caractristiques de la tche
+    {
+        f<<"Activity "<<a->i<<" with duration ["<<a->di_min<<", "<<a->di_max<<"], having "<<a->n_p<<" predecessor(s) (";
+        vector<int>::iterator it;
+        for(it=a->Pred.begin();it<a->Pred.end();it++)
+            f<<*it<<" ,";
+        f<<") and "<<a->n_s<<" successor(s) (";
+        for(it=a->Succ.begin();it<a->Succ.end();it++)
+            f<<*it<<" ,";
+        f<<")\n";
+        f.flush();
+        return f;
+    };
 };
 
 class ActivityGraph
 {
 public:
-  /*==========================================*/
-  /*=                ATTRIBUTS               =*/
-  /*==========================================*/
-  vector <Activity> A; // Liste des activits sommets
-  /*==========================================*/
-  /*=                METHODES                =*/
-  /*==========================================*/
-  ActivityGraph(char *filename,int coef)  // Constructeur
-  {
-    filebuf fichier;
-    filebuf *ouvert=fichier.open(filename,ios_base::in);
-    if(!ouvert)
-      {
-        cout<<"Can not open file "<<filename<<endl;
-        exit(1);
-      }
-    istream entree(&fichier);
-    int n_activites;
-    entree>>n_activites;
-    A.resize(n_activites);
-    for(int i=0;i<n_activites;i++)
-      {
-        float di_max,di_min;
-        entree>>A[i].i;
-        entree>>di_min;
-        entree>>di_max;
-        entree>>A[i].n_s;
-        A[i].di_max=(int)floor(di_max*coef);
-        A[i].di_min=(int)floor(di_min*coef);
-        A[i].Succ.resize(A[i].n_s);
-        for(int j=0;j<A[i].n_s;j++)
-          {
-            entree>>A[i].Succ[j];
-            A[A[i].Succ[j]].AddPred(i);
-          }
-      }
-  };
-  friend ostream & operator << (ostream &f, ActivityGraph *G) // Affichage du graphe
-  {
-    int n=G->A.size();
-    f<< "The graph has "<<n<<" activities :\n";
-    for(int i=0;i<n;i++)
-      f<<&(G->A[i]);
-    f.flush();
-    return f;
-  };
+    /*==========================================*/
+    /*=                ATTRIBUTS               =*/
+    /*==========================================*/
+    vector <Activity> A; // Liste des activits sommets
+    /*==========================================*/
+    /*=                METHODES                =*/
+    /*==========================================*/
+    ActivityGraph(char *filename,int coef)  // Constructeur
+    {
+        filebuf fichier;
+        filebuf *ouvert=fichier.open(filename,ios_base::in);
+        if(!ouvert)
+        {
+            cout<<"Can not open file "<<filename<<endl;
+            exit(1);
+        }
+        istream entree(&fichier);
+        int n_activites;
+        entree>>n_activites;
+        A.resize(n_activites);
+        for(int i=0;i<n_activites;i++)
+        {
+            float di_max,di_min;
+            entree>>A[i].i;
+            entree>>di_min;
+            entree>>di_max;
+            entree>>A[i].n_s;
+            A[i].di_max=(int)floor(di_max*coef);
+            A[i].di_min=(int)floor(di_min*coef);
+            A[i].Succ.resize(A[i].n_s);
+            for(int j=0;j<A[i].n_s;j++)
+            {
+                entree>>A[i].Succ[j];
+                A[A[i].Succ[j]].AddPred(i);
+            }
+        }
+    };
+    friend ostream & operator << (ostream &f, ActivityGraph *G) // Affichage du graphe
+    {
+        int n=G->A.size();
+        f<< "The graph has "<<n<<" activities :\n";
+        for(int i=0;i<n;i++)
+            f<<&(G->A[i]);
+        f.flush();
+        return f;
+    };
 
 
-  int* DFS()
-  {
-      //cout << "test1";
-
-
-
-
-      //numero de visite
-      int numVisite = 0;
-      //Liste indiquant les noeuds visite
-      bool *visited = new bool[A.size()];
+    int* DFS()
+    {
+        //cout << "test1";
 
 
 
-      //initialisation de visited
-      for(int i=0;i<A.size();i++){
-          visited[i]=false;
-      }
 
-
-      //numero de visite max des noeuds
-      int *numVisAc = new int[A.size()];
-
-      //pile des activites en cours de visite
-      vector <Activity> pile;
-
-      Activity activiteCourante;
-
-      activiteCourante = A[0];
-
-      int i=0;
-
-      pile.push_back(activiteCourante);
-
-
-      //cout << pile.empty();
-      cout << "\n";
-
-      //cout << pile.at(0).i;
-      cout << "\n";
+        //numero de visite
+        int numVisite = 0;
+        //Liste indiquant les noeuds visite
+        bool *visited = new bool[A.size()];
 
 
 
-      int k=0;
-
-      do
-      {
-
-
-              //tant qu'il y a des successeurs au noeud courant
-
-              i=0;
-              while(i<activiteCourante.n_s){
-
-                   //si le successeur n'est pas visite
-                  if(!visited[(activiteCourante.Succ).at(i)]){
+        //initialisation de visited
+        for(int i=0;i<A.size();i++){
+            visited[i]=false;
+        }
 
 
-                              //on le visite
-                              //visited[(activiteCourante.Succ).at(i) = true;
+        //numero de visite max des noeuds
+        int *numVisAc = new int[A.size()];
 
-                              activiteCourante=A.at(activiteCourante.Succ.at(i));
+        //pile des activites en cours de visite
+        vector <Activity> pile;
 
-                              pile.push_back(activiteCourante);
+        Activity activiteCourante;
 
+        activiteCourante = A[0];
 
-                              i=0;
-                  }
-                  else{
-                  i++;
-                  }
-              }
+        int i=0;
 
-              //tous les successeurs sont visites ou il n'y a plus de successeur
+        pile.push_back(activiteCourante);
 
 
-              visited[activiteCourante.i] = true;
-              numVisAc[activiteCourante.i] = numVisite;
-              numVisite++;
-              pile.pop_back();
+        //cout << pile.empty();
+        cout << "\n";
 
-                //activiteCourante=pile.back();
-              if(!pile.empty()){
-                    activiteCourante=pile.back();
-              }
+        //cout << pile.at(0).i;
+        cout << "\n";
 
 
 
-              /*
+        int k=0;
+
+        do
+        {
+
+
+            //tant qu'il y a des successeurs au noeud courant
+
+            i=0;
+            while(i<activiteCourante.n_s){
+
+                //si le successeur n'est pas visite
+                if(!visited[(activiteCourante.Succ).at(i)]){
+
+
+                    //on le visite
+                    //visited[(activiteCourante.Succ).at(i) = true;
+
+                    activiteCourante=A.at(activiteCourante.Succ.at(i));
+
+                    pile.push_back(activiteCourante);
+
+
+                    i=0;
+                }
+                else{
+                    i++;
+                }
+            }
+
+            //tous les successeurs sont visites ou il n'y a plus de successeur
+
+
+            visited[activiteCourante.i] = true;
+            numVisAc[activiteCourante.i] = numVisite;
+            numVisite++;
+            pile.pop_back();
+
+            //activiteCourante=pile.back();
+            if(!pile.empty()){
+                activiteCourante=pile.back();
+            }
+
+
+
+            /*
 
               for(int l=0;l<pile.size();l++){
                   cout << "pile: element " ;
@@ -212,32 +212,142 @@ public:
 
 
 
-      }while(!pile.empty());
+        }while(!pile.empty());
 
-    cout << sizeof(numVisAc);
-
-
-    for(int l=0;l<A.size();l++){
-        cout << "element " ;
-         cout << l;
-        cout << " :";
+        //cout << sizeof(numVisAc);
 
 
-      cout << "\n";
-    cout << numVisAc[l];
-    cout << "\n";
+        for(int l=0;l<A.size();l++){
+            cout << "position du sommet " ;
+            cout << l;
+            cout << " :";
+
+
+            cout << "\n";
+            cout << numVisAc[l];
+            cout << "\n";
+        }
+
+        return numVisAc;
+
+
+
+
     }
 
-      return numVisAc;
 
 
 
 
-  }
+    /* question 1.c = determine la longueur du chemin optimiste le plus court entre s et chacun de ses sommets*/
 
+    const int* longueurCheminOpti(){
+
+        /*ltt est la liste du tri topologique*/
+        const int* ltt = this->DFS();
+
+        //sommet en cours
+        int sommetRunning = 0;
+
+        int* liste_longueur = new int[A.size()];
+
+        for(int i=0;i<A.size();i++){
+
+            liste_longueur[i]=10000;
+            liste_longueur[i]=abs( liste_longueur[i]);
+
+        }
+        /* la longueur du chemin entre la sousrce et elle-même est sa durée minimum */
+        liste_longueur[0] = 0;
+
+
+
+        for(int i=A.size()-1;i>0;i--){
+
+
+            sommetRunning = this->chercheElem(ltt,i);
+            cout << "sommet courant\n";
+            cout << sommetRunning;
+            cout << "\n";
+            /*on recupère les successeur du sommet courant*/
+            int numSucc = 0;
+            /*successeur à mettre à jour*/
+            int succMaj = -1;
+
+            /*pour chaque successeur*/
+            while(numSucc < A.at(sommetRunning).n_s){
+
+                succMaj=(A.at(sommetRunning).Succ).at(numSucc);
+
+
+//                cout << "Aha ";
+//                cout << liste_longueur[succMaj];
+//                cout << "Oho ";
+//                cout << liste_longueur[sommetRunning];
+
+
+                /*si la longueur de s à succMaj est suppérieur à la longueur de s à i + durée de i, on a une distance plus courte*/
+                if(liste_longueur[succMaj]>liste_longueur[sommetRunning] + A[sommetRunning].di_min){
+                    liste_longueur[succMaj]=liste_longueur[sommetRunning] + A[sommetRunning].di_min;
+
+
+                }
+
+                numSucc ++;
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+        //for(int i=0; i<)
+
+        for(int i=0; i<A.size();i++){
+
+            cout << "cout du sommet ";
+            cout << i;
+            cout << "\n";
+            cout << liste_longueur[i];
+            cout << "\n";
+
+        }
+        return liste_longueur;
+
+
+    }
+
+
+    /*fonction pour rechercher dans la liste du tri topologique le numéro du sommet qui a la valeur x*/
+
+    int chercheElem(const int* l, int x){
+
+        for(int i=0; i<A.size();i++){
+
+
+            if(l[i] == x){
+
+                return i;
+
+            }
+
+        }
+        cout << "Aucun élément de la liste n'a la valeur " + x;
+
+
+    }
 
 
 };
+
 
 
 
@@ -249,25 +359,25 @@ int main(int argc, char **argv)
 
 
 
-  if(argc<2 || argc >3)
+    if(argc<2 || argc >3)
     {
-      cout<<" The syntax must respect the following format: main.exe <Problem_file> {< Duration_multiplicator=1>} \n";
-      return 0;
+        cout<<" The syntax must respect the following format: main.exe <Problem_file> {< Duration_multiplicator=1>} \n";
+        return 0;
     }
-  int Duration_mul=1;
-  if(argc==3)
-    Duration_mul=atoi(argv[2]);
-  char fileName[60];
-  strcpy(fileName,argv[1]);
-  clock_t start=clock(); // Lancement du cpt TCdi_max
-  ActivityGraph G(fileName,Duration_mul);
+    int Duration_mul=1;
+    if(argc==3)
+        Duration_mul=atoi(argv[2]);
+    char fileName[60];
+    strcpy(fileName,argv[1]);
+    clock_t start=clock(); // Lancement du cpt TCdi_max
+    ActivityGraph G(fileName,Duration_mul);
 
 
 
-  G.DFS();
+    //G.DFS();
+    G.longueurCheminOpti();
 
-
-  /*cout<<&G;
+    /*cout<<&G;
 
 
   clock_t end=clock(); // Lancement du cpt TCdi_max
@@ -275,5 +385,6 @@ int main(int argc, char **argv)
   cout<<"Instance "<< fileName<<" done: Tcpu(microsec)="<<((double)(end - start) / (double)(CLOCKS_PER_SEC / 1000000.0))<<endl;
   cout<<"*===================================================================*\n";
     */
-return 0;
+
+    return 0;
 }
