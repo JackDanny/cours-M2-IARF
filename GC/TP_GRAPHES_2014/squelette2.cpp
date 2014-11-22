@@ -102,51 +102,46 @@ public:
     };
 
 
-    int* DFS()
+
+
+
+
+
+
+
+    /*                          tri topologique                    */
+    /*-------------------------------------------------------------*/
+    vector <int> DFS()
     {
-        //cout << "test1";
+        
+        //liste des numeros des sommets triés
+        vector <int> tri;
 
 
-
-
-        //numero de visite
-        int numVisite = 0;
         //Liste indiquant les noeuds visite
         bool *visited = new bool[A.size()];
-
-
 
         //initialisation de visited
         for(int i=0;i<A.size();i++){
             visited[i]=false;
         }
 
-
-        //numero de visite max des noeuds
-        int *numVisAc = new int[A.size()];
-
         //pile des activites en cours de visite
         vector <Activity> pile;
 
+        //Acitivite courante
         Activity activiteCourante;
 
+        //on part du sommet
         activiteCourante = A[0];
 
         int i=0;
 
         pile.push_back(activiteCourante);
 
-
-        //cout << pile.empty();
         cout << "\n";
 
-        //cout << pile.at(0).i;
-        cout << "\n";
-
-
-
-        int k=0;
-
+        //à faire tant que la pile n'est pas vide
         do
         {
 
@@ -154,6 +149,7 @@ public:
             //tant qu'il y a des successeurs au noeud courant
 
             i=0;
+            //pour chaque successeur de l'activite courante
             while(i<activiteCourante.n_s){
 
                 //si le successeur n'est pas visite
@@ -161,13 +157,12 @@ public:
 
 
                     //on le visite
-                    //visited[(activiteCourante.Succ).at(i) = true;
-
                     activiteCourante=A.at(activiteCourante.Succ.at(i));
 
+                    //on rajoute ce successeur a la liste des noeuds en cours de visite
                     pile.push_back(activiteCourante);
 
-
+                    //et on reinitialise le numero des successeurs a visite
                     i=0;
                 }
                 else{
@@ -177,61 +172,25 @@ public:
 
             //tous les successeurs sont visites ou il n'y a plus de successeur
 
-
+            //l'activite courante est donc visite
             visited[activiteCourante.i] = true;
-            numVisAc[activiteCourante.i] = numVisite;
-            numVisite++;
+
+            tri.insert(tri.begin(),activiteCourante.i);
+
+            //on retire le sommet visite de la pile des sommets restants
             pile.pop_back();
 
-            //activiteCourante=pile.back();
+            //si la pile n'est pas vide, le sommet en cours est le dernier élément inséré
             if(!pile.empty()){
                 activiteCourante=pile.back();
             }
 
-
-
-            /*
-
-              for(int l=0;l<pile.size();l++){
-                  cout << "pile: element " ;
-                   cout << l;
-                            cout << " :";
-
-
-                cout << "\n";
-              cout << (pile.at(l)).i;
-              cout << "\n";
-              }
-              cout << "\n";
-              cout << "\n";
-
-              cout << "noeud courant\n";
-              cout<< activiteCourante.i;
-               cout << "\n";
-                */
-
-
-
         }while(!pile.empty());
 
-        //cout << sizeof(numVisAc);
+        // si la pile est vide, le parcours est fini
 
 
-        for(int l=0;l<A.size();l++){
-            cout << "position du sommet " ;
-            cout << l;
-            cout << " :";
-
-
-            cout << "\n";
-            cout << numVisAc[l];
-            cout << "\n";
-        }
-
-        return numVisAc;
-
-
-
+        return tri;
 
     }
 
@@ -239,109 +198,270 @@ public:
 
 
 
-    /* question 1.c = determine la longueur du chemin optimiste le plus court entre s et chacun de ses sommets*/
+    /*                          chemin optimiste                   */
+    /*-------------------------------------------------------------*/
 
-    const int* longueurCheminOpti(){
+    /* question 1.c = determine la longueur du chemin optimiste le plus court entre s et chacun de ses sommets*/
+    vector <int> longueurCheminOpti(){
 
         /*ltt est la liste du tri topologique*/
-        const int* ltt = this->DFS();
+        vector <int> ltt = this->DFS();
 
-        //sommet en cours
-        int sommetRunning = 0;
+        //liste des distances de s à chaque sommet
+        vector <int> liste_longueur;
 
-        int* liste_longueur = new int[A.size()];
-
+        //on initialise toutes les longueurs a l'infini
         for(int i=0;i<A.size();i++){
+            liste_longueur.push_back(INFINITY);
+        }
 
-            liste_longueur[i]=10000;
-            liste_longueur[i]=abs( liste_longueur[i]);
+        //sommet en cours de traitement
+        int sActu;
+
+        /* la longueur du chemin entre la source et elle-même est sa durée minimum */
+        liste_longueur[0] = 0;
+
+
+        //pour chaque sommet
+        for(int i=0;i<ltt.size();i++){
+            sActu=ltt[i];
+            for(int numSucc=0; numSucc < A.at(sActu).n_s;numSucc++){
+
+                //si on ameliore la distance on remplace la nouvelle valeur
+                if(A[sActu].di_min + liste_longueur[sActu]<liste_longueur[(A[sActu].Succ).at(numSucc)]){
+                    liste_longueur[(A.at(sActu).Succ).at(numSucc)] = A[sActu].di_min + liste_longueur[sActu];
+                }
+            }
 
         }
-        /* la longueur du chemin entre la sousrce et elle-même est sa durée minimum */
+
+        return liste_longueur;
+
+    }
+
+    /*                          chemin pessimiste                  */
+    /*-------------------------------------------------------------*/
+    vector <int> longueurCheminPessi(){
+
+        /*ltt est la liste du tri topologique*/
+        vector <int> ltt = this->DFS();
+
+        //liste des distances de s à chaque sommet
+        vector <int> liste_longueur;
+
+        //on initialise toutes les longueurs a l'infini
+        for(int i=0;i<A.size();i++){
+            liste_longueur.push_back(INFINITY);
+        }
+
+        //sommet en cours de traitement
+        int sActu;
+
+        /* la longueur du chemin entre la source et elle-même est sa durée minimum */
         liste_longueur[0] = 0;
 
 
 
-        for(int i=A.size()-1;i>0;i--){
+        for(int i=0;i<ltt.size();i++){
+            sActu=ltt[i];
+            for(int numSucc=0; numSucc < A.at(sActu).n_s;numSucc++){
 
-
-            sommetRunning = this->chercheElem(ltt,i);
-            cout << "sommet courant\n";
-            cout << sommetRunning;
-            cout << "\n";
-            /*on recupère les successeur du sommet courant*/
-            int numSucc = 0;
-            /*successeur à mettre à jour*/
-            int succMaj = -1;
-
-            /*pour chaque successeur*/
-            while(numSucc < A.at(sommetRunning).n_s){
-
-                succMaj=(A.at(sommetRunning).Succ).at(numSucc);
-
-
-//                cout << "Aha ";
-//                cout << liste_longueur[succMaj];
-//                cout << "Oho ";
-//                cout << liste_longueur[sommetRunning];
-
-
-                /*si la longueur de s à succMaj est suppérieur à la longueur de s à i + durée de i, on a une distance plus courte*/
-                if(liste_longueur[succMaj]>liste_longueur[sommetRunning] + A[sommetRunning].di_min){
-                    liste_longueur[succMaj]=liste_longueur[sommetRunning] + A[sommetRunning].di_min;
-
-
+                //si on ameliore la distance on remplace la nouvelle valeur
+                if(A[sActu].di_max + liste_longueur[sActu]<liste_longueur[(A[sActu].Succ).at(numSucc)]){
+                    liste_longueur[(A.at(sActu).Succ).at(numSucc)] = A[sActu].di_max + liste_longueur[sActu];
                 }
-
-                numSucc ++;
-
             }
 
-
-
-
-
-
-
-
-
         }
 
-
-
-        //for(int i=0; i<)
-
-        for(int i=0; i<A.size();i++){
-
-            cout << "cout du sommet ";
-            cout << i;
-            cout << "\n";
-            cout << liste_longueur[i];
-            cout << "\n";
-
-        }
         return liste_longueur;
-
 
     }
 
 
-    /*fonction pour rechercher dans la liste du tri topologique le numéro du sommet qui a la valeur x*/
 
-    int chercheElem(const int* l, int x){
+    /*                liste des chemins de s a t                   */
+    /*-------------------------------------------------------------*/
+    vector< vector<int> > toutChemin(){
 
-        for(int i=0; i<A.size();i++){
+        //tous les chemins possibles de s à t
+        vector< vector<int> > allPath;
+
+        //chemin courant
+        vector<int> pathRunning;
+
+        // activite courante
+        Activity activiteCourante;
+
+        //on part de la source
+        activiteCourante = A[0];
 
 
-            if(l[i] == x){
+        allPath = recChemin(allPath,pathRunning,activiteCourante);
 
-                return i;
+        return allPath;
+
+
+    }
+    /*               algo recursif pour recherche de chemin        */
+    /*-------------------------------------------------------------*/
+
+    //renvoie l'esemble des chemins déja calculé concaténé avec ceux partant de
+    //l'activité courante
+    vector< vector<int> > recChemin(vector< vector<int> > allPath,vector<int> pathRunning, Activity activiteCourante){
+
+
+        //on ajoute l'activite courante au chemin en cours
+        pathRunning.push_back(activiteCourante.i);
+
+
+
+        //si on tombe sur le puit, on ajoute le chemin à allPath
+        if(activiteCourante.i == A.size()-1){
+
+            allPath.push_back(pathRunning);
+        }
+
+        //sinon, on continue la recherche en profondeur pour chaque successeur
+        else{
+
+            for(int i=0;i<activiteCourante.Succ.size();i++){
+
+                allPath = recChemin(allPath,pathRunning,A[activiteCourante.Succ.at(i)]);
+
+            }
+        }
+        return allPath;
+        //on devrait enlever le sommet traité en fisant
+        //pathRunning.pop_back();
+        //mais ici on a pas besoin car la variable pathRunning est une variable locale
+        //elle disparaitra simplement
+
+    }
+
+
+
+
+
+    /*               algo pour calculer le regret d'un chemin      */
+    /*-------------------------------------------------------------*/
+
+    int Regrets(vector< vector<int> > allPath,int numChemin){
+
+        //on initialise le regret a l'infini
+        int Reg = INFINITY;
+        //regret auxiliaire
+        int RegAux;
+
+        //cout du chemin
+        int coutChemVoulu = 0;
+
+        int listeCouts [A.size()];
+        //on initialise toutes les distances à dmin
+        for(int i=0;i<A.size();i++){
+            listeCouts[i]=A[i].di_min;
+
+
+        }
+
+        //on choisi le chemin voulu
+        vector<int> cheminVoulu = allPath[numChemin];
+
+        //on met les distances contenu dans le chemin à d max
+        for(int i=0;i<cheminVoulu.size();i++){
+            listeCouts[cheminVoulu[i]]=A[cheminVoulu[i]].di_max;
+            //on en profitte pour calculer le cout du chemin voulu
+            coutChemVoulu=coutChemVoulu+A[cheminVoulu[i]].di_max;
+        }
+
+        //on calcule le cout des chemins un à un, si un est inférieur
+        //a l'autre on le garde pour avoir le plus court chemin
+        for(int i=0;i<allPath.size();i++){
+
+            RegAux=0;
+            //on ajoute à regAux tous les couts
+            for(int j=0;j<allPath[i].size();j++){
+                RegAux=RegAux+listeCouts[allPath[i][j]];
+
 
             }
 
-        }
-        cout << "Aucun élément de la liste n'a la valeur " + x;
+            //si on a trouve un chemin plus court, on change RegAux
+            if(RegAux<Reg){
+                Reg=RegAux;
+            }
 
+
+        }
+        //le regret est egale au cout du chemin - le plus court chemin
+        return coutChemVoulu-Reg;
+
+
+    }
+    /*     fonction qui renvoi le chemin robuste et le regret      */
+    /*-------------------------------------------------------------*/
+    void chRobusteMinRegret(vector< vector<int> > allPath, int& chem,int& reg){
+
+        int minReg=INFINITY;
+        int regAux=0;
+        int chemin=INFINITY;
+
+        for(int i=0;i<allPath.size();i++){
+
+            regAux=Regrets(allPath,i);
+            if(regAux < minReg){
+                minReg=regAux;
+                chemin=i;
+            }
+
+        }
+        chem=chemin;
+        reg=minReg;
+
+    }
+
+
+
+    /*     fonction qui affiche le regret pour chaque chemin       */
+    /*-------------------------------------------------------------*/
+    void afficheRegrets(vector< vector<int> > allPath){
+
+        for(int i=0;i<allPath.size();i++){
+
+
+            cout << "regret " << i << " "<< Regrets(allPath,i)<<endl;
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+    //pour afficher un vecteur d'entier
+    void afficheIntVector(vector<int> v){
+
+        for(int i = 0; i < v.size();i++){
+
+            cout << "v[" << i << "] ";
+            cout << v.at(i) << " ";
+
+        }
+        cout << endl;
+
+    }
+    //pour afficher un vecteur de vecteur d'entier
+    void afficheIntVectorVector(vector< vector<int> > v){
+        for(int i = 0; i < v.size();i++){
+
+            cout << "vecteur[" << i << "]" << endl;
+            afficheIntVector(v.at(i));
+
+        }
 
     }
 
@@ -355,8 +475,6 @@ public:
 
 int main(int argc, char **argv)
 {
-
-
 
 
     if(argc<2 || argc >3)
@@ -373,18 +491,82 @@ int main(int argc, char **argv)
     ActivityGraph G(fileName,Duration_mul);
 
 
+    //seance 1
+    /*vector <int> tri = G.DFS();
 
-    //G.DFS();
-    G.longueurCheminOpti();
+    cout << "tri topologique" << endl;
+    G.afficheIntVector(tri);
 
-    /*cout<<&G;
+    cout << "chemin opti" << endl;
+    vector <int> lco =G.longueurCheminOpti();
 
+    G.afficheIntVector(lco);
 
-  clock_t end=clock(); // Lancement du cpt TCdi_max
-  cout<<"*===================================================================*\n";
-  cout<<"Instance "<< fileName<<" done: Tcpu(microsec)="<<((double)(end - start) / (double)(CLOCKS_PER_SEC / 1000000.0))<<endl;
-  cout<<"*===================================================================*\n";
+    cout << "chemin pessi" << endl;
+    vector <int> lcp =G.longueurCheminPessi();
+
+    G.afficheIntVector(lcp);
+
     */
+    //seance 2
+
+cout <<&G;
+
+
+    vector< vector<int> > allPath;
+
+    allPath=G.toutChemin();
+
+
+//    G.afficheIntVectorVector(allPath);
+
+
+ //   G.afficheRegrets(allPath);
+
+    int min;
+    int chem;
+
+    G.chRobusteMinRegret(allPath,chem,min);
+
+    cout << "chemin robuste " ;
+
+   G.afficheIntVector(allPath[chem]);
+
+    cout << "regret " << min<<endl;
+
+    //G.afficheIntVectorVector(allPath);
+
+    //cout <<&G;
+    /*
+
+    for(int i=0; i<9;i++){
+
+        cout << "cout du sommet ";
+        cout << i;
+//        cout << "\n";
+//        cout << l[i];
+//        cout << "\n";
+
+//    }
+//    */
+    //    int i=G.afficheRegretMinChem(allPath);
+
+    //    //cout << "chemin le plus court" <<  G.afficheIntVector(allPath[0]) << endl;
+
+    //G.afficheIntVector(allPath[i]);
+
+    ////    cout<<&G;
+
+
+    clock_t end=clock(); // Lancement du cpt TCdi_max
+    cout<<"*===================================================================*\n";
+    cout<<"Instance "<< fileName<<" done: Tcpu(microsec)="<<((double)(end - start) / (double)(CLOCKS_PER_SEC / 1000000.0))<<endl;
+    cout<<"*===================================================================*\n";
+
+    int coeff=100;
+    cout << (int) (floor((float)3.78 *coeff));
 
     return 0;
 }
+
+
