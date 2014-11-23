@@ -137,6 +137,7 @@ public:
 
         int i=0;
 
+        //on rjoute l'activite a la pile
         pile.push_back(activiteCourante);
 
         cout << "\n";
@@ -296,7 +297,8 @@ public:
         //on part de la source
         activiteCourante = A[0];
 
-
+        //on concatene a allPath tous les chemins descendant du sommet
+        //0 dans l'algorithme de recherche en profondeur
         allPath = recChemin(allPath,pathRunning,activiteCourante);
 
         return allPath;
@@ -326,7 +328,8 @@ public:
         else{
 
             for(int i=0;i<activiteCourante.Succ.size();i++){
-
+                //on concatene a allPath tous les chemins descendant du sommet
+                //courant dans l'algorithme de recherche en profondeur
                 allPath = recChemin(allPath,pathRunning,A[activiteCourante.Succ.at(i)]);
 
             }
@@ -407,15 +410,18 @@ public:
         int regAux=0;
         int chemin=INFINITY;
 
+        //pour chaque chemin
         for(int i=0;i<allPath.size();i++){
-
+            //on calcule le regret
             regAux=Regret(allPath,i);
+            //on garde le plus petit regret ainsi que le chemin associe
             if(regAux < minReg){
                 minReg=regAux;
                 chemin=i;
             }
 
         }
+        //on renvoi le chemin et le regret
         chem=chemin;
         reg=minReg;
 
@@ -429,9 +435,7 @@ public:
 
         for(int i=0;i<allPath.size();i++){
 
-
             cout << "regret " << i << " "<< Regret(allPath,i)<<endl;
-
 
         }
     }
@@ -445,6 +449,7 @@ public:
         while(i<allPath.size()){
             //si l'activité numAct n'appartient pas au chemin
             if(!belongInt(allPath[i],numAct)){
+                //on la supprime
                 allPath.erase(allPath.begin()+i);
 
             }
@@ -453,11 +458,8 @@ public:
                 i++;
             }
 
-
         }
         return allPath;
-
-
 
     }
 
@@ -480,8 +482,8 @@ public:
     /*fonction pour afficher le chemin robuste et le regret correspondant*/
     /*pour tous les chemins passant par chaque activité i                */
     /*-------------------------------------------------------------------*/
-
     //fait avec la notion de regret de possibilite 1
+
     void chemRobRegPassntPar(vector< vector<int> > allPath){
         //liste des chemins passant par i
         vector< vector<int> > allPathByi;
@@ -505,6 +507,7 @@ public:
 
     }
 
+
     /*   algo pour calculer les regrets de tous les chemins        */
     /*-------------------------------------------------------------*/
 
@@ -519,10 +522,6 @@ public:
 
         }
         return regrets;
-
-
-
-
 
     }
 
@@ -541,12 +540,15 @@ public:
         while(i<allPath.size()){
             //si l'activité act n'appartient pas au chemin
             if(!belongInt(allPath[i],act)){
+                //on l'enlève
                 allPath.erase(allPath.begin()+i);
                 vRegrets.erase(vRegrets.begin()+i);
 
             }
             //sinon
             else{
+                //si l'activité appartient au chemin, et que ce chemin
+                //a amélioré le regret, on garde ce chemin
                 if(vRegrets[i] < reg){
                     chem=i;
                 }
@@ -641,19 +643,20 @@ int main(int argc, char **argv)
     cout << "tri topologique" << endl;
     G.afficheIntVector(tri);
 
-    cout << "chemin opti" << endl;
+    cout << endl;
+    cout << "chemin opti";
     vector <int> lco =G.longueurCheminOpti();
 
     G.afficheIntVector(lco);
-
-    cout << "chemin pessi" << endl;
+    cout << endl;
+    cout << "chemin pessi";
     vector <int> lcp =G.longueurCheminPessi();
 
     G.afficheIntVector(lcp);
+
+    cout << endl;
+
     */
-
-
-
 
 
 
@@ -708,8 +711,8 @@ int main(int argc, char **argv)
     cout<<"Instance "<< fileName<<" done: Tcpu(microsec)="<<((double)(end - start) / (double)(CLOCKS_PER_SEC / 1000000.0))<<endl;
     cout<<"*===================================================================*\n";
 
-//    int coeff=100;
-//    cout << (int) (floor((float)3.78 *coeff));
+    //    int coeff=100;
+    //    cout << (int) (floor((float)3.78 *coeff));
 
     return 0;
 }
