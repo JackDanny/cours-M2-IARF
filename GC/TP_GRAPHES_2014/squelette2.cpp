@@ -346,7 +346,7 @@ public:
     /*               algo pour calculer le regret d'un chemin      */
     /*-------------------------------------------------------------*/
 
-    int Regrets(vector< vector<int> > allPath,int numChemin){
+    int Regret(vector< vector<int> > allPath,int numChemin){
 
         //on initialise le regret a l'infini
         int Reg = INFINITY;
@@ -381,10 +381,11 @@ public:
             RegAux=0;
             //on ajoute à regAux tous les couts
             for(int j=0;j<allPath[i].size();j++){
+
                 RegAux=RegAux+listeCouts[allPath[i][j]];
 
-
             }
+
 
             //si on a trouve un chemin plus court, on change RegAux
             if(RegAux<Reg){
@@ -408,7 +409,7 @@ public:
 
         for(int i=0;i<allPath.size();i++){
 
-            regAux=Regrets(allPath,i);
+            regAux=Regret(allPath,i);
             if(regAux < minReg){
                 minReg=regAux;
                 chemin=i;
@@ -429,14 +430,153 @@ public:
         for(int i=0;i<allPath.size();i++){
 
 
-            cout << "regret " << i << " "<< Regrets(allPath,i)<<endl;
+            cout << "regret " << i << " "<< Regret(allPath,i)<<endl;
 
 
         }
     }
 
+    /*fonction qui renvoie tout les chemins de s à t passant par l'activité numAct*/
+    /*                    à partir de tous les chemins possibles                  */
+    /*----------------------------------------------------------------------------*/
+
+    vector< vector<int> > toutCheminPassantPar(vector< vector<int> > allPath,int numAct){
+        int i=0;
+        while(i<allPath.size()){
+            //si l'activité numAct n'appartient pas au chemin
+            if(!belongInt(allPath[i],numAct)){
+                allPath.erase(allPath.begin()+i);
+
+            }
+            //sinon
+            else{
+                i++;
+            }
 
 
+        }
+        return allPath;
+
+
+
+    }
+
+
+
+    /*fonction pour savoir si un entier appartient à un vecteur d'entier*/
+    /*------------------------------------------------------------------*/
+    bool belongInt(vector<int> v,int elem){
+
+        for(int i=0;i<v.size();i++){
+            if(v[i] == elem){
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
+    /*fonction pour afficher le chemin robuste et le regret correspondant*/
+    /*pour tous les chemins passant par chaque activité i                */
+    /*-------------------------------------------------------------------*/
+
+    //fait avec la notion de regret de possibilite 1
+    void chemRobRegPassntPar(vector< vector<int> > allPath){
+        //liste des chemins passant par i
+        vector< vector<int> > allPathByi;
+        //pour chaque activite
+
+        for(int i=0;i<A.size();i++){
+            //on recupere la liste des chemins passant par i
+            allPathByi = toutCheminPassantPar(allPath,i);
+            int chem;
+            int reg;
+            //parmis ces chemins on choisis le chemin robuste et on calcule son regret
+            chRobusteMinRegret(allPathByi, chem,reg);
+            cout<< "chemin robuste passant par " <<i << endl;
+
+            afficheIntVector(allPathByi[chem]);
+            cout << "regret associe: "<< reg <<endl;
+
+
+        }
+
+
+    }
+
+    /*   algo pour calculer les regrets de tous les chemins        */
+    /*-------------------------------------------------------------*/
+
+    vector<int> regrets(vector< vector<int> > allPath){
+        vector <int> regrets;
+
+        for(int i=0;i<allPath.size();i++){
+
+
+            regrets.push_back(Regret(allPath,i));
+
+
+        }
+        return regrets;
+
+
+
+
+
+    }
+
+    /* algo pour afficher le regret du chemin robuste de tous les chemins passant par act */
+    /*------------------------------------------------------------------------------------*/
+
+
+    void regretsPassantPar(vector< vector<int> > allPath,int act){
+        vector <int> vRegrets;
+        int reg=INFINITY;
+        int chem;
+
+        vRegrets=regrets(allPath);
+
+        int i=0;
+        while(i<allPath.size()){
+            //si l'activité act n'appartient pas au chemin
+            if(!belongInt(allPath[i],act)){
+                allPath.erase(allPath.begin()+i);
+                vRegrets.erase(vRegrets.begin()+i);
+
+            }
+            //sinon
+            else{
+                if(vRegrets[i] < reg){
+                    chem=i;
+                }
+
+                i++;
+            }
+
+
+        }
+        cout << "chemin robuste entre s et t passant par " << act <<endl;
+        afficheIntVector(allPath[chem]);
+        cout << "regret " << vRegrets[chem]<<endl;
+
+
+    }
+
+    /* algo pour afficher le regret et le chemin robuste des chemins passant par chaque activite*/
+    /*------------------------------------------------------------------------------------------*/
+    //fait avec la notion de regret de possibilite 2
+
+
+    void tousRegrets(vector< vector<int> > allPath){
+
+
+        //pour chaque activite
+        for(int i=0;i<A.size();i++){
+            //affiche les infos
+            regretsPassantPar(allPath,i);
+        }
+    }
 
 
 
@@ -466,6 +606,9 @@ public:
     }
 
 
+
+
+
 };
 
 
@@ -492,7 +635,8 @@ int main(int argc, char **argv)
 
 
     //seance 1
-    /*vector <int> tri = G.DFS();
+    /*
+    vector <int> tri = G.DFS();
 
     cout << "tri topologique" << endl;
     G.afficheIntVector(tri);
@@ -506,56 +650,57 @@ int main(int argc, char **argv)
     vector <int> lcp =G.longueurCheminPessi();
 
     G.afficheIntVector(lcp);
-
     */
+
+
+
+
+
+
     //seance 2
 
-cout <<&G;
 
-
+    /*possibilite 1*/
+    /*
     vector< vector<int> > allPath;
 
     allPath=G.toutChemin();
 
 
-//    G.afficheIntVectorVector(allPath);
+    G.chemRobRegPassntPar(allPath);
+    */
 
 
- //   G.afficheRegrets(allPath);
 
-    int min;
+
+    /*possibilite 2*/
+    /*
+    vector< vector<int> > allPath;
+
+    allPath=G.toutChemin();
+
+    G.tousRegrets(allPath);
+    */
+
+    /*Affichage du chemin robuste et du regret associé*/
+
+    vector< vector<int> > allPath;
+
+    allPath=G.toutChemin();
     int chem;
+    int min;
 
     G.chRobusteMinRegret(allPath,chem,min);
 
     cout << "chemin robuste " ;
 
-   G.afficheIntVector(allPath[chem]);
+    G.afficheIntVector(allPath[chem]);
 
     cout << "regret " << min<<endl;
 
-    //G.afficheIntVectorVector(allPath);
+    cout << endl;
 
-    //cout <<&G;
-    /*
 
-    for(int i=0; i<9;i++){
-
-        cout << "cout du sommet ";
-        cout << i;
-//        cout << "\n";
-//        cout << l[i];
-//        cout << "\n";
-
-//    }
-//    */
-    //    int i=G.afficheRegretMinChem(allPath);
-
-    //    //cout << "chemin le plus court" <<  G.afficheIntVector(allPath[0]) << endl;
-
-    //G.afficheIntVector(allPath[i]);
-
-    ////    cout<<&G;
 
 
     clock_t end=clock(); // Lancement du cpt TCdi_max
@@ -563,8 +708,8 @@ cout <<&G;
     cout<<"Instance "<< fileName<<" done: Tcpu(microsec)="<<((double)(end - start) / (double)(CLOCKS_PER_SEC / 1000000.0))<<endl;
     cout<<"*===================================================================*\n";
 
-    int coeff=100;
-    cout << (int) (floor((float)3.78 *coeff));
+//    int coeff=100;
+//    cout << (int) (floor((float)3.78 *coeff));
 
     return 0;
 }
