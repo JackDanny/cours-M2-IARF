@@ -1787,3 +1787,192 @@ java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfigu
 	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
 	at java.util.TimerThread.mainLoop(Timer.java:555)
 	at java.util.TimerThread.run(Timer.java:505)
+!SESSION 2014-11-23 10:29:42.805 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2014-11-23 10:43:39.244
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2014-11-23 10:43:39.244
+!MESSAGE session context was:(profile=PlatformProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:43:39.244
+!MESSAGE Problems downloading artifact: osgi.bundle,javax.xml,1.3.4.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:43:39.244
+!MESSAGE MD5 hash is not as expected. Expected: d0dd35af04d185c9a523eed51ff8eae1 and found 40dd2289e78d27e5bb3da65d3e2195c6.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:43:39.244
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.resolver,1.2.0.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:43:39.244
+!MESSAGE MD5 hash is not as expected. Expected: 670f0f92d161802c2a1eb43b9c1f680e and found c76a3152317c214f395e52a297294baf.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:43:39.244
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.serializer,2.7.1.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:43:39.244
+!MESSAGE MD5 hash is not as expected. Expected: fc914081de59952a182632fdbb8d6707 and found 7e31321e39b01d718eb4b83445128f87.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 10:43:39.245
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 10:43:39.245
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-11-23 10:44:32.709 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2014-11-23 10:45:25.204
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2014-11-23 10:45:25.204
+!MESSAGE session context was:(profile=PlatformProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:45:25.204
+!MESSAGE Problems downloading artifact: osgi.bundle,javax.xml,1.3.4.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:45:25.204
+!MESSAGE MD5 hash is not as expected. Expected: d0dd35af04d185c9a523eed51ff8eae1 and found 40dd2289e78d27e5bb3da65d3e2195c6.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:45:25.204
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.resolver,1.2.0.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:45:25.204
+!MESSAGE MD5 hash is not as expected. Expected: 670f0f92d161802c2a1eb43b9c1f680e and found c76a3152317c214f395e52a297294baf.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 10:45:25.205
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.serializer,2.7.1.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 10:45:25.205
+!MESSAGE MD5 hash is not as expected. Expected: fc914081de59952a182632fdbb8d6707 and found 7e31321e39b01d718eb4b83445128f87.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 10:45:25.205
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 10:45:25.205
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-11-23 11:05:13.480 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2014-11-23 11:07:47.566
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2014-11-23 11:07:47.566
+!MESSAGE session context was:(profile=PlatformProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 11:07:47.566
+!MESSAGE Problems downloading artifact: osgi.bundle,javax.xml,1.3.4.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 11:07:47.566
+!MESSAGE MD5 hash is not as expected. Expected: d0dd35af04d185c9a523eed51ff8eae1 and found 40dd2289e78d27e5bb3da65d3e2195c6.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 11:07:47.566
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.resolver,1.2.0.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 11:07:47.566
+!MESSAGE MD5 hash is not as expected. Expected: 670f0f92d161802c2a1eb43b9c1f680e and found c76a3152317c214f395e52a297294baf.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2014-11-23 11:07:47.566
+!MESSAGE Problems downloading artifact: osgi.bundle,org.apache.xml.serializer,2.7.1.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 1203 2014-11-23 11:07:47.566
+!MESSAGE MD5 hash is not as expected. Expected: fc914081de59952a182632fdbb8d6707 and found 7e31321e39b01d718eb4b83445128f87.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 11:07:47.566
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.draw2d_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1200 2014-11-23 11:07:47.567
+!MESSAGE Artifact not found: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar.
+!STACK 0
+java.io.FileNotFoundException: http://www.objectaid.net/update/plugins/org.eclipse.gef_3.6.0.v20100525-1225.jar
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:297)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.checkException(FileReader.java:474)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:431)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:355)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:668)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:590)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:723)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:287)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:267)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:208)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:138)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:707)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

@@ -536,6 +536,8 @@ public:
 
         vRegrets=regrets(allPath);
 
+
+
         int i=0;
         while(i<allPath.size()){
             //si l'activité act n'appartient pas au chemin
@@ -550,6 +552,7 @@ public:
                 //si l'activité appartient au chemin, et que ce chemin
                 //a amélioré le regret, on garde ce chemin
                 if(vRegrets[i] < reg){
+                    reg=vRegrets[i];
                     chem=i;
                 }
 
@@ -681,6 +684,8 @@ int main(int argc, char **argv)
     vector< vector<int> > allPath;
 
     allPath=G.toutChemin();
+
+    //G.afficheIntVectorVector(allPath);
 
     G.tousRegrets(allPath);
     */

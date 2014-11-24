@@ -8,6 +8,8 @@ public class Mentee extends Employe {
 	private Mentor mentor;
 
 	/** constructeur */
+	
+	
 
 	public Mentee() {
 		super();
@@ -21,6 +23,7 @@ public class Mentee extends Employe {
 
 	/** methodes */
 
+	//mise a jour du mentor
 	public void setMentor(Mentor ment) {
 		this.mentor = ment;
 	}
@@ -82,5 +85,40 @@ public class Mentee extends Employe {
 		fic.println("Salaire du mois : " + this.getSalary() + "\n");
 
 	}
+	//verifie la coherence du langage du mentoré avec celui de son Mentor
+	public boolean verifCoherenceLanguage(){
+		if(this.getMentor()==null){
+			return true;
+		}
+		if(this.getLangage().equals(this.getMentor().getLangage())){
+			return true;
+		}
+		else{
+			return false;
+		}
+		
+	}
+	
+	//Regler le probleme de la cohérence
+	public void resoudIncoherence(){
+		if(!this.verifCoherenceLanguage()){
+			System.out.println("probleme de coherence de langage entre " + this.getNum() + " et " + this.getMentor().getNum());
+			//on enleve le mentee des mentees du mentor
+			this.getMentor().suppMentee(this);
+			//on enleve le mentor du mentee
+			this.setMentor(null);
+			
+			
+		}
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
 
 }

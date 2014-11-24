@@ -1,10 +1,15 @@
-Calcul des salaires mensuels des employés de Nestlé
-Nom : Vincent // Mentoré
-Numéro de paie : 5201
-Langage : Java
+Calcul des salaires mensuels des employes de Nestlé
+Nom : Emile // Employé qui n'a pas de mentoré
+Numéro de paie : 5204
+Langage : C++
 Salaire de base : 1000.0
-son Mentor est Marc avec le numero de paie 5203
-Salaire du mois : 1100.0
+Salaire du mois : 1000.0
+
+Nom : John // Employé qui n'a pas de mentoré
+Numéro de paie : 7
+Langage : Java
+Salaire de base : 3.0
+Salaire du mois : 3.3000002
 
 Nom : Camille // Mentoré
 Numéro de paie : 5202
@@ -13,18 +18,40 @@ Salaire de base : 1000.0
 son Mentor est Marc avec le numero de paie 5203
 Salaire du mois : 1100.0
 
-Nom : Marc // Mentor
-Numéro de paie : 5203
-Langage : Java
-Salaire de base : 1000.0
-Son (ses) mentoré(s) est(sont):
-Vincent avec le numero de paie de 5201
-Camille avec le numero de paie de 5202
-Salaire du mois : 1200.0
-
 Nom : Jean // Employé qui n'a pas de mentoré
 Numéro de paie : 5200
 Langage : C++
 Salaire de base : 1000.0
 Salaire du mois : 1000.0
+
+Nom : Rachid // Mentoré
+Numéro de paie : 5
+Langage : Java
+Salaire de base : 1500.0
+son Mentor est Henry avec le numero de paie 8
+Salaire du mois : 1650.0
+
+Nom : Vincent // Mentoré
+Numéro de paie : 5201
+Langage : Java
+Salaire de base : 1000.0
+son Mentor est Marc avec le numero de paie 5203
+Salaire du mois : 1100.0
+
+Nom : Henry // Mentor
+Numéro de paie : 8
+Langage : Java
+Salaire de base : 500.0
+Son (ses) mentoré(s) est(sont):
+Rachid avec le numero de paie de 5
+Salaire du mois : 575.0
+
+Nom : Marc // Mentor
+Numéro de paie : 5203
+Langage : Java
+Salaire de base : 1000.0
+Son (ses) mentoré(s) est(sont):
+Camille avec le numero de paie de 5202
+Vincent avec le numero de paie de 5201
+Salaire du mois : 1200.0
 

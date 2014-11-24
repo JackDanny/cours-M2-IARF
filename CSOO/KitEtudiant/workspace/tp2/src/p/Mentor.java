@@ -13,28 +13,47 @@ public class Mentor extends Employe {
 
 	/** constructeurs */
 
+	//on utilise les constructeur de Employe
 	public Mentor() {
 		super();
 	}
 
 	Mentor(String nom, int num, float salaryB) {
-
 		super(nom, num, salaryB);
-
 	}
+
+	public HashSet<Mentee> getMentees(){
+
+//		if(this.mentees != null){
+			return this.mentees;
+//		}
+//		return null;
+	}
+
+
 
 	/** methodes */
 
+	//Ajoute un Mentee au mentor
 	public void addMentee(Mentee me) {
+		//On ajoute le mentor au mentee. Si il est deja associe on en informe l'utilisateur.
 		if (this.mentees.add(me) == false) {
 			System.out
-					.println("\nCe Mentee (" + me.getName()
-							+ ") est deja associé à ce Mentor("
-							+ this.getName() + "\n");
+			.println("\nCe Mentee (" + me.getName()
+					+ ") est deja associe a� ce Mentor("
+					+ this.getName() + "\n");
 		}
 		;
 
 	}
+
+	//supprime un Mentee au mentor
+	public void suppMentee(Mentee me) {
+		this.mentees.remove(me);
+
+	}
+
+
 
 	/** bonus = 10% si java + 5% * Mentoree */
 	public int bonus() {
@@ -48,6 +67,14 @@ public class Mentor extends Employe {
 
 	public float getSalary() {
 		return (this.salaryBase) * (1 + (this.bonus() / 100.f));
+	}
+
+	public boolean hasMentee(){
+		if (this.mentees.size() == 0) {
+			return false;
+		}
+		return true;
+
 	}
 
 	public void display() {

@@ -9,7 +9,7 @@ public abstract class Employe {
 	String nom;
 	int num;
 	float salaryBase;
-	String langage;
+	String langage = "";
 
 	/** methodes */
 
