@@ -1,0 +1,266 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+/*on definit la matrice de Denavit Hartenberg*/
+
+dhmatrix(a,alpha,r,theta) :=
+matrix(
+ [cos(theta)           , -sin(theta)          , 0          , a], 
+ [sin(theta)*cos(alpha), cos(theta)*cos(alpha), -sin(alpha), -r*sin(alpha)], 
+ [sin(theta)*sin(alpha), cos(theta)*sin(alpha), cos(alpha) , r*cos(alpha)], 
+ [0                    , 0                    , 0          , 1]
+) $
+
+/*on definit toutes les matrices de changements*/
+
+"T01";
+T01:dhmatrix(0, 0     , 0 , q1);
+"T12";
+T12:dhmatrix(a1, 0 , 0 , q2);
+"T23";
+T23:dhmatrix(a2, 0 , q3, 0 );
+"T34";
+T34:dhmatrix(0, 0     , 0 , q4);
+
+/*calcul de T04*/
+
+T06: T01.T12.T23.T34;
+
+/*on substitue par les valeurs q1,...,qn*/
+
+"config 1";
+
+T06_1:subst(0,q1,T06)$
+T06_1:subst(0,q2,T06_1)$
+T06_1:subst(0,q3,T06_1)$
+T06_1:subst(0,q4,T06_1)$
+
+T06_1;
+
+"config 2";
+
+T06_2:subst(%pi/2,q1,T06)$
+T06_2:subst(0,q2,T06_2)$
+T06_2:subst(0,q3,T06_2)$
+T06_2:subst(0,q4,T06_2)$
+
+T06_2;
+
+"config 3";
+
+T06_3:subst(0,q1,T06)$
+T06_3:subst(%pi/2,q2,T06_3)$
+T06_3:subst(0,q3,T06_3)$
+T06_3:subst(0,q4,T06_3)$
+
+T06_3;
+
+"config 4";
+
+T06_4:subst(0,q1,T06)$
+T06_4:subst(0,q2,T06_4)$
+T06_4:subst(0,q3,T06_4)$
+T06_4:subst(%pi/2,q4,T06_4)$
+
+T06_4;
+
+"config 5";
+
+T06_5:subst(-%pi/2,q1,T06)$
+T06_5:subst(0,q2,T06_5)$
+T06_5:subst(0,q3,T06_5)$
+T06_5:subst(0,q4,T06_5)$
+
+T06_5;
+
+
+"config 6";
+
+T06_6:subst(0,q1,T06)$
+T06_6:subst(0,q2,T06_6)$
+T06_6:subst(-0.5,q3,T06_6)$
+T06_6:subst(0,q4,T06_6)$
+
+T06_6;
+
+"config 7";
+
+T06_7:subst(-%pi/2,q1,T06)$
+T06_7:subst(%pi/2,q2,T06_7)$
+T06_7:subst(-0.5,q3,T06_7)$
+T06_7:subst(0,q4,T06_7)$
+
+T06_7;
+
+
+
+
+
+"T04";
+
+
+
+
+
+T06:subst(c1,cos(q1),T06)$
+T06:subst(s1,sin(q1),T06)$
+T06:subst(c2,cos(q2),T06)$
+T06:subst(s2,sin(q2),T06)$
+T06:subst(c3,cos(q3),T06)$
+T06:subst(s3,sin(q3),T06)$
+T06:subst(c4,cos(q4),T06)$
+T06:subst(s4,sin(q4),T06)$
+
+T06;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+T01
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+\begin{pmatrix}\mathrm{cos}\left( q1\right)  & −\mathrm{sin}\left( q1\right)  & 0 & 0\cr \mathrm{sin}\left( q1\right)  & \mathrm{cos}\left( q1\right)  & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+T12
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+\begin{pmatrix}\mathrm{cos}\left( q2\right)  & −\mathrm{sin}\left( q2\right)  & 0 & a1\cr \mathrm{sin}\left( q2\right)  & \mathrm{cos}\left( q2\right)  & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+T23
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+\begin{pmatrix}1 & 0 & 0 & a2\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & q3\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+T34
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+\begin{pmatrix}\mathrm{cos}\left( q4\right)  & −\mathrm{sin}\left( q4\right)  & 0 & 0\cr \mathrm{sin}\left( q4\right)  & \mathrm{cos}\left( q4\right)  & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+\begin{pmatrix}\mathrm{cos}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{cos}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{sin}\left( q4\right) \right) −\mathrm{sin}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{sin}\left( q4\right) +\mathrm{sin}\left( q2\right) \,\mathrm{cos}\left( q4\right) \right)  & \mathrm{cos}\left( q1\right) \,\left( −\mathrm{cos}\left( q2\right) \,\mathrm{sin}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{cos}\left( q4\right) \right) −\mathrm{sin}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{cos}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{sin}\left( q4\right) \right)  & 0 & \mathrm{cos}\left( q1\right) \,\left( a2\,\mathrm{cos}\left( q2\right) +a1\right) −a2\,\mathrm{sin}\left( q1\right) \,\mathrm{sin}\left( q2\right) \cr \mathrm{sin}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{cos}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{sin}\left( q4\right) \right) +\mathrm{cos}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{sin}\left( q4\right) +\mathrm{sin}\left( q2\right) \,\mathrm{cos}\left( q4\right) \right)  & \mathrm{cos}\left( q1\right) \,\left( \mathrm{cos}\left( q2\right) \,\mathrm{cos}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{sin}\left( q4\right) \right) +\mathrm{sin}\left( q1\right) \,\left( −\mathrm{cos}\left( q2\right) \,\mathrm{sin}\left( q4\right) −\mathrm{sin}\left( q2\right) \,\mathrm{cos}\left( q4\right) \right)  & 0 & a2\,\mathrm{cos}\left( q1\right) \,\mathrm{sin}\left( q2\right) +\mathrm{sin}\left( q1\right) \,\left( a2\,\mathrm{cos}\left( q2\right) +a1\right) \cr 0 & 0 & 1 & q3\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+config 1
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o16) }
+\begin{pmatrix}1 & 0 & 0 & a2+a1\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o17) }
+config 2
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o22) }
+\begin{pmatrix}0 & −1 & 0 & 0\cr 1 & 0 & 0 & a2+a1\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o23) }
+config 3
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o28) }
+\begin{pmatrix}0 & −1 & 0 & a1\cr 1 & 0 & 0 & a2\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o29) }
+config 4
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o34) }
+\begin{pmatrix}0 & −1 & 0 & a2+a1\cr 1 & 0 & 0 & 0\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o35) }
+config 5
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o40) }
+\begin{pmatrix}0 & 1 & 0 & 0\cr −1 & 0 & 0 & −a2−a1\cr 0 & 0 & 1 & 0\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o41) }
+config 6
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o46) }
+\begin{pmatrix}1 & 0 & 0 & a2+a1\cr 0 & 1 & 0 & 0\cr 0 & 0 & 1 & −0.5\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o47) }
+config 7
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o52) }
+\begin{pmatrix}1 & 0 & 0 & a2\cr 0 & 1 & 0 & −a1\cr 0 & 0 & 1 & −0.5\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o53) }
+T04
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o62) }
+\begin{pmatrix}c1\,\left( c2\,c4−s2\,s4\right) −s1\,\left( c2\,s4+c4\,s2\right)  & c1\,\left( −c2\,s4−c4\,s2\right) −s1\,\left( c2\,c4−s2\,s4\right)  & 0 & c1\,\left( a2\,c2+a1\right) −a2\,s1\,s2\cr s1\,\left( c2\,c4−s2\,s4\right) +c1\,\left( c2\,s4+c4\,s2\right)  & c1\,\left( c2\,c4−s2\,s4\right) +s1\,\left( −c2\,s4−c4\,s2\right)  & 0 & a2\,c1\,s2+\left( a2\,c2+a1\right) \,s1\cr 0 & 0 & 1 & q3\cr 0 & 0 & 0 & 1\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

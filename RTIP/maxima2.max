@@ -1,0 +1,155 @@
+kill(all);
+
+q1:0;
+
+q2:0;
+q3:0;
+q4:0;
+
+
+/*on definit la matrice de Denavit Hartenberg*/
+
+dhmatrix(a,alpha,r,theta) :=
+matrix(
+ [cos(theta)           , -sin(theta)          , 0          , a], 
+ [sin(theta)*cos(alpha), cos(theta)*cos(alpha), -sin(alpha), -r*sin(alpha)], 
+ [sin(theta)*sin(alpha), cos(theta)*sin(alpha), cos(alpha) , r*cos(alpha)], 
+ [0                    , 0                    , 0          , 1]
+) $
+
+/*on definit toutes les matrices de changements*/
+
+"T01";
+T01:dhmatrix(0, 0     , 0 , q1);
+"T12";
+T12:dhmatrix(a1, 0 , 0 , q2);
+"T23";
+T23:dhmatrix(a2, 0 , q3, 0 );
+"T34";
+T34:dhmatrix(0, 0     , 0 , q4);
+
+/*calcul de T04*/
+
+T06: T01.T12.T23.T34;
+
+/*on substitue par les valeurs q1,...,qn*/
+
+"config 1";
+
+T06_1:subst(0,q1,T06)$
+T06_1:subst(0,q2,T06_1)$
+T06_1:subst(0,q3,T06_1)$
+T06_1:subst(0,q4,T06_1)$
+
+T06_1;
+
+"config 2";
+
+T06_2:subst(%pi/2,q1,T06)$
+T06_2:subst(0,q2,T06_2)$
+T06_2:subst(0,q3,T06_2)$
+T06_2:subst(0,q4,T06_2)$
+
+T06_2;
+
+"config 3";
+
+T06_3:subst(0,q1,T06)$
+T06_3:subst(%pi/2,q2,T06_3)$
+T06_3:subst(0,q3,T06_3)$
+T06_3:subst(0,q4,T06_3)$
+
+T06_3;
+
+"config 4";
+
+T06_4:subst(0,q1,T06)$
+T06_4:subst(0,q2,T06_4)$
+T06_4:subst(0,q3,T06_4)$
+T06_4:subst(%pi/2,q4,T06_4)$
+
+T06_4;
+
+"config 5";
+
+T06_5:subst(-%pi/2,q1,T06)$
+T06_5:subst(0,q2,T06_5)$
+T06_5:subst(0,q3,T06_5)$
+T06_5:subst(0,q4,T06_5)$
+
+T06_5;
+
+
+"config 6";
+
+T06_6:subst(0,q1,T06)$
+T06_6:subst(0,q2,T06_6)$
+T06_6:subst(-0.5,q3,T06_6)$
+T06_6:subst(0,q4,T06_6)$
+
+T06_6;
+
+"config 7";
+
+T06_7:subst(-%pi/2,q1,T06)$
+T06_7:subst(%pi/2,q2,T06_7)$
+T06_7:subst(-0.5,q3,T06_7)$
+T06_7:subst(0,q4,T06_7)$
+
+T06_7;
+
+"T2C";
+
+T2C:matrix(
+ [-1, 0, 0, L3+a2], 
+ [ 0, 1, 0, 0 ], 
+ [ 0, 0,-1, 0 ], 
+ [ 0, 0, 0, 1]
+);
+
+"T0C";
+
+T0C:T01.T12.T2C;
+
+"T0C simplifie";
+
+T0C_s:subst(c1,cos(q1),T0C)$
+T0C_s:subst(s1,sin(q1),T0C_s)$
+T0C_s:subst(c2,cos(q2),T0C_s)$
+T0C_s:subst(s2,sin(q2),T0C_s)$
+T0C_s:subst(c3,cos(q3),T0C_s)$
+T0C_s:subst(s3,sin(q3),T0C_s)$
+T0C_s:subst(c4,cos(q4),T0C_s)$
+T0C_s:subst(s4,sin(q4),T0C_s)$
+
+T0C_s;
+
+
+
+/*
+"T04";
+
+T06:subst(c1,cos(q1),T06)$
+T06:subst(s1,sin(q1),T06)$
+T06:subst(c2,cos(q2),T06)$
+T06:subst(s2,sin(q2),T06)$
+T06:subst(c3,cos(q3),T06)$
+T06:subst(s3,sin(q3),T06)$
+T06:subst(c4,cos(q4),T06)$
+T06:subst(s4,sin(q4),T06)$
+*/
+"T06";
+T06;
+
+piece:matrix([0.5],[0],[h],[1])$
+T0C.piece;
+
+
+
+"T4C";
+invert(T06).T0C.piece;
+
+
+
+
+
