@@ -1,0 +1,94 @@
+kill(all);
+
+
+
+/*on definit la matrice de Denavit Hartenberg*/
+
+dhmatrix(a,alpha,r,theta) :=
+matrix(
+ [cos(theta)           , -sin(theta)          , 0          , a], 
+ [sin(theta)*cos(alpha), cos(theta)*cos(alpha), -sin(alpha), -r*sin(alpha)], 
+ [sin(theta)*sin(alpha), cos(theta)*sin(alpha), cos(alpha) , r*cos(alpha)], 
+ [0                    , 0                    , 0          , 1]
+) $
+
+/*on definit toutes les matrices de changements*/
+
+"T01";
+T01:dhmatrix(0, 0     , 0 , q1);
+
+"T12";
+T12:dhmatrix(a1, 0 , 0 , q2);
+
+
+"T23";
+T23:dhmatrix(a2, 0 , q3, 0 );
+
+
+"T34";
+T34:dhmatrix(0, 0     , 0 , q4);
+
+
+/*calcul de T04*/
+
+T04: T01.T12.T23.T34;
+
+
+T04:expand(T04);
+
+T04:subst(c124, −c1*s2*s4−c2*s1*s4−c4*s1*s2+c1*c2*c4, T04);
+
+T04:subst(-s124, s1*s2*s4−c1*c2*s4−c1*c4*s2−c2*c4*s1, T04);
+
+T04:subst(s124, −s1*s2*s4+c1*c2*s4+c1*c4*s2+c2*c4*s1, T04);
+
+T04:subst(L1*c1 + L2*c12, −a2*s1*s2+a2*c1*c2+a1*c1,  T04);
+
+T04:subst(L1*s1 + L2*s12, a2*c1*s2+a2*c2*s1+a1*s1,  T04);
+
+T04x:matrix([0,0,0,X],
+              [0,0,0,Y],
+              [0,0,0,Z],
+              [0  ,0  ,0  ,1  ]);
+
+T10:ratsimp(invert(T01));
+
+T10:subst(1, sin(q1)^2+cos(q1)^2,  T10);
+
+
+T21:ratsimp(invert(T12));
+T21:subst(1, sin(q2)^2+cos(q2)^2,  T21);
+
+
+
+
+
+"T24(q)";
+T24x:T21.T10.T04x;
+
+
+T24x:subst(c1,cos(q1),T24x)$
+T24x:subst(s1,sin(q1),T24x)$
+T24x:subst(c2,cos(q2),T24x)$
+T24x:subst(s2,sin(q2),T24x)$
+T24x:subst(c3,cos(q3),T24x)$
+T24x:subst(s3,sin(q3),T24x)$
+T24x:subst(c4,cos(q4),T24x)$
+T24x:subst(s4,sin(q4),T24x)$
+T24x;
+
+"T24(q)";
+T24q:T23.T34;
+
+
+T24q:subst(c1,cos(q1),T24q)$
+T24q:subst(s1,sin(q1),T24q)$
+T24q:subst(c2,cos(q2),T24q)$
+T24q:subst(s2,sin(q2),T24q)$
+T24q:subst(c3,cos(q3),T24q)$
+T24q:subst(s3,sin(q3),T24q)$
+T24q:subst(c4,cos(q4),T24q)$
+T24q:subst(s4,sin(q4),T24q)$
+T24q;
+
+

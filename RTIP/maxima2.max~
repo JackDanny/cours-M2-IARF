@@ -1,5 +1,10 @@
 kill(all);
 
+q1:0;
+q2:0;
+q3:0;
+q4:%pi/2;
+
 /*on definit la matrice de Denavit Hartenberg*/
 
 dhmatrix(a,alpha,r,theta) :=
@@ -24,6 +29,18 @@ T34:dhmatrix(0, 0     , 0 , q4);
 /*calcul de T04*/
 
 T06: T01.T12.T23.T34;
+
+T06_s:subst(c1,cos(q1),T06)$
+T06_s:subst(s1,sin(q1),T06_s)$
+T06_s:subst(c2,cos(q2),T06_s)$
+T06_s:subst(s2,sin(q2),T06_s)$
+T06_s:subst(c3,cos(q3),T06_s)$
+T06_s:subst(s3,sin(q3),T06_s)$
+T06_s:subst(c4,cos(q4),T06_s)$
+T06_s:subst(s4,sin(q4),T06_s)$
+T06_s;
+
+
 
 /*on substitue par les valeurs q1,...,qn*/
 
@@ -131,6 +148,7 @@ T06:subst(s3,sin(q3),T06)$
 T06:subst(c4,cos(q4),T06)$
 T06:subst(s4,sin(q4),T06)$
 */
+
 "T06";
 T06;
 
@@ -138,14 +156,11 @@ piece:matrix([0.5],[0],[h],[1])$
 T0C.piece;
 
 
-q1:0;
-
-q2:0;
-q3:0;
-q4:0;
 
 "T4C";
 invert(T06).T0C.piece;
+
+
 
 
 
