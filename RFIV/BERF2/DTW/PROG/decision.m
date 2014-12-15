@@ -4,6 +4,6 @@ function [dist,mot]= decision(ListCoutTotal,ListeMot)
 [dist,indexMot]=min(ListCoutTotal);
 
 %on retourne le mot correspondant
-mot=ListeMot(indexMot);
+mot=indexMot;
 
 
