@@ -17,6 +17,8 @@ if (opts.fmt.nChannels ~= 1)
     error('Erreur : vous ne travaillez pas avec des fichiers mono.');
 end
 
+%coeffCepstraux=melcepst(y,freqEch);
+%coeffCepstraux=coeffCepstraux';
 
 dureeFenetre = 30e-3;
 nbEchParFenetre = freqEch * dureeFenetre;
@@ -33,4 +35,5 @@ for i = 1 : size(fenetreAnalyse, 2)
     r = rceps(fenetreAnalyse(:,i).*hamming(l));
     coeffCepstraux(1:32, i) = r(2:33);
 end
+
 

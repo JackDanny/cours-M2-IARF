@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int k=2;
+		int k=100;
 
 		BufferedReader IN = null;
 
@@ -52,7 +52,7 @@ public class Main {
 
 				} 
 				else {
-					System.out.println("pas de fichier graphe");
+					
 				}
 
 			}
