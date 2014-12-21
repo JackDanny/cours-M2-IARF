@@ -1,0 +1,48 @@
+
+$unite = un;
+$unite2 = sept | huit | neuf;
+$unite3= deux | trois | quatre | cinq | six ;
+$unite4 =  douze | treize | quatorze | quinze | seize;
+$unite5 = onze
+
+$dizaine2 = vingt | trente | quarante | cinquante | soixante;
+$dizaine3 = (quatre vingt) [$unite | $unite2 | $unite3 | $unite4 | $unite5 | (dix [$unite2]);
+
+$dizaine = $unite4 | (dix [$unite2]) |($dizaine2 et un) | ($dizaine2 [($unite3 |$unite2)]) | (soixante et onze) | (soixante [$unite4|(dix [$unite2])]) |
+($dizaine3 );
+
+$operator1= (plus moins multiplier fois diviser sur);
+$operator2= (egal);
+
+
+(SENT-START ( [pause] ( cinq
+| cinquante
+| deux
+| diviser
+| dix
+| douze
+| egal
+| et
+| fois
+| huit
+| moins
+| multiplier
+| neuf
+| onze
+| par
+| plus
+| quarante
+| quatorze
+| quatre
+| quinze
+| seize
+| sept
+| six
+| soixante
+| sur
+| treize
+| trente
+| trois
+| un
+| vingt
+| zero ) [pause] ) SENT-END ) 

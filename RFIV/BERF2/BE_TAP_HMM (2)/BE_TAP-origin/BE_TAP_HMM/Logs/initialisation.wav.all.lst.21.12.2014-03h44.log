@@ -1,0 +1,578 @@
+dimanche 21 décembre 2014, 03:44:01 (UTC+0100)
+~~~~~~~~~~~ modele cinq ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/cinq -l cinq -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/cinq -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/cinq . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  cinq
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele cinquante ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/cinquante -l cinquante -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/cinquante -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/cinquante . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  cinquante
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele deux ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/deux -l deux -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/deux -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/deux . . . 
+ States   :   2  3 (width)
+ Mixes  s1:   1  1 ( 39  )
+ Num Using:   0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  deux
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele diviser ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/diviser -l diviser -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/diviser -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/diviser . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  diviser
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele dix ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/dix -l dix -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/dix -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/dix . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  dix
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele douze ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/douze -l douze -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/douze -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/douze . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  douze
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele egal ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/egal -l egal -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/egal -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/egal . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  egal
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele et ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/et -l et -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/et -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/et . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  et
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+10 Observation Sequences Loaded
+Starting Estimation Process
+Iteration 1: Average LogP =   -54.36605
+Iteration 2: Average LogP =   -52.06346  Change =     2.30259
+Iteration 3: Average LogP =   -52.06346  Change =     0.00000
+Estimation converged at iteration 4
+Output written to directory current
+~~~~~~~~~~~ modele fois ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/fois -l fois -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/fois -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/fois . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  fois
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele huit ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/huit -l huit -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/huit -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/huit . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  huit
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele moins ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/moins -l moins -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/moins -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/moins . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  moins
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele multiplier ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/multiplier -l multiplier -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/multiplier -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/multiplier . . . 
+ States   :   2  3  4  5  6  7  8  9 10 11 12 13 (width)
+ Mixes  s1:   1  1  1  1  1  1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  multiplier
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele neuf ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/neuf -l neuf -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/neuf -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/neuf . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  neuf
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele onze ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/onze -l onze -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/onze -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/onze . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  onze
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele par ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/par -l par -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/par -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/par . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  par
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele plus ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/plus -l plus -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/plus -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/plus . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  plus
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele quarante ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/quarante -l quarante -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/quarante -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/quarante . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quarante
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele quatorze ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/quatorze -l quatorze -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/quatorze -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/quatorze . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quatorze
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele quatre ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/quatre -l quatre -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/quatre -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/quatre . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quatre
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele quinze ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/quinze -l quinze -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/quinze -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/quinze . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quinze
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele seize ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/seize -l seize -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/seize -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/seize . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  seize
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele sept ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/sept -l sept -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/sept -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/sept . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  sept
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele six ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/six -l six -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/six -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/six . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  six
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele soixante ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/soixante -l soixante -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/soixante -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/soixante . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  soixante
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele sur ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/sur -l sur -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/sur -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/sur . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  sur
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele treize ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/treize -l treize -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/treize -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/treize . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  treize
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele trente ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/trente -l trente -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/trente -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/trente . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  trente
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele trois ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/trois -l trois -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/trois -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/trois . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  trois
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele un ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/un -l un -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/un -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/un . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  un
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+10 Observation Sequences Loaded
+Starting Estimation Process
+Iteration 1: Average LogP =   -51.05217
+Iteration 2: Average LogP =   -48.74958  Change =     2.30259
+Iteration 3: Average LogP =   -48.74958  Change =     0.00000
+Estimation converged at iteration 4
+Output written to directory current
+~~~~~~~~~~~ modele vingt ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/vingt -l vingt -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/vingt -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/vingt . . . 
+ States   :   2  3 (width)
+ Mixes  s1:   1  1 ( 39  )
+ Num Using:   0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  vingt
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele zero ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/zero -l zero -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/zero -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/zero . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  zero
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+  ERROR [+2121]  HInit: Too Few Observation Sequences [0]
+ FATAL ERROR - Terminating program HInit
+~~~~~~~~~~~ modele pause ~~~~~~~~~~~~~
+HInit -A -C Modeles/htk.conf -o Modeles/init/pause -l pause -L Labels/ -i 30 -T 1 -m 3 Modeles/gabarits/pause -S Listes/wav.all.lst 
+Initialising  HMM Modeles/gabarits/pause . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:  32 32 32 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  pause
+ maxIter  :  30
+ epsilon  :  0.000100
+ minSeg   :  3
+ Updating :  Means Variances MixWeights/DProbs TransProbs
+
+ - system is PLAIN
+7 Observation Sequences Loaded
+Starting Estimation Process
+Iteration 1: Average LogP =-16458.50391
+Iteration 2: Average LogP =-16199.84668  Change =   258.65723
+Iteration 3: Average LogP =-16134.00781  Change =    65.83887
+Iteration 4: Average LogP =-16099.41699  Change =    34.59082
+Iteration 5: Average LogP =-16078.72363  Change =    20.69336
+Iteration 6: Average LogP =-16067.32031  Change =    11.40332
+Iteration 7: Average LogP =-16058.16309  Change =     9.15723
+Iteration 8: Average LogP =-16054.25488  Change =     3.90820
+Iteration 9: Average LogP =-16050.15820  Change =     4.09668
+Iteration 10: Average LogP =-16047.11426  Change =     3.04395
+Iteration 11: Average LogP =-16046.30176  Change =     0.81250
+Iteration 12: Average LogP =-16045.13574  Change =     1.16602
+Iteration 13: Average LogP =-16044.50879  Change =     0.62695
+Iteration 14: Average LogP =-16042.99414  Change =     1.51465
+Iteration 15: Average LogP =-16041.63965  Change =     1.35449
+Iteration 16: Average LogP =-16041.03711  Change =     0.60254
+Iteration 17: Average LogP =-16040.64062  Change =     0.39648
+Iteration 18: Average LogP =-16039.98242  Change =     0.65820
+Iteration 19: Average LogP =-16039.47168  Change =     0.51074
+Iteration 20: Average LogP =-16039.47168  Change =     0.00000
+Estimation converged at iteration 21
+Output written to directory current
+dimanche 21 décembre 2014, 03:44:33 (UTC+0100)

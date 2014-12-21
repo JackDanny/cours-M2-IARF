@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0091)http://moodle.univ-tlse3.fr/pluginfile.php/91644/course/section/12729/feuille220142015.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Feuille 3. Projet IARF</title>
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css">
+body {max-width : 21cm}
+/* Century Schoolbook font is very similar to Computer Modern Math: cmmi */
+.MATH    { font-family: "Century Schoolbook", serif; }
+.MATH I  { font-family: "Century Schoolbook", serif; font-style: italic }
+.BOLDMATH { font-family: "Century Schoolbook", serif; font-weight: bold }
+
+/* heading styles */
+H1		{  }
+H2		{}
+H3		{  }
+H4		{  }
+H5		{  }
+
+/* mathematics styles */
+DIV.displaymath		{ }	/* math displays */
+TD.eqno			{ }	/* equation-number cells */
+
+.invisible {display:none;text-align:justify; }
+
+
+p.code{white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -o-pre-wrap;
+ background: #faf8f0;
+border: 2px solid #003B62;
+display:none;
+}
+</style>
+<script type="text/javascript">
+<!--
+  function afficher(id) {
+	elem = document.getElementById(id);
+	elem.style.display = (elem.style.display == 'block') ? 'none' : 'block' ;
+	return false;
+}
+// -->
+</script> 
+<style type="text/css"></style></head>
+<body>
+Projet. Master 2- Parcours IARF - Univ. Toulouse III<br><br>
+<p>
+
+</p><h1 align="center"><a name="TITRE">
+Feuille de projet n<span class="MATH">°</span> 2 : Problèmes de
+planification</a>
+</h1>
+
+
+<h2><a name="SECTION1" href="" onclick="return afficher(&#39;intro&#39;);">
+1. Rappels sur la planification et présentation du "Wumpus world"</a>
+</h2>
+<div id="intro" class="invisible">
+Le <a href="http://users.cecs.anu.edu.au/~patrik/pddlman/writing.html">
+langage PDDL</a> permet de représenter les problèmes de planifications, il
+est considéré comme un standard et utilisé lors des 
+<a href="http://ipc.icaps-conference.org/">compétitions internationnales de planification</a>.
+
+La description du problème de planification se fait en deux étapes :
+<ul type="disc">
+<li> description du domaine (cliquez pour voir l'exemple  
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus1.pddl.txt" target="_blank" title="wumpus1">wumpus1.pddl</a>)
+</li><li> description d'un problème particulier du domaine. (cliquez pour voir l'exemple  
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus1pb.pddl.txt" target="_blank">wumpus1pb.pddl</a>)
+</li>
+</ul>
+
+L'exemple du Wumpus  est issu d'un jeu vidéo 
+<a href="http://en.wikipedia.org/wiki/Hunt_the_Wumpus">"Hunt the Wumpus"</a> 
+écrit par Gregory Yob en 1973, il fut repris comme exemple pour l'intelligence
+artificielle par Michael Genesereth et développé dans le livre de Russell et
+Norvig. <br>
+
+Le Wumpus world et une cave avec des pièces représentées par une
+grille (dans "la chasse au Wumpus" le joueur pouvait se promener dans un
+dodécaèdre mais les variantes ont simplifié ce domaine).<br>
+
+Une pièce est voisine avec 4 autres pièces au maximum : situées au nord, au sud, à
+l'est et à l'ouest de cette pièces.<br>
+
+Dans une pièce il peut y avoir de l'or, une fosse ou un wumpus (on
+considère ici une version simplifiée, dans le
+modèle de Russel et Norvig, une brise passe dans chaque pièce voisine 
+d'une falaise et l'agent sent la puanteur du Wumpus depuis les pièces
+voisines, il entend aussi des cris quand le wumpus est tué et Bump quand
+il fonce dans un mur).<br>
+
+Dans notre version simplifiée, un agent ne peut faire que 
+l'une des trois actions suivantes : <ul><li>Shoot,</li><li>
+    Take,</li> <li>Move.</li></ul> 
+
+L'agent ne peut pas aller dans la 
+pièce qui contient une fosse, l'agent peut prendre l'or s'il est dans la
+pièce où est l'or, l'agent peut tirer sur le wumpus s'il est dans une pièce
+voisine et s'il possède une flèche. Si l'agent passe dans une pièce occupée par un
+wumpus vivant alors il meurt.
+
+Un exemple de problème est représenté par le tableau suivant : <br>
+<p align="center"><table border="1" cellpadding="1" cellspacing="2" align="CENTER">
+<thead><tr>
+        <th align="CENTER"></th>
+	<th align="CENTER" width="75">1</th>
+	<th align="CENTER" width="75">2</th>
+	<th align="CENTER" width="75">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th height="50">1</th>
+	<td align="CENTER">Agent</td>
+	<td align="CENTER">fosse</td>
+	<td align="CENTER">or</td>
+</tr>
+<tr>	<th height="50">2</th>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td align="CENTER">Wumpus</td>
+</tr>
+</tbody></table></p><br>
+
+On sait que l'agent possède une flèche, le but est d'arriver à ce que
+l'agent soit dans la pièce 1.1. en possession de l'or. 
+
+</div>
+<h2><a name="SECTION2" href="" onclick="return afficher(&#39;ffplan&#39;);">
+2. Utilisation du planificateur FF </a>
+</h2>
+<div id="ffplan" class="invisible">
+Nous allons utiliser un planificateur
+nommé <a href="http://fai.cs.uni-saarland.de/hoffmann/ff.html">FF</a>.
+
+FF est un planificateur de "recherche avant" dans l'espace des plans avec
+heuristique. Le principe de l'heuristique utilisée fut developpé à l'origine par Blai
+Bonet et Hector Geffner pour le système HSP :
+pour obtenir une estimation, on relache le problème P en un problème plus simple
+P+ avec une delete list vide pour tous les opérateurs. 
+Alors que HSP utilisait une technique basée sur une estimation grossière de
+la longueur de la solution du problème P+, FF, lui, extrait une solution
+explicite de P+ en utilisant un algorithme du style GRAPHPLAN qui guide
+la recherche en avant.<br>
+
+<p>FF est disponible sous la licence GNU. Vous devez récupérer la version
+<a href="http://fai.cs.uni-saarland.de/hoffmann/ff/FF-v2.3.tgz">FF-v2.3</a>
+pour linux. </p><br>
+
+La commande pour décompresser l'archive est :
+<pre>gunzip FF-v2.3.tgz</pre>
+
+Vous devez ensuite l'extraire :
+<pre>tar xvf  FF-v2.3.tar</pre>
+
+Le plannificateur FF prend ensuite deux fichiers en entrée au format PDDL,
+l'un décrivant le domaine et l'autre le problème. 
+Lancez la commande :
+<pre>ff -o wumpus1.pddl -f wumpus1pb.pddl</pre>
+
+</div>
+
+<h2><a name="SECTION3" href="" onclick="return afficher(&#39;exemples&#39;);">
+3. Tests de FF sur des petits exemples </a>
+</h2>
+<div id="exemples" class="invisible">
+<ol>
+<li> Expliquez pourquoi le plan obtenu n'est pas correct.</li>
+<li> Essayez avec la version suivante
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus2.pddl.txt" target="_blank">wumpus2.pddl</a>
+et <a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus2pb.pddl.txt" target="_blank">wumpus2pb.pddl</a>
+Le plan obtenu est-il correct? Expliquez pourquoi.</li>
+<li> Même question avec la troisième
+  version <a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus3.pddl.txt" target="_blank">wumpus3.pddl</a>
+  et <a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus3pb.pddl.txt" target="_blank">wumpus3pb.pddl</a></li>
+<li> Même question avec la quatrième
+  version <a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus4.pddl.txt" target="_blank">wumpus4.pddl</a>
+  et <a href="http://moodle.ups-tlse.fr/file.php/1408/TP3/wumpus4pb.pddl.txt" target="_blank">wumpus4pb.pddl</a></li>
+<li> Le problème
+  des <a href="http://fr.wikipedia.org/wiki/Tours_de_Hano%C3%AF"><b>Tours de
+    Hanoi</b></a> est un jeu mathématique. Il est constitué de trois piques et
+  d'un certain nombre de disques de différentes tailles qui peuvent
+  s'enfiler sur les piques. Au début du jeu, tous les disques sont empilés
+  sur une pique, le plus petit au sommet, formant ainsi un cône.<br>
+<br>
+L'objectif du jeu et de déplacer toute la pile de disque sur une autre
+  pique, en respectant les règles suivantes :
+<ul type="disc">
+<li> On ne peut bouger qu'un seul disque à la fois</li>
+<li> Un disque ne peut être placé que sur un disque plus grand (pas
+  nécéssairement de taille voisine, ainsi : le plus petit disque peut être
+  posé directement sur le plus gros disque).</li>
+</ul> <br>
+Vous allez devoir coder le domaine des tours de Hanoi et résoudre un problème
+particulier avec 4 disques :
+<ol type="a">
+<li> Ecrivez le code PDDL permettant de représenter le domaine des Tours de
+  Hanoi. Vous utiliserez trois prédicats : un prédicat unaire appelé
+  "libre", deux prédicats binaires "sur" et "plus-petit". Une seule action
+  "deplacer" est suffisante.</li>
+<li> Ecrivez le code PDDL représentant problème avec 4 disques : D1 étant plus
+  petit que D2 qui est lui-même plus petit que D3 qui est plus petit que
+  D4. Tous les disques sont sur la pique 1, avec D1 sur D2 qui est sur D3
+  qui est sur D4. Le but est d'avoir D1 sur D2, D2 sur D3, D3 sur D4 et D4
+  sur la pique 3.</li>
+<li> Résolvez ce problème en utilisant ff.</li>
+</ol>
+</li>
+<li> : <b>3-SAT :</b> On considère une formule propositionnelle contenant 3
+  variables. L'objectif est de trouver si elle est satisfaisable et si oui d'en
+  donner une interprétation.
+<ol type="a"><li> Ecrivez le code PDDL permettant de représenter le domaine de la
+    satisfiabilité des formules propositionnelles à trois variables. Vous
+    aurez besoin d'actions qui permettent d'assigner une valeur booléenne à
+    une variable propositionnelle. </li>
+<li> Ecrivez le code PDDL correspondant à la formule suivante : <i>((x1 ou x2 ou
+    x3) et (non x2) et (non x1 ou non x2) et (non x1 ou non x3) et (non x2 ou non x3))</i>.</li>
+<li> Résolvez ce problème en utilisant ff.</li>
+</ol>
+</li><li> : <b>CSP:</b> On considère le CSP correspondant à la coloration du graphe à
+  4 sommets A,B,C et D et 5 arcs (AB), (AC), (BC), (BD) et (CD) que l'on désire
+  colorier avec 3 couleurs.  L'objectif est de trouver une coloration. Ecrivez
+  le code PDDL permettant de coder un domaine et une instance du domaine
+  permettant d'arriver à une solution.
+</li><li> Modifiez le code du <b>wumpus1</b> afin que l'or ne puisse pas bouger. Testez
+  le plan obtenu. Modifiez le code afin d'assurer que toute rencontre avec
+  un Wumpus vivant soit mortelle (soit en allant vers lui soit parcequ'il
+  vient à l'agent). Enfin, transformez l'action "move" pour qu'elle devienne
+  à effets conditionnels : on peut aller vers une fosse mais l'effet est
+  mortel, de même on peut aller vers un wumpus vivant mais ça fait mal.</li>
+<li> Modifiez l'action move du <b>wumpus2</b> pour la rendre à effet conditionnel
+  comme précédemment et pour qu'on obtienne un plan rationnel. </li>
+<li> Faîtes de même pour <b>wumpus3</b>.</li>
+<li>Testez ff sur un problème
+ de <a href="http://fr.wikipedia.org/wiki/Taquin">Taquin</a> 3x2 
+ (vous pouvez vous servir des adjacences dans le Wumpus pour coder
+ l'adjacence des cases du taquin). </li>
+</ol></div>
+
+<h2><a name="SECTION4" href="" onclick="return afficher(&#39;gros&#39;);">
+4. Tests sur de plus gros exemples </a>
+</h2>
+<div id="gros" class="invisible">
+<ol>
+<li> Générez des taquins de plus grande dimension, par exemple 5x5, et testez si ff trouve  un plan. </li>
+ <li>Testez ff sur un problème de <a href="http://fr.wikipedia.org/wiki/Sokoban">Sokoban</a>.</li>
+ <li>Visitez le dépot de
+ problèmes <a href="http://scom.hud.ac.uk/planet/repository/">
+ scom.hud.ac.uk/planet/repository</a> et testez-en deux ou trois.
+</li></ol>
+</div>
+
+
+
+</body></html>

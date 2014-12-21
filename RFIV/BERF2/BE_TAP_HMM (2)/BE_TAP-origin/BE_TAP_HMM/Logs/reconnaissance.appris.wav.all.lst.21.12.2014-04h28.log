@@ -1,0 +1,626 @@
+HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.all.lst Modeles/dictionnaire Modeles/liste-mots 
+Read 32 physical / 32 logical HMMs
+Read lattice with 38 nodes / 67 arcs
+Created network with 73 nodes / 102 links
+File: Signaux/promo2012/cinq_alban_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [53 frames] -51.0402 [Ac=-2705.1 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/cinq_brice_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [51 frames] -57.4959 [Ac=-2932.3 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/cinq_dominique_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [50 frames] -57.3453 [Ac=-2867.3 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/cinq_eric_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [53 frames] -53.0000 [Ac=-2809.0 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/cinq_etienne_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [65 frames] -55.5617 [Ac=-3611.5 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/cinq_gabrielides_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [76 frames] -60.1515 [Ac=-4571.5 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/cinq_hyliass_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [50 frames] -86.6873 [Ac=-4334.4 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/cinq_jean_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [59 frames] -54.2643 [Ac=-3201.6 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/cinq_nabil_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [60 frames] -81.3413 [Ac=-4880.5 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/cinq_thomas_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [53 frames] -60.0545 [Ac=-3182.9 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/cinquante_alban_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [75 frames] -55.2496 [Ac=-4143.7 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/cinquante_brice_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [119 frames] -50.4038 [Ac=-5998.0 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/cinquante_dominique_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [61 frames] -56.9759 [Ac=-3475.5 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/cinquante_eric_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [110 frames] -53.5124 [Ac=-5886.4 LM=0.0] (Act=68.7)
+File: Signaux/promo2012/cinquante_etienne_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [86 frames] -56.0344 [Ac=-4819.0 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/cinquante_gabrielides_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [122 frames] -54.5733 [Ac=-6657.9 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/cinquante_hyliass_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [95 frames] -84.0520 [Ac=-7984.9 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/cinquante_jean_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [61 frames] -57.5663 [Ac=-3511.5 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/cinquante_nabil_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [94 frames] -81.6969 [Ac=-7679.5 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/cinquante_thomas_2012.wav
+SENT-START pause cinquante pause SENT-END  ==  [61 frames] -58.3057 [Ac=-3556.6 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/deux_alban_2012.wav
+SENT-START pause deux pause SENT-END  ==  [24 frames] -58.8348 [Ac=-1412.0 LM=0.0] (Act=64.1)
+File: Signaux/promo2012/deux_brice_2012.wav
+SENT-START pause deux pause SENT-END  ==  [30 frames] -54.5588 [Ac=-1636.8 LM=0.0] (Act=65.3)
+File: Signaux/promo2012/deux_dominique_2012.wav
+SENT-START pause deux pause SENT-END  ==  [34 frames] -55.0080 [Ac=-1870.3 LM=0.0] (Act=65.9)
+File: Signaux/promo2012/deux_eric_2012.wav
+SENT-START pause deux pause SENT-END  ==  [37 frames] -58.2839 [Ac=-2156.5 LM=0.0] (Act=66.2)
+File: Signaux/promo2012/deux_etienne_2012.wav
+SENT-START pause deux pause SENT-END  ==  [41 frames] -52.7349 [Ac=-2162.1 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/deux_gabrielides_2012.wav
+SENT-START pause deux pause SENT-END  ==  [42 frames] -52.9290 [Ac=-2223.0 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/deux_hyliass_2012.wav
+SENT-START pause deux pause SENT-END  ==  [42 frames] -54.7121 [Ac=-2297.9 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/deux_jean_2012.wav
+SENT-START pause deux pause SENT-END  ==  [41 frames] -50.3840 [Ac=-2065.7 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/deux_nabil_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [26 frames] -81.0647 [Ac=-2107.7 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/deux_thomas_2012.wav
+SENT-START pause deux pause SENT-END  ==  [26 frames] -62.1503 [Ac=-1615.9 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/diviser_alban_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [55 frames] -51.6305 [Ac=-2839.7 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/diviser_brice_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [99 frames] -52.1480 [Ac=-5162.7 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/diviser_dominique_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [65 frames] -49.0724 [Ac=-3189.7 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/diviser_eric_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [95 frames] -51.8981 [Ac=-4930.3 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/diviser_etienne_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [63 frames] -53.3235 [Ac=-3359.4 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/diviser_gabrielides_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [72 frames] -56.6633 [Ac=-4079.8 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/diviser_hyliass_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [81 frames] -69.7798 [Ac=-5652.2 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/diviser_jean_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [79 frames] -53.0743 [Ac=-4192.9 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/diviser_nabil_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [93 frames] -66.6850 [Ac=-6201.7 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/diviser_thomas_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [45 frames] -55.2754 [Ac=-2487.4 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/dix_alban_2012.wav
+SENT-START pause six pause SENT-END  ==  [57 frames] -49.9181 [Ac=-2845.3 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/dix_brice_2012.wav
+SENT-START pause dix pause SENT-END  ==  [66 frames] -54.6735 [Ac=-3608.4 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/dix_dominique_2012.wav
+SENT-START pause dix pause SENT-END  ==  [48 frames] -55.9476 [Ac=-2685.5 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/dix_eric_2012.wav
+SENT-START pause dix pause SENT-END  ==  [50 frames] -55.3737 [Ac=-2768.7 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/dix_etienne_2012.wav
+SENT-START pause dix pause SENT-END  ==  [72 frames] -52.0889 [Ac=-3750.4 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/dix_gabrielides_2012.wav
+SENT-START pause dix pause SENT-END  ==  [88 frames] -55.2450 [Ac=-4861.6 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/dix_hyliass_2012.wav
+SENT-START pause dix pause SENT-END  ==  [68 frames] -73.1438 [Ac=-4973.8 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/dix_jean_2012.wav
+SENT-START pause dix pause SENT-END  ==  [71 frames] -55.3403 [Ac=-3929.2 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/dix_nabil_2012.wav
+SENT-START pause dix pause SENT-END  ==  [55 frames] -74.4010 [Ac=-4092.1 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/dix_thomas_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [58 frames] -58.3451 [Ac=-3384.0 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/douze_alban_2012.wav
+SENT-START pause douze pause SENT-END  ==  [43 frames] -57.0799 [Ac=-2454.4 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/douze_brice_2012.wav
+SENT-START pause douze pause SENT-END  ==  [58 frames] -53.1781 [Ac=-3084.3 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/douze_dominique_2012.wav
+SENT-START pause douze pause SENT-END  ==  [41 frames] -55.6392 [Ac=-2281.2 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/douze_eric_2012.wav
+SENT-START pause douze pause SENT-END  ==  [75 frames] -55.8939 [Ac=-4192.0 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/douze_etienne_2012.wav
+SENT-START pause douze pause SENT-END  ==  [69 frames] -54.8913 [Ac=-3787.5 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/douze_gabrielides_2012.wav
+SENT-START pause douze pause SENT-END  ==  [146 frames] -44.3890 [Ac=-6480.8 LM=0.0] (Act=69.0)
+File: Signaux/promo2012/douze_hyliass_2012.wav
+SENT-START pause douze pause SENT-END  ==  [100 frames] -77.1986 [Ac=-7719.9 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/douze_jean_2012.wav
+SENT-START pause douze pause SENT-END  ==  [71 frames] -54.3416 [Ac=-3858.3 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/douze_nabil_2012.wav
+SENT-START pause douze pause SENT-END  ==  [53 frames] -81.9287 [Ac=-4342.2 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/douze_thomas_2012.wav
+SENT-START pause douze pause SENT-END  ==  [67 frames] -56.7105 [Ac=-3799.6 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/egal_alban_2012.wav
+SENT-START pause egal pause SENT-END  ==  [57 frames] -54.9470 [Ac=-3132.0 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/egal_brice_2012.wav
+SENT-START pause egal pause SENT-END  ==  [63 frames] -57.5335 [Ac=-3624.6 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/egal_dominique_2012.wav
+SENT-START pause egal pause SENT-END  ==  [42 frames] -60.2507 [Ac=-2530.5 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/egal_eric_2012.wav
+SENT-START pause egal pause SENT-END  ==  [70 frames] -53.7933 [Ac=-3765.5 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/egal_etienne_2012.wav
+SENT-START pause egal pause SENT-END  ==  [62 frames] -56.3698 [Ac=-3494.9 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/egal_gabrielides_2012.wav
+SENT-START pause egal pause SENT-END  ==  [89 frames] -53.3814 [Ac=-4750.9 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/egal_hyliass_2012.wav
+SENT-START pause egal pause SENT-END  ==  [60 frames] -59.4771 [Ac=-3568.6 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/egal_jean_2012.wav
+SENT-START pause egal pause SENT-END  ==  [69 frames] -57.7961 [Ac=-3987.9 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/egal_nabil_2012.wav
+SENT-START pause egal pause SENT-END  ==  [70 frames] -81.1308 [Ac=-5679.2 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/egal_thomas_2012.wav
+SENT-START pause egal pause SENT-END  ==  [45 frames] -59.7079 [Ac=-2686.9 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/et_alban_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [32 frames] -59.4719 [Ac=-1903.1 LM=0.0] (Act=65.6)
+File: Signaux/promo2012/et_brice_2012.wav
+SENT-START pause et pause SENT-END  ==  [22 frames] -60.5156 [Ac=-1331.3 LM=0.0] (Act=63.6)
+File: Signaux/promo2012/et_dominique_2012.wav
+SENT-START pause et pause SENT-END  ==  [16 frames] -63.6563 [Ac=-1018.5 LM=0.0] (Act=61.2)
+File: Signaux/promo2012/et_eric_2012.wav
+SENT-START pause diviser pause SENT-END  ==  [24 frames] -60.0770 [Ac=-1441.8 LM=0.0] (Act=64.1)
+File: Signaux/promo2012/et_etienne_2012.wav
+SENT-START pause et pause SENT-END  ==  [15 frames] -69.3935 [Ac=-1040.9 LM=0.0] (Act=60.6)
+File: Signaux/promo2012/et_gabrielides_2012.wav
+SENT-START pause et pause SENT-END  ==  [26 frames] -65.8103 [Ac=-1711.1 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/et_hyliass_2012.wav
+SENT-START pause et pause SENT-END  ==  [25 frames] -67.5751 [Ac=-1689.4 LM=0.0] (Act=64.4)
+File: Signaux/promo2012/et_jean_2012.wav
+SENT-START pause et pause SENT-END  ==  [23 frames] -61.8024 [Ac=-1421.5 LM=0.0] (Act=63.9)
+File: Signaux/promo2012/et_nabil_2012.wav
+SENT-START pause et pause SENT-END  ==  [32 frames] -73.7556 [Ac=-2360.2 LM=0.0] (Act=65.6)
+File: Signaux/promo2012/et_thomas_2012.wav
+SENT-START pause et pause SENT-END  ==  [11 frames] -75.9528 [Ac=-835.5 LM=0.0] (Act=57.3)
+File: Signaux/promo2012/fois_alban_2012.wav
+SENT-START pause fois pause SENT-END  ==  [39 frames] -53.0382 [Ac=-2068.5 LM=0.0] (Act=66.4)
+File: Signaux/promo2012/fois_brice_2012.wav
+SENT-START pause trois pause SENT-END  ==  [42 frames] -51.3571 [Ac=-2157.0 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/fois_dominique_2012.wav
+SENT-START pause fois pause SENT-END  ==  [42 frames] -55.1819 [Ac=-2317.6 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/fois_eric_2012.wav
+SENT-START pause fois pause SENT-END  ==  [50 frames] -50.6416 [Ac=-2532.1 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/fois_etienne_2012.wav
+SENT-START pause fois pause SENT-END  ==  [54 frames] -54.7962 [Ac=-2959.0 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/fois_gabrielides_2012.wav
+SENT-START pause fois pause SENT-END  ==  [38 frames] -57.2623 [Ac=-2176.0 LM=0.0] (Act=66.3)
+File: Signaux/promo2012/fois_hyliass_2012.wav
+SENT-START pause fois pause SENT-END  ==  [41 frames] -88.1988 [Ac=-3616.1 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/fois_jean_2012.wav
+SENT-START pause fois pause SENT-END  ==  [49 frames] -53.0168 [Ac=-2597.8 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/fois_nabil_2012.wav
+SENT-START pause fois pause SENT-END  ==  [47 frames] -77.4263 [Ac=-3639.0 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/fois_thomas_2012.wav
+SENT-START pause fois pause SENT-END  ==  [44 frames] -56.0208 [Ac=-2464.9 LM=0.0] (Act=66.8)
+File: Signaux/promo2012/huit_alban_2012.wav
+SENT-START pause huit pause SENT-END  ==  [43 frames] -50.0489 [Ac=-2152.1 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/huit_brice_2012.wav
+SENT-START pause huit pause SENT-END  ==  [71 frames] -48.4392 [Ac=-3439.2 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/huit_dominique_2012.wav
+SENT-START pause huit pause SENT-END  ==  [44 frames] -58.5540 [Ac=-2576.4 LM=0.0] (Act=66.8)
+File: Signaux/promo2012/huit_eric_2012.wav
+SENT-START pause huit pause SENT-END  ==  [66 frames] -52.2282 [Ac=-3447.1 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/huit_etienne_2012.wav
+SENT-START pause huit pause SENT-END  ==  [58 frames] -53.9061 [Ac=-3126.6 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/huit_gabrielides_2012.wav
+SENT-START pause huit pause SENT-END  ==  [99 frames] -49.4904 [Ac=-4899.5 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/huit_hyliass_2012.wav
+SENT-START pause huit pause SENT-END  ==  [62 frames] -76.2937 [Ac=-4730.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/huit_jean_2012.wav
+SENT-START pause huit pause SENT-END  ==  [59 frames] -53.4932 [Ac=-3156.1 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/huit_nabil_2012.wav
+SENT-START pause huit pause SENT-END  ==  [51 frames] -81.2491 [Ac=-4143.7 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/huit_thomas_2012.wav
+SENT-START pause huit pause SENT-END  ==  [43 frames] -65.6385 [Ac=-2822.5 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/moins_alban_2012.wav
+SENT-START pause moins pause SENT-END  ==  [35 frames] -49.1116 [Ac=-1718.9 LM=0.0] (Act=66.0)
+File: Signaux/promo2012/moins_brice_2012.wav
+SENT-START pause moins pause SENT-END  ==  [45 frames] -48.2989 [Ac=-2173.4 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/moins_dominique_2012.wav
+SENT-START pause moins pause SENT-END  ==  [33 frames] -53.5046 [Ac=-1765.7 LM=0.0] (Act=65.7)
+File: Signaux/promo2012/moins_eric_2012.wav
+SENT-START pause moins pause SENT-END  ==  [33 frames] -56.4070 [Ac=-1861.4 LM=0.0] (Act=65.7)
+File: Signaux/promo2012/moins_etienne_2012.wav
+SENT-START pause moins pause SENT-END  ==  [35 frames] -53.2499 [Ac=-1863.7 LM=0.0] (Act=66.0)
+File: Signaux/promo2012/moins_gabrielides_2012.wav
+SENT-START pause moins pause SENT-END  ==  [37 frames] -47.8763 [Ac=-1771.4 LM=0.0] (Act=66.2)
+File: Signaux/promo2012/moins_hyliass_2012.wav
+SENT-START pause moins pause SENT-END  ==  [47 frames] -82.9741 [Ac=-3899.8 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/moins_jean_2012.wav
+SENT-START pause moins pause SENT-END  ==  [48 frames] -48.8689 [Ac=-2345.7 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/moins_nabil_2012.wav
+SENT-START pause moins pause SENT-END  ==  [51 frames] -69.9454 [Ac=-3567.2 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/moins_thomas_2012.wav
+SENT-START pause moins pause SENT-END  ==  [27 frames] -58.3644 [Ac=-1575.8 LM=0.0] (Act=64.8)
+File: Signaux/promo2012/multiplier_alban_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [85 frames] -52.0138 [Ac=-4421.2 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/multiplier_brice_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [101 frames] -51.6454 [Ac=-5216.2 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/multiplier_dominique_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [70 frames] -54.4533 [Ac=-3811.7 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/multiplier_eric_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [116 frames] -50.7830 [Ac=-5890.8 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/multiplier_etienne_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [94 frames] -55.9875 [Ac=-5262.8 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/multiplier_gabrielides_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [91 frames] -56.7650 [Ac=-5165.6 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/multiplier_hyliass_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [89 frames] -75.0885 [Ac=-6682.9 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/multiplier_jean_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [86 frames] -56.3276 [Ac=-4844.2 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/multiplier_nabil_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [116 frames] -70.7828 [Ac=-8210.8 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/multiplier_thomas_2012.wav
+SENT-START pause multiplier pause SENT-END  ==  [77 frames] -58.0939 [Ac=-4473.2 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/neuf_alban_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [36 frames] -50.6648 [Ac=-1823.9 LM=0.0] (Act=66.1)
+File: Signaux/promo2012/neuf_brice_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [63 frames] -47.2056 [Ac=-2974.0 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/neuf_dominique_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [38 frames] -55.0262 [Ac=-2091.0 LM=0.0] (Act=66.3)
+File: Signaux/promo2012/neuf_eric_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [57 frames] -53.2110 [Ac=-3033.0 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/neuf_etienne_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [55 frames] -52.1635 [Ac=-2869.0 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/neuf_gabrielides_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [200 frames] -46.6732 [Ac=-9334.6 LM=0.0] (Act=69.3)
+File: Signaux/promo2012/neuf_hyliass_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [58 frames] -83.9940 [Ac=-4871.7 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/neuf_jean_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [55 frames] -48.0195 [Ac=-2641.1 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/neuf_nabil_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [47 frames] -77.7204 [Ac=-3652.9 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/neuf_thomas_2012.wav
+SENT-START pause neuf pause SENT-END  ==  [50 frames] -55.0863 [Ac=-2754.3 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/onze_alban_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [42 frames] -50.9570 [Ac=-2140.2 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/onze_brice_2012.wav
+SENT-START pause onze pause SENT-END  ==  [55 frames] -52.1735 [Ac=-2869.5 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/onze_dominique_2012.wav
+SENT-START pause onze pause SENT-END  ==  [41 frames] -54.9172 [Ac=-2251.6 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/onze_eric_2012.wav
+SENT-START pause onze pause SENT-END  ==  [64 frames] -50.2210 [Ac=-3214.1 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/onze_etienne_2012.wav
+SENT-START pause onze pause SENT-END  ==  [54 frames] -51.1193 [Ac=-2760.4 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/onze_gabrielides_2012.wav
+SENT-START pause onze pause SENT-END  ==  [115 frames] -45.8116 [Ac=-5268.3 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/onze_hyliass_2012.wav
+SENT-START pause onze pause SENT-END  ==  [53 frames] -85.4175 [Ac=-4527.1 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/onze_jean_2012.wav
+SENT-START pause onze pause SENT-END  ==  [66 frames] -51.5549 [Ac=-3402.6 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/onze_nabil_2012.wav
+SENT-START pause trente pause SENT-END  ==  [62 frames] -82.7471 [Ac=-5130.3 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/onze_thomas_2012.wav
+SENT-START pause onze pause SENT-END  ==  [54 frames] -54.9034 [Ac=-2964.8 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/par_alban_2012.wav
+SENT-START pause par pause SENT-END  ==  [34 frames] -49.3537 [Ac=-1678.0 LM=0.0] (Act=65.9)
+File: Signaux/promo2012/par_brice_2012.wav
+SENT-START pause par pause SENT-END  ==  [43 frames] -53.7997 [Ac=-2313.4 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/par_dominique_2012.wav
+SENT-START pause par pause SENT-END  ==  [39 frames] -49.9086 [Ac=-1946.4 LM=0.0] (Act=66.4)
+File: Signaux/promo2012/par_eric_2012.wav
+SENT-START pause par pause SENT-END  ==  [42 frames] -48.4994 [Ac=-2037.0 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/par_etienne_2012.wav
+SENT-START pause par pause SENT-END  ==  [75 frames] -50.6431 [Ac=-3798.2 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/par_gabrielides_2012.wav
+SENT-START pause par pause SENT-END  ==  [37 frames] -52.9684 [Ac=-1959.8 LM=0.0] (Act=66.2)
+File: Signaux/promo2012/par_hyliass_2012.wav
+SENT-START pause par pause SENT-END  ==  [24 frames] -85.3464 [Ac=-2048.3 LM=0.0] (Act=64.1)
+File: Signaux/promo2012/par_jean_2012.wav
+SENT-START pause par pause SENT-END  ==  [54 frames] -53.9652 [Ac=-2914.1 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/par_nabil_2012.wav
+SENT-START pause par pause SENT-END  ==  [46 frames] -79.6661 [Ac=-3664.6 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/par_thomas_2012.wav
+SENT-START pause par pause SENT-END  ==  [31 frames] -52.6066 [Ac=-1630.8 LM=0.0] (Act=65.5)
+File: Signaux/promo2012/pause.wav
+SENT-START pause sept pause SENT-END  ==  [3872 frames] -34.5018 [Ac=-133591.1 LM=0.0] (Act=70.0)
+File: Signaux/promo2012/plus_alban_2012.wav
+SENT-START pause plus pause SENT-END  ==  [48 frames] -50.3408 [Ac=-2416.4 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/plus_brice_2012.wav
+SENT-START pause plus pause SENT-END  ==  [67 frames] -52.3705 [Ac=-3508.8 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/plus_dominique_2012.wav
+SENT-START pause plus pause SENT-END  ==  [47 frames] -51.3912 [Ac=-2415.4 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/plus_eric_2012.wav
+SENT-START pause plus pause SENT-END  ==  [55 frames] -55.2108 [Ac=-3036.6 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/plus_etienne_2012.wav
+SENT-START pause plus pause SENT-END  ==  [75 frames] -51.8541 [Ac=-3889.1 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/plus_gabrielides_2012.wav
+SENT-START pause plus pause SENT-END  ==  [58 frames] -52.6196 [Ac=-3051.9 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/plus_hyliass_2012.wav
+SENT-START pause plus pause SENT-END  ==  [55 frames] -77.4840 [Ac=-4261.6 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/plus_jean_2012.wav
+SENT-START pause plus pause SENT-END  ==  [52 frames] -56.1980 [Ac=-2922.3 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/plus_nabil_2012.wav
+SENT-START pause plus pause SENT-END  ==  [49 frames] -77.2644 [Ac=-3786.0 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/plus_thomas_2012.wav
+SENT-START pause plus pause SENT-END  ==  [17 frames] -76.0082 [Ac=-1292.1 LM=0.0] (Act=61.7)
+File: Signaux/promo2012/quarante_alban_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [70 frames] -52.3312 [Ac=-3663.2 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/quarante_brice_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [85 frames] -51.6223 [Ac=-4387.9 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/quarante_dominique_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [52 frames] -52.5250 [Ac=-2731.3 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/quarante_eric_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [70 frames] -56.2566 [Ac=-3938.0 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/quarante_etienne_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [75 frames] -55.0113 [Ac=-4125.9 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/quarante_gabrielides_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [94 frames] -51.3211 [Ac=-4824.2 LM=0.0] (Act=68.5)
+File: Signaux/promo2012/quarante_hyliass_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [74 frames] -79.5395 [Ac=-5885.9 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/quarante_jean_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [68 frames] -51.9928 [Ac=-3535.5 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/quarante_nabil_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [82 frames] -78.0335 [Ac=-6398.8 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/quarante_thomas_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [63 frames] -57.7118 [Ac=-3635.8 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/quatorze_alban_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [62 frames] -53.2942 [Ac=-3304.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/quatorze_brice_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [68 frames] -53.0441 [Ac=-3607.0 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/quatorze_dominique_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [62 frames] -55.6552 [Ac=-3450.6 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/quatorze_eric_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [54 frames] -63.6527 [Ac=-3437.2 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/quatorze_etienne_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [83 frames] -51.4898 [Ac=-4273.6 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/quatorze_gabrielides_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [130 frames] -54.0259 [Ac=-7023.4 LM=0.0] (Act=68.9)
+File: Signaux/promo2012/quatorze_hyliass_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [63 frames] -81.3877 [Ac=-5127.4 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/quatorze_jean_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [77 frames] -52.6837 [Ac=-4056.6 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/quatorze_nabil_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [83 frames] -76.4139 [Ac=-6342.4 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/quatorze_thomas_2012.wav
+SENT-START pause quatorze pause SENT-END  ==  [89 frames] -56.4947 [Ac=-5028.0 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/quatre_alban_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [37 frames] -53.6682 [Ac=-1985.7 LM=0.0] (Act=66.2)
+File: Signaux/promo2012/quatre_brice_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [48 frames] -54.3830 [Ac=-2610.4 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/quatre_dominique_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [52 frames] -50.1657 [Ac=-2608.6 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/quatre_eric_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [51 frames] -54.8438 [Ac=-2797.0 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/quatre_etienne_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [57 frames] -53.3540 [Ac=-3041.2 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/quatre_gabrielides_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [61 frames] -51.0713 [Ac=-3115.3 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/quatre_hyliass_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [47 frames] -84.4977 [Ac=-3971.4 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/quatre_jean_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [39 frames] -56.5735 [Ac=-2206.4 LM=0.0] (Act=66.4)
+File: Signaux/promo2012/quatre_nabil_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [43 frames] -81.1642 [Ac=-3490.1 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/quatre_thomas_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [18 frames] -61.8544 [Ac=-1113.4 LM=0.0] (Act=62.2)
+File: Signaux/promo2012/quinze_alban_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [48 frames] -52.2191 [Ac=-2506.5 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/quinze_brice_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [56 frames] -56.2801 [Ac=-3151.7 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/quinze_dominique_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [47 frames] -50.7184 [Ac=-2383.8 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/quinze_eric_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [61 frames] -56.3002 [Ac=-3434.3 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/quinze_etienne_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [73 frames] -50.3801 [Ac=-3677.7 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/quinze_gabrielides_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [113 frames] -49.0397 [Ac=-5541.5 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/quinze_hyliass_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [44 frames] -90.9633 [Ac=-4002.4 LM=0.0] (Act=66.8)
+File: Signaux/promo2012/quinze_jean_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [69 frames] -48.9552 [Ac=-3377.9 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/quinze_nabil_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [66 frames] -86.4486 [Ac=-5705.6 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/quinze_thomas_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [69 frames] -50.5927 [Ac=-3490.9 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/seize_alban_2012.wav
+SENT-START pause treize pause SENT-END  ==  [58 frames] -51.7787 [Ac=-3003.2 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/seize_brice_2012.wav
+SENT-START pause seize pause SENT-END  ==  [63 frames] -51.6623 [Ac=-3254.7 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/seize_dominique_2012.wav
+SENT-START pause seize pause SENT-END  ==  [60 frames] -53.8190 [Ac=-3229.1 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/seize_eric_2012.wav
+SENT-START pause seize pause SENT-END  ==  [65 frames] -56.4810 [Ac=-3671.3 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/seize_etienne_2012.wav
+SENT-START pause seize pause SENT-END  ==  [81 frames] -52.9768 [Ac=-4291.1 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/seize_gabrielides_2012.wav
+SENT-START pause seize pause SENT-END  ==  [116 frames] -53.0500 [Ac=-6153.8 LM=0.0] (Act=68.8)
+File: Signaux/promo2012/seize_hyliass_2012.wav
+SENT-START pause seize pause SENT-END  ==  [54 frames] -79.2722 [Ac=-4280.7 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/seize_jean_2012.wav
+SENT-START pause seize pause SENT-END  ==  [72 frames] -52.1919 [Ac=-3757.8 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/seize_nabil_2012.wav
+SENT-START pause seize pause SENT-END  ==  [62 frames] -79.2444 [Ac=-4913.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/seize_thomas_2012.wav
+SENT-START pause seize pause SENT-END  ==  [64 frames] -54.0340 [Ac=-3458.2 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/sept_alban_2012.wav
+SENT-START pause sept pause SENT-END  ==  [38 frames] -53.0493 [Ac=-2015.9 LM=0.0] (Act=66.3)
+File: Signaux/promo2012/sept_brice_2012.wav
+SENT-START pause sept pause SENT-END  ==  [79 frames] -50.4309 [Ac=-3984.0 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/sept_dominique_2012.wav
+SENT-START pause sept pause SENT-END  ==  [40 frames] -53.0547 [Ac=-2122.2 LM=0.0] (Act=66.5)
+File: Signaux/promo2012/sept_eric_2012.wav
+SENT-START pause sept pause SENT-END  ==  [51 frames] -60.7393 [Ac=-3097.7 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/sept_etienne_2012.wav
+SENT-START pause sept pause SENT-END  ==  [74 frames] -52.3913 [Ac=-3877.0 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/sept_gabrielides_2012.wav
+SENT-START pause sept pause SENT-END  ==  [69 frames] -55.4361 [Ac=-3825.1 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/sept_hyliass_2012.wav
+SENT-START pause sept pause SENT-END  ==  [65 frames] -80.1265 [Ac=-5208.2 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/sept_jean_2012.wav
+SENT-START pause sept pause SENT-END  ==  [55 frames] -55.6873 [Ac=-3062.8 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/sept_nabil_2012.wav
+SENT-START pause sept pause SENT-END  ==  [56 frames] -87.1855 [Ac=-4882.4 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/sept_thomas_2012.wav
+SENT-START pause sept pause SENT-END  ==  [73 frames] -53.7069 [Ac=-3920.6 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/six_alban_2012.wav
+SENT-START pause six pause SENT-END  ==  [46 frames] -52.1425 [Ac=-2398.6 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/six_brice_2012.wav
+SENT-START pause six pause SENT-END  ==  [65 frames] -51.8229 [Ac=-3368.5 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/six_dominique_2012.wav
+SENT-START pause six pause SENT-END  ==  [44 frames] -51.1701 [Ac=-2251.5 LM=0.0] (Act=66.8)
+File: Signaux/promo2012/six_eric_2012.wav
+SENT-START pause six pause SENT-END  ==  [74 frames] -50.0259 [Ac=-3701.9 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/six_etienne_2012.wav
+SENT-START pause six pause SENT-END  ==  [76 frames] -52.4910 [Ac=-3989.3 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/six_gabrielides_2012.wav
+SENT-START pause six pause SENT-END  ==  [100 frames] -51.9021 [Ac=-5190.2 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/six_hyliass_2012.wav
+SENT-START pause six pause SENT-END  ==  [71 frames] -82.1701 [Ac=-5834.1 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/six_jean_2012.wav
+SENT-START pause six pause SENT-END  ==  [61 frames] -55.5324 [Ac=-3387.5 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/six_nabil_2012.wav
+SENT-START pause six pause SENT-END  ==  [52 frames] -77.2531 [Ac=-4017.2 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/six_thomas_2012.wav
+SENT-START pause six pause SENT-END  ==  [69 frames] -55.8884 [Ac=-3856.3 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/soixante_alban_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [76 frames] -57.0966 [Ac=-4339.3 LM=0.0] (Act=68.1)
+File: Signaux/promo2012/soixante_brice_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [104 frames] -53.1503 [Ac=-5527.6 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/soixante_dominique_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [80 frames] -57.8214 [Ac=-4625.7 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/soixante_eric_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [88 frames] -54.6410 [Ac=-4808.4 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/soixante_etienne_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [68 frames] -58.1559 [Ac=-3954.6 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/soixante_gabrielides_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [112 frames] -58.7111 [Ac=-6575.6 LM=0.0] (Act=68.7)
+File: Signaux/promo2012/soixante_hyliass_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [90 frames] -81.4204 [Ac=-7327.8 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/soixante_jean_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [71 frames] -57.5266 [Ac=-4084.4 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/soixante_nabil_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [88 frames] -79.1474 [Ac=-6965.0 LM=0.0] (Act=68.4)
+File: Signaux/promo2012/soixante_thomas_2012.wav
+SENT-START pause soixante pause SENT-END  ==  [81 frames] -54.7252 [Ac=-4432.7 LM=0.0] (Act=68.3)
+File: Signaux/promo2012/sur_alban_2012.wav
+SENT-START pause sur pause SENT-END  ==  [41 frames] -54.0288 [Ac=-2215.2 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/sur_brice_2012.wav
+SENT-START pause sur pause SENT-END  ==  [48 frames] -53.7124 [Ac=-2578.2 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/sur_dominique_2012.wav
+SENT-START pause sur pause SENT-END  ==  [46 frames] -58.5698 [Ac=-2694.2 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/sur_eric_2012.wav
+SENT-START pause sur pause SENT-END  ==  [47 frames] -56.4905 [Ac=-2655.1 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/sur_etienne_2012.wav
+SENT-START pause sur pause SENT-END  ==  [102 frames] -50.3778 [Ac=-5138.5 LM=0.0] (Act=68.6)
+File: Signaux/promo2012/sur_gabrielides_2012.wav
+SENT-START pause sur pause SENT-END  ==  [48 frames] -57.7582 [Ac=-2772.4 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/sur_hyliass_2012.wav
+SENT-START pause sur pause SENT-END  ==  [61 frames] -58.0514 [Ac=-3541.1 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/sur_jean_2012.wav
+SENT-START pause sur pause SENT-END  ==  [62 frames] -54.5054 [Ac=-3379.3 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/sur_nabil_2012.wav
+SENT-START pause douze pause SENT-END  ==  [51 frames] -86.7469 [Ac=-4424.1 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/sur_thomas_2012.wav
+SENT-START pause sur pause SENT-END  ==  [50 frames] -58.0225 [Ac=-2901.1 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/treize_alban_2012.wav
+SENT-START pause treize pause SENT-END  ==  [52 frames] -54.2775 [Ac=-2822.4 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/treize_brice_2012.wav
+SENT-START pause treize pause SENT-END  ==  [56 frames] -50.1957 [Ac=-2811.0 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/treize_dominique_2012.wav
+SENT-START pause treize pause SENT-END  ==  [37 frames] -53.1320 [Ac=-1965.9 LM=0.0] (Act=66.2)
+File: Signaux/promo2012/treize_eric_2012.wav
+SENT-START pause treize pause SENT-END  ==  [56 frames] -53.0434 [Ac=-2970.4 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/treize_etienne_2012.wav
+SENT-START pause treize pause SENT-END  ==  [80 frames] -48.6531 [Ac=-3892.2 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/treize_gabrielides_2012.wav
+SENT-START pause treize pause SENT-END  ==  [112 frames] -47.5983 [Ac=-5331.0 LM=0.0] (Act=68.7)
+File: Signaux/promo2012/treize_hyliass_2012.wav
+SENT-START pause treize pause SENT-END  ==  [49 frames] -77.2096 [Ac=-3783.3 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/treize_jean_2012.wav
+SENT-START pause treize pause SENT-END  ==  [61 frames] -53.2818 [Ac=-3250.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/treize_nabil_2012.wav
+SENT-START pause treize pause SENT-END  ==  [67 frames] -67.1015 [Ac=-4495.8 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/treize_thomas_2012.wav
+SENT-START pause treize pause SENT-END  ==  [53 frames] -55.6540 [Ac=-2949.7 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/trente_alban_2012.wav
+SENT-START pause trente pause SENT-END  ==  [56 frames] -52.3705 [Ac=-2932.7 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/trente_brice_2012.wav
+SENT-START pause trente pause SENT-END  ==  [78 frames] -51.6051 [Ac=-4025.2 LM=0.0] (Act=68.2)
+File: Signaux/promo2012/trente_dominique_2012.wav
+SENT-START pause trente pause SENT-END  ==  [45 frames] -56.7742 [Ac=-2554.8 LM=0.0] (Act=66.9)
+File: Signaux/promo2012/trente_eric_2012.wav
+SENT-START pause trente pause SENT-END  ==  [67 frames] -53.2546 [Ac=-3568.1 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/trente_etienne_2012.wav
+SENT-START pause trente pause SENT-END  ==  [64 frames] -54.6151 [Ac=-3495.4 LM=0.0] (Act=67.8)
+File: Signaux/promo2012/trente_gabrielides_2012.wav
+SENT-START pause trente pause SENT-END  ==  [57 frames] -51.4597 [Ac=-2933.2 LM=0.0] (Act=67.5)
+File: Signaux/promo2012/trente_hyliass_2012.wav
+SENT-START pause trente pause SENT-END  ==  [53 frames] -87.1160 [Ac=-4617.1 LM=0.0] (Act=67.3)
+File: Signaux/promo2012/trente_jean_2012.wav
+SENT-START pause trente pause SENT-END  ==  [54 frames] -54.4934 [Ac=-2942.6 LM=0.0] (Act=67.4)
+File: Signaux/promo2012/trente_nabil_2012.wav
+SENT-START pause trente pause SENT-END  ==  [60 frames] -77.1866 [Ac=-4631.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/trente_thomas_2012.wav
+SENT-START pause trente pause SENT-END  ==  [59 frames] -52.9749 [Ac=-3125.5 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/trois_alban_2012.wav
+SENT-START pause trois pause SENT-END  ==  [47 frames] -54.6425 [Ac=-2568.2 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/trois_brice_2012.wav
+SENT-START pause trois pause SENT-END  ==  [24 frames] -56.9175 [Ac=-1366.0 LM=0.0] (Act=64.1)
+File: Signaux/promo2012/trois_dominique_2012.wav
+SENT-START pause trois pause SENT-END  ==  [47 frames] -51.7901 [Ac=-2434.1 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/trois_eric_2012.wav
+SENT-START pause trois pause SENT-END  ==  [35 frames] -55.1092 [Ac=-1928.8 LM=0.0] (Act=66.0)
+File: Signaux/promo2012/trois_etienne_2012.wav
+SENT-START pause trois pause SENT-END  ==  [58 frames] -55.5323 [Ac=-3220.9 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/trois_gabrielides_2012.wav
+SENT-START pause trois pause SENT-END  ==  [43 frames] -53.9667 [Ac=-2320.6 LM=0.0] (Act=66.7)
+File: Signaux/promo2012/trois_hyliass_2012.wav
+SENT-START pause trois pause SENT-END  ==  [34 frames] -90.5323 [Ac=-3078.1 LM=0.0] (Act=65.9)
+File: Signaux/promo2012/trois_jean_2012.wav
+SENT-START pause trois pause SENT-END  ==  [49 frames] -55.6421 [Ac=-2726.5 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/trois_nabil_2012.wav
+SENT-START pause trois pause SENT-END  ==  [36 frames] -83.2299 [Ac=-2996.3 LM=0.0] (Act=66.1)
+File: Signaux/promo2012/trois_thomas_2012.wav
+SENT-START pause trois pause SENT-END  ==  [33 frames] -63.9143 [Ac=-2109.2 LM=0.0] (Act=65.7)
+File: Signaux/promo2012/un_alban_2012.wav
+SENT-START pause quatre pause SENT-END  ==  [22 frames] -57.0744 [Ac=-1255.6 LM=0.0] (Act=63.6)
+File: Signaux/promo2012/un_brice_2012.wav
+SENT-START pause trente pause SENT-END  ==  [23 frames] -66.7390 [Ac=-1535.0 LM=0.0] (Act=63.9)
+File: Signaux/promo2012/un_dominique_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [26 frames] -59.4151 [Ac=-1544.8 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/un_eric_2012.wav
+SENT-START pause quarante pause SENT-END  ==  [39 frames] -55.6058 [Ac=-2168.6 LM=0.0] (Act=66.4)
+File: Signaux/promo2012/un_etienne_2012.wav
+SENT-START pause un pause SENT-END  ==  [14 frames] -65.6609 [Ac=-919.3 LM=0.0] (Act=59.9)
+File: Signaux/promo2012/un_gabrielides_2012.wav
+SENT-START pause un pause SENT-END  ==  [27 frames] -59.0255 [Ac=-1593.7 LM=0.0] (Act=64.8)
+File: Signaux/promo2012/un_hyliass_2012.wav
+SENT-START pause cinq pause SENT-END  ==  [26 frames] -78.3079 [Ac=-2036.0 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/un_jean_2012.wav
+SENT-START pause quinze pause SENT-END  ==  [28 frames] -59.3671 [Ac=-1662.3 LM=0.0] (Act=65.0)
+File: Signaux/promo2012/un_nabil_2012.wav
+SENT-START pause un pause SENT-END  ==  [22 frames] -83.9317 [Ac=-1846.5 LM=0.0] (Act=63.6)
+File: Signaux/promo2012/un_thomas_2012.wav
+SENT-START pause un pause SENT-END  ==  [26 frames] -59.0803 [Ac=-1536.1 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/vingt_alban_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [44 frames] -55.5946 [Ac=-2446.2 LM=0.0] (Act=66.8)
+File: Signaux/promo2012/vingt_brice_2012.wav
+SENT-START pause moins pause SENT-END  ==  [42 frames] -53.2399 [Ac=-2236.1 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/vingt_dominique_2012.wav
+SENT-START pause par pause SENT-END  ==  [22 frames] -57.1409 [Ac=-1257.1 LM=0.0] (Act=63.6)
+File: Signaux/promo2012/vingt_eric_2012.wav
+SENT-START pause moins pause SENT-END  ==  [29 frames] -59.6897 [Ac=-1731.0 LM=0.0] (Act=65.1)
+File: Signaux/promo2012/vingt_etienne_2012.wav
+SENT-START pause moins pause SENT-END  ==  [26 frames] -56.4534 [Ac=-1467.8 LM=0.0] (Act=64.6)
+File: Signaux/promo2012/vingt_gabrielides_2012.wav
+SENT-START pause fois pause SENT-END  ==  [143 frames] -43.6856 [Ac=-6247.0 LM=0.0] (Act=69.0)
+File: Signaux/promo2012/vingt_hyliass_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [60 frames] -76.6757 [Ac=-4600.5 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/vingt_jean_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [58 frames] -52.0972 [Ac=-3021.6 LM=0.0] (Act=67.6)
+File: Signaux/promo2012/vingt_nabil_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [47 frames] -74.1989 [Ac=-3487.3 LM=0.0] (Act=67.0)
+File: Signaux/promo2012/vingt_thomas_2012.wav
+SENT-START pause vingt pause SENT-END  ==  [62 frames] -54.9203 [Ac=-3405.1 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/zero_alban_2012.wav
+SENT-START pause zero pause SENT-END  ==  [67 frames] -53.0157 [Ac=-3552.0 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/zero_brice_2012.wav
+SENT-START pause zero pause SENT-END  ==  [50 frames] -58.3842 [Ac=-2919.2 LM=0.0] (Act=67.2)
+File: Signaux/promo2012/zero_dominique_2012.wav
+SENT-START pause zero pause SENT-END  ==  [66 frames] -50.0984 [Ac=-3306.5 LM=0.0] (Act=67.9)
+File: Signaux/promo2012/zero_eric_2012.wav
+SENT-START pause zero pause SENT-END  ==  [70 frames] -50.4877 [Ac=-3534.1 LM=0.0] (Act=68.0)
+File: Signaux/promo2012/zero_etienne_2012.wav
+SENT-START pause zero pause SENT-END  ==  [61 frames] -56.3395 [Ac=-3436.7 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/zero_gabrielides_2012.wav
+SENT-START pause zero pause SENT-END  ==  [60 frames] -55.2613 [Ac=-3315.7 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/zero_hyliass_2012.wav
+SENT-START pause zero pause SENT-END  ==  [42 frames] -78.1007 [Ac=-3280.2 LM=0.0] (Act=66.6)
+File: Signaux/promo2012/zero_jean_2012.wav
+SENT-START pause zero pause SENT-END  ==  [60 frames] -53.3031 [Ac=-3198.2 LM=0.0] (Act=67.7)
+File: Signaux/promo2012/zero_nabil_2012.wav
+SENT-START pause zero pause SENT-END  ==  [48 frames] -80.6312 [Ac=-3870.3 LM=0.0] (Act=67.1)
+File: Signaux/promo2012/zero_thomas_2012.wav
+SENT-START pause zero pause SENT-END  ==  [52 frames] -56.9282 [Ac=-2960.3 LM=0.0] (Act=67.3)
