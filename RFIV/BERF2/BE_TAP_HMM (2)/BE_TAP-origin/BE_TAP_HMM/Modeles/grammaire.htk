@@ -1,0 +1,119 @@
+VERSION=1.0
+N=36   L=81   
+I=0    W=SENT-END            
+I=1    W=pause               
+I=2    W=neuf                
+I=3    W=!NULL               
+I=4    W=huit                
+I=5    W=sept                
+I=6    W=six                 
+I=7    W=cinq                
+I=8    W=quatre              
+I=9    W=trois               
+I=10   W=deux                
+I=11   W=un                  
+I=12   W=pause               
+I=13   W=sur                 
+I=14   W=!NULL               
+I=15   W=par                 
+I=16   W=diviser             
+I=17   W=fois                
+I=18   W=multiplier          
+I=19   W=moins               
+I=20   W=plus                
+I=21   W=pause               
+I=22   W=neuf                
+I=23   W=!NULL               
+I=24   W=huit                
+I=25   W=sept                
+I=26   W=six                 
+I=27   W=cinq                
+I=28   W=quatre              
+I=29   W=trois               
+I=30   W=deux                
+I=31   W=un                  
+I=32   W=pause               
+I=33   W=SENT-START          
+I=34   W=!NULL               
+I=35   W=!NULL               
+J=0     S=1    E=0    
+J=1     S=3    E=0    
+J=2     S=3    E=1    
+J=3     S=12   E=2    
+J=4     S=14   E=2    
+J=5     S=2    E=3    
+J=6     S=4    E=3    
+J=7     S=5    E=3    
+J=8     S=6    E=3    
+J=9     S=7    E=3    
+J=10    S=8    E=3    
+J=11    S=9    E=3    
+J=12    S=10   E=3    
+J=13    S=11   E=3    
+J=14    S=12   E=4    
+J=15    S=14   E=4    
+J=16    S=12   E=5    
+J=17    S=14   E=5    
+J=18    S=12   E=6    
+J=19    S=14   E=6    
+J=20    S=12   E=7    
+J=21    S=14   E=7    
+J=22    S=12   E=8    
+J=23    S=14   E=8    
+J=24    S=12   E=9    
+J=25    S=14   E=9    
+J=26    S=12   E=10   
+J=27    S=14   E=10   
+J=28    S=12   E=11   
+J=29    S=14   E=11   
+J=30    S=14   E=12   
+J=31    S=21   E=13   
+J=32    S=23   E=13   
+J=33    S=13   E=14   
+J=34    S=15   E=14   
+J=35    S=17   E=14   
+J=36    S=18   E=14   
+J=37    S=19   E=14   
+J=38    S=20   E=14   
+J=39    S=16   E=15   
+J=40    S=21   E=16   
+J=41    S=23   E=16   
+J=42    S=21   E=17   
+J=43    S=23   E=17   
+J=44    S=21   E=18   
+J=45    S=23   E=18   
+J=46    S=21   E=19   
+J=47    S=23   E=19   
+J=48    S=21   E=20   
+J=49    S=23   E=20   
+J=50    S=23   E=21   
+J=51    S=32   E=22   
+J=52    S=33   E=22   
+J=53    S=22   E=23   
+J=54    S=24   E=23   
+J=55    S=25   E=23   
+J=56    S=26   E=23   
+J=57    S=27   E=23   
+J=58    S=28   E=23   
+J=59    S=29   E=23   
+J=60    S=30   E=23   
+J=61    S=31   E=23   
+J=62    S=32   E=24   
+J=63    S=33   E=24   
+J=64    S=32   E=25   
+J=65    S=33   E=25   
+J=66    S=32   E=26   
+J=67    S=33   E=26   
+J=68    S=32   E=27   
+J=69    S=33   E=27   
+J=70    S=32   E=28   
+J=71    S=33   E=28   
+J=72    S=32   E=29   
+J=73    S=33   E=29   
+J=74    S=32   E=30   
+J=75    S=33   E=30   
+J=76    S=32   E=31   
+J=77    S=33   E=31   
+J=78    S=33   E=32   
+J=79    S=35   E=33   
+J=80    S=0    E=34   

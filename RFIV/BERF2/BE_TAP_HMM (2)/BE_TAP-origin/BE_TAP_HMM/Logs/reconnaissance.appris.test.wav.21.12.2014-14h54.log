@@ -1,0 +1,1 @@
+HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S test/test.wav Modeles/dictionnaire Modeles/liste-mots 

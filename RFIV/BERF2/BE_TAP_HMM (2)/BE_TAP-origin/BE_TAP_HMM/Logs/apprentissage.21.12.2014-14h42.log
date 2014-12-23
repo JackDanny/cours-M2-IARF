@@ -1,0 +1,965 @@
+dimanche 21 décembre 2014, 14:42:27 (UTC+0100)
+
+~~~~~~~~~~~ modele cinq ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l cinq -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//cinq -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//cinq . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  cinq
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 76, Min length = 50
+Ave LogProb at iter 1 = -3508.85303 using 10 examples
+Ave LogProb at iter 2 = -3394.22192 using 10 examples  change =  114.63110
+Ave LogProb at iter 3 = -3393.94653 using 10 examples  change =    0.27539
+Ave LogProb at iter 4 = -3393.91870 using 10 examples  change =    0.02783
+Ave LogProb at iter 5 = -3393.91602 using 10 examples  change =    0.00269
+Estimation converged at iteration 5
+~~~ modele cinq deja calcule ! ~~~
+~~~~~~~~~~~ modele cinquante ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l cinquante -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//cinquante -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//cinquante . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  cinquante
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 122, Min length = 61
+Ave LogProb at iter 1 = -5470.17725 using 10 examples
+Ave LogProb at iter 2 = -5293.93066 using 10 examples  change =  176.24658
+Ave LogProb at iter 3 = -5292.93604 using 10 examples  change =    0.99463
+Ave LogProb at iter 4 = -5292.21240 using 10 examples  change =    0.72363
+Ave LogProb at iter 5 = -5291.81689 using 10 examples  change =    0.39551
+Ave LogProb at iter 6 = -5291.57178 using 10 examples  change =    0.24512
+Ave LogProb at iter 7 = -5291.37842 using 10 examples  change =    0.19336
+Ave LogProb at iter 8 = -5291.22461 using 10 examples  change =    0.15381
+Ave LogProb at iter 9 = -5291.08643 using 10 examples  change =    0.13818
+Ave LogProb at iter 10 = -5290.94824 using 10 examples  change =    0.13818
+Ave LogProb at iter 11 = -5290.81982 using 10 examples  change =    0.12842
+Ave LogProb at iter 12 = -5290.72607 using 10 examples  change =    0.09375
+Ave LogProb at iter 13 = -5290.67236 using 10 examples  change =    0.05371
+Ave LogProb at iter 14 = -5290.64160 using 10 examples  change =    0.03076
+Ave LogProb at iter 15 = -5290.62500 using 10 examples  change =    0.01660
+Ave LogProb at iter 16 = -5290.61523 using 10 examples  change =    0.00977
+Ave LogProb at iter 17 = -5290.60840 using 10 examples  change =    0.00684
+Ave LogProb at iter 18 = -5290.60498 using 10 examples  change =    0.00342
+Estimation converged at iteration 18
+~~~~~~~~~~~ modele deux ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l deux -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//deux -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//deux . . . 
+ States   :   2  3 (width)
+ Mixes  s1:   1  1 ( 39  )
+ Num Using:   0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  deux
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 42, Min length = 24
+Ave LogProb at iter 1 = -2011.26343 using 10 examples
+Ave LogProb at iter 2 = -1936.88110 using 10 examples  change =   74.38232
+Ave LogProb at iter 3 = -1936.75818 using 10 examples  change =    0.12292
+Ave LogProb at iter 4 = -1934.81567 using 10 examples  change =    1.94250
+Ave LogProb at iter 5 = -1926.10217 using 10 examples  change =    8.71350
+Ave LogProb at iter 6 = -1921.63025 using 10 examples  change =    4.47192
+Ave LogProb at iter 7 = -1919.42908 using 10 examples  change =    2.20117
+Ave LogProb at iter 8 = -1918.37048 using 10 examples  change =    1.05859
+Ave LogProb at iter 9 = -1918.11743 using 10 examples  change =    0.25305
+Ave LogProb at iter 10 = -1917.82092 using 10 examples  change =    0.29651
+Ave LogProb at iter 11 = -1917.49084 using 10 examples  change =    0.33008
+Ave LogProb at iter 12 = -1917.04236 using 10 examples  change =    0.44849
+Ave LogProb at iter 13 = -1916.87427 using 10 examples  change =    0.16809
+Ave LogProb at iter 14 = -1916.85962 using 10 examples  change =    0.01465
+Ave LogProb at iter 15 = -1916.85510 using 10 examples  change =    0.00452
+Estimation converged at iteration 15
+~~~~~~~~~~~ modele diviser ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l diviser -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//diviser -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//diviser . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  diviser
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 99, Min length = 45
+Ave LogProb at iter 1 = -4327.67480 using 10 examples
+Ave LogProb at iter 2 = -4135.58008 using 10 examples  change =  192.09473
+Ave LogProb at iter 3 = -4135.22705 using 10 examples  change =    0.35303
+Ave LogProb at iter 4 = -4135.12988 using 10 examples  change =    0.09717
+Ave LogProb at iter 5 = -4135.05762 using 10 examples  change =    0.07227
+Ave LogProb at iter 6 = -4135.03418 using 10 examples  change =    0.02344
+Ave LogProb at iter 7 = -4135.02441 using 10 examples  change =    0.00977
+Ave LogProb at iter 8 = -4135.01318 using 10 examples  change =    0.01123
+Ave LogProb at iter 9 = -4134.98340 using 10 examples  change =    0.02979
+Ave LogProb at iter 10 = -4134.91748 using 10 examples  change =    0.06592
+Ave LogProb at iter 11 = -4134.87939 using 10 examples  change =    0.03809
+Ave LogProb at iter 12 = -4134.87646 using 10 examples  change =    0.00293
+Estimation converged at iteration 12
+~~~~~~~~~~~ modele dix ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l dix -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//dix -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//dix . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  dix
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 88, Min length = 48
+Ave LogProb at iter 1 = -3788.76050 using 10 examples
+Ave LogProb at iter 2 = -3621.82861 using 10 examples  change =  166.93188
+Ave LogProb at iter 3 = -3621.75854 using 10 examples  change =    0.07007
+Ave LogProb at iter 4 = -3621.55347 using 10 examples  change =    0.20508
+Ave LogProb at iter 5 = -3621.37109 using 10 examples  change =    0.18237
+Ave LogProb at iter 6 = -3621.35791 using 10 examples  change =    0.01318
+Ave LogProb at iter 7 = -3621.35791 using 10 examples  change =    0.00000
+Estimation converged at iteration 7
+~~~~~~~~~~~ modele douze ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l douze -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//douze -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//douze . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  douze
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 146, Min length = 41
+Ave LogProb at iter 1 = -4291.12451 using 10 examples
+Ave LogProb at iter 2 = -4103.21143 using 10 examples  change =  187.91309
+Ave LogProb at iter 3 = -4096.87402 using 10 examples  change =    6.33740
+Ave LogProb at iter 4 = -4096.69971 using 10 examples  change =    0.17432
+Ave LogProb at iter 5 = -4096.63770 using 10 examples  change =    0.06201
+Ave LogProb at iter 6 = -4096.62598 using 10 examples  change =    0.01172
+Ave LogProb at iter 7 = -4096.62402 using 10 examples  change =    0.00195
+Estimation converged at iteration 7
+~~~~~~~~~~~ modele egal ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l egal -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//egal -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//egal . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  egal
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 89, Min length = 42
+Ave LogProb at iter 1 = -3786.95703 using 10 examples
+Ave LogProb at iter 2 = -3627.22925 using 10 examples  change =  159.72778
+Ave LogProb at iter 3 = -3626.04810 using 10 examples  change =    1.18115
+Ave LogProb at iter 4 = -3625.20703 using 10 examples  change =    0.84106
+Ave LogProb at iter 5 = -3624.68481 using 10 examples  change =    0.52222
+Ave LogProb at iter 6 = -3624.28662 using 10 examples  change =    0.39819
+Ave LogProb at iter 7 = -3624.07568 using 10 examples  change =    0.21094
+Ave LogProb at iter 8 = -3623.93628 using 10 examples  change =    0.13940
+Ave LogProb at iter 9 = -3623.77686 using 10 examples  change =    0.15942
+Ave LogProb at iter 10 = -3623.37891 using 10 examples  change =    0.39795
+Ave LogProb at iter 11 = -3623.05518 using 10 examples  change =    0.32373
+Ave LogProb at iter 12 = -3623.02417 using 10 examples  change =    0.03101
+Ave LogProb at iter 13 = -3623.01025 using 10 examples  change =    0.01392
+Ave LogProb at iter 14 = -3623.00244 using 10 examples  change =    0.00781
+Ave LogProb at iter 15 = -3622.99756 using 10 examples  change =    0.00488
+Estimation converged at iteration 15
+~~~~~~~~~~~ modele et ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l et -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//et -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//et . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  et
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 32, Min length = 11
+Ave LogProb at iter 1 = -1376.72827 using 10 examples
+Ave LogProb at iter 2 = -1340.61926 using 10 examples  change =   36.10901
+Ave LogProb at iter 3 = -1340.61926 using 10 examples  change =    0.00000
+Estimation converged at iteration 3
+~~~~~~~~~~~ modele fois ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l fois -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//fois -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//fois . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  fois
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 54, Min length = 38
+Ave LogProb at iter 1 = -2657.67139 using 10 examples
+Ave LogProb at iter 2 = -2556.47705 using 10 examples  change =  101.19434
+Ave LogProb at iter 3 = -2556.03857 using 10 examples  change =    0.43848
+Ave LogProb at iter 4 = -2555.92432 using 10 examples  change =    0.11426
+Ave LogProb at iter 5 = -2555.90210 using 10 examples  change =    0.02222
+Ave LogProb at iter 6 = -2555.89502 using 10 examples  change =    0.00708
+Ave LogProb at iter 7 = -2555.88965 using 10 examples  change =    0.00537
+Ave LogProb at iter 8 = -2555.88574 using 10 examples  change =    0.00391
+Estimation converged at iteration 8
+~~~~~~~~~~~ modele huit ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l huit -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//huit -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//huit . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  huit
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 99, Min length = 43
+Ave LogProb at iter 1 = -3467.53125 using 10 examples
+Ave LogProb at iter 2 = -3353.47314 using 10 examples  change =  114.05811
+Ave LogProb at iter 3 = -3353.32227 using 10 examples  change =    0.15088
+Ave LogProb at iter 4 = -3353.22021 using 10 examples  change =    0.10205
+Ave LogProb at iter 5 = -3353.15674 using 10 examples  change =    0.06348
+Ave LogProb at iter 6 = -3353.12061 using 10 examples  change =    0.03613
+Ave LogProb at iter 7 = -3353.10278 using 10 examples  change =    0.01782
+Ave LogProb at iter 8 = -3353.09229 using 10 examples  change =    0.01050
+Ave LogProb at iter 9 = -3353.08203 using 10 examples  change =    0.01025
+Ave LogProb at iter 10 = -3353.07080 using 10 examples  change =    0.01123
+Ave LogProb at iter 11 = -3353.06372 using 10 examples  change =    0.00708
+Ave LogProb at iter 12 = -3353.06250 using 10 examples  change =    0.00122
+Estimation converged at iteration 12
+~~~~~~~~~~~ modele moins ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l moins -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//moins -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//moins . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  moins
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 51, Min length = 27
+Ave LogProb at iter 1 = -2276.88843 using 10 examples
+Ave LogProb at iter 2 = -2158.34009 using 10 examples  change =  118.54834
+Ave LogProb at iter 3 = -2157.01685 using 10 examples  change =    1.32324
+Ave LogProb at iter 4 = -2156.21680 using 10 examples  change =    0.80005
+Ave LogProb at iter 5 = -2155.79224 using 10 examples  change =    0.42456
+Ave LogProb at iter 6 = -2155.48779 using 10 examples  change =    0.30444
+Ave LogProb at iter 7 = -2155.12988 using 10 examples  change =    0.35791
+Ave LogProb at iter 8 = -2154.80688 using 10 examples  change =    0.32300
+Ave LogProb at iter 9 = -2154.12476 using 10 examples  change =    0.68213
+Ave LogProb at iter 10 = -2153.85010 using 10 examples  change =    0.27466
+Ave LogProb at iter 11 = -2153.36670 using 10 examples  change =    0.48340
+Ave LogProb at iter 12 = -2153.11963 using 10 examples  change =    0.24707
+Ave LogProb at iter 13 = -2153.03857 using 10 examples  change =    0.08105
+Ave LogProb at iter 14 = -2152.97021 using 10 examples  change =    0.06836
+Ave LogProb at iter 15 = -2152.88184 using 10 examples  change =    0.08838
+Ave LogProb at iter 16 = -2152.75073 using 10 examples  change =    0.13110
+Ave LogProb at iter 17 = -2152.60767 using 10 examples  change =    0.14307
+Ave LogProb at iter 18 = -2152.51074 using 10 examples  change =    0.09692
+Ave LogProb at iter 19 = -2152.46436 using 10 examples  change =    0.04639
+Ave LogProb at iter 20 = -2152.44653 using 10 examples  change =    0.01782
+Ave LogProb at iter 21 = -2152.44043 using 10 examples  change =    0.00610
+Ave LogProb at iter 22 = -2152.43799 using 10 examples  change =    0.00244
+Estimation converged at iteration 22
+~~~~~~~~~~~ modele multiplier ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l multiplier -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//multiplier -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//multiplier . . . 
+ States   :   2  3  4  5  6  7  8  9 10 11 12 13 (width)
+ Mixes  s1:   1  1  1  1  1  1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  multiplier
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 116, Min length = 70
+Ave LogProb at iter 1 = -5515.55322 using 10 examples
+Ave LogProb at iter 2 = -5297.88037 using 10 examples  change =  217.67285
+Ave LogProb at iter 3 = -5292.22949 using 10 examples  change =    5.65088
+Ave LogProb at iter 4 = -5286.27051 using 10 examples  change =    5.95898
+Ave LogProb at iter 5 = -5281.55322 using 10 examples  change =    4.71729
+Ave LogProb at iter 6 = -5280.84912 using 10 examples  change =    0.70410
+Ave LogProb at iter 7 = -5280.62598 using 10 examples  change =    0.22314
+Ave LogProb at iter 8 = -5280.19434 using 10 examples  change =    0.43164
+Ave LogProb at iter 9 = -5278.86963 using 10 examples  change =    1.32471
+Ave LogProb at iter 10 = -5278.33887 using 10 examples  change =    0.53076
+Ave LogProb at iter 11 = -5278.32910 using 10 examples  change =    0.00977
+Ave LogProb at iter 12 = -5278.32617 using 10 examples  change =    0.00293
+Estimation converged at iteration 12
+~~~~~~~~~~~ modele neuf ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l neuf -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//neuf -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//neuf . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  neuf
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 200, Min length = 36
+Ave LogProb at iter 1 = -3683.86865 using 10 examples
+Ave LogProb at iter 2 = -3524.49463 using 10 examples  change =  159.37402
+Ave LogProb at iter 3 = -3523.94067 using 10 examples  change =    0.55396
+Ave LogProb at iter 4 = -3522.56592 using 10 examples  change =    1.37476
+Ave LogProb at iter 5 = -3522.50537 using 10 examples  change =    0.06055
+Ave LogProb at iter 6 = -3522.49097 using 10 examples  change =    0.01440
+Ave LogProb at iter 7 = -3522.48633 using 10 examples  change =    0.00464
+Estimation converged at iteration 7
+~~~~~~~~~~~ modele onze ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l onze -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//onze -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//onze . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  onze
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 115, Min length = 41
+Ave LogProb at iter 1 = -3591.21924 using 10 examples
+Ave LogProb at iter 2 = -3433.36182 using 10 examples  change =  157.85742
+Ave LogProb at iter 3 = -3431.27783 using 10 examples  change =    2.08398
+Ave LogProb at iter 4 = -3431.04150 using 10 examples  change =    0.23633
+Ave LogProb at iter 5 = -3429.61523 using 10 examples  change =    1.42627
+Ave LogProb at iter 6 = -3427.80420 using 10 examples  change =    1.81104
+Ave LogProb at iter 7 = -3423.11206 using 10 examples  change =    4.69214
+Ave LogProb at iter 8 = -3417.25781 using 10 examples  change =    5.85425
+Ave LogProb at iter 9 = -3414.16162 using 10 examples  change =    3.09619
+Ave LogProb at iter 10 = -3410.51562 using 10 examples  change =    3.64600
+Ave LogProb at iter 11 = -3408.72021 using 10 examples  change =    1.79541
+Ave LogProb at iter 12 = -3406.94019 using 10 examples  change =    1.78003
+Ave LogProb at iter 13 = -3403.90161 using 10 examples  change =    3.03857
+Ave LogProb at iter 14 = -3400.63232 using 10 examples  change =    3.26929
+Ave LogProb at iter 15 = -3396.69189 using 10 examples  change =    3.94043
+Ave LogProb at iter 16 = -3386.66797 using 10 examples  change =   10.02393
+Ave LogProb at iter 17 = -3382.20312 using 10 examples  change =    4.46484
+Ave LogProb at iter 18 = -3381.70361 using 10 examples  change =    0.49951
+Ave LogProb at iter 19 = -3381.30396 using 10 examples  change =    0.39966
+Ave LogProb at iter 20 = -3380.88428 using 10 examples  change =    0.41968
+Ave LogProb at iter 21 = -3380.62354 using 10 examples  change =    0.26074
+Ave LogProb at iter 22 = -3380.57861 using 10 examples  change =    0.04492
+Ave LogProb at iter 23 = -3380.57227 using 10 examples  change =    0.00635
+Ave LogProb at iter 24 = -3380.57031 using 10 examples  change =    0.00195
+Estimation converged at iteration 24
+~~~~~~~~~~~ modele par ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l par -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//par -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//par . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  par
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 75, Min length = 24
+Ave LogProb at iter 1 = -2420.71191 using 10 examples
+Ave LogProb at iter 2 = -2306.69849 using 10 examples  change =  114.01343
+Ave LogProb at iter 3 = -2303.03613 using 10 examples  change =    3.66235
+Ave LogProb at iter 4 = -2295.01489 using 10 examples  change =    8.02124
+Ave LogProb at iter 5 = -2288.00244 using 10 examples  change =    7.01245
+Ave LogProb at iter 6 = -2286.96802 using 10 examples  change =    1.03442
+Ave LogProb at iter 7 = -2285.45410 using 10 examples  change =    1.51392
+Ave LogProb at iter 8 = -2278.24463 using 10 examples  change =    7.20947
+Ave LogProb at iter 9 = -2263.61719 using 10 examples  change =   14.62744
+Ave LogProb at iter 10 = -2262.80371 using 10 examples  change =    0.81348
+Ave LogProb at iter 11 = -2262.78174 using 10 examples  change =    0.02197
+Ave LogProb at iter 12 = -2262.76807 using 10 examples  change =    0.01367
+Ave LogProb at iter 13 = -2262.76147 using 10 examples  change =    0.00659
+Ave LogProb at iter 14 = -2262.75928 using 10 examples  change =    0.00220
+Estimation converged at iteration 14
+~~~~~~~~~~~ modele plus ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l plus -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//plus -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//plus . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  plus
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 75, Min length = 17
+Ave LogProb at iter 1 = -3104.82861 using 10 examples
+Ave LogProb at iter 2 = -2953.62988 using 10 examples  change =  151.19873
+Ave LogProb at iter 3 = -2952.89038 using 10 examples  change =    0.73950
+Ave LogProb at iter 4 = -2951.11743 using 10 examples  change =    1.77295
+Ave LogProb at iter 5 = -2947.00024 using 10 examples  change =    4.11719
+Ave LogProb at iter 6 = -2926.90967 using 10 examples  change =   20.09058
+Ave LogProb at iter 7 = -2912.45972 using 10 examples  change =   14.44995
+Ave LogProb at iter 8 = -2909.28076 using 10 examples  change =    3.17896
+Ave LogProb at iter 9 = -2907.10693 using 10 examples  change =    2.17383
+Ave LogProb at iter 10 = -2906.11255 using 10 examples  change =    0.99438
+Ave LogProb at iter 11 = -2905.17383 using 10 examples  change =    0.93872
+Ave LogProb at iter 12 = -2904.86865 using 10 examples  change =    0.30518
+Ave LogProb at iter 13 = -2904.76733 using 10 examples  change =    0.10132
+Ave LogProb at iter 14 = -2904.72656 using 10 examples  change =    0.04077
+Ave LogProb at iter 15 = -2904.65771 using 10 examples  change =    0.06885
+Ave LogProb at iter 16 = -2904.57568 using 10 examples  change =    0.08203
+Ave LogProb at iter 17 = -2904.54443 using 10 examples  change =    0.03125
+Ave LogProb at iter 18 = -2904.53369 using 10 examples  change =    0.01074
+Ave LogProb at iter 19 = -2904.52856 using 10 examples  change =    0.00513
+Ave LogProb at iter 20 = -2904.52563 using 10 examples  change =    0.00293
+Estimation converged at iteration 20
+~~~~~~~~~~~ modele quarante ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l quarante -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//quarante -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//quarante . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quarante
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 94, Min length = 52
+Ave LogProb at iter 1 = -4380.44238 using 10 examples
+Ave LogProb at iter 2 = -4203.32129 using 10 examples  change =  177.12109
+Ave LogProb at iter 3 = -4202.60205 using 10 examples  change =    0.71924
+Ave LogProb at iter 4 = -4202.41064 using 10 examples  change =    0.19141
+Ave LogProb at iter 5 = -4202.38428 using 10 examples  change =    0.02637
+Ave LogProb at iter 6 = -4202.37939 using 10 examples  change =    0.00488
+Estimation converged at iteration 6
+~~~~~~~~~~~ modele quatorze ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l quatorze -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//quatorze -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//quatorze . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quatorze
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 130, Min length = 54
+Ave LogProb at iter 1 = -4620.92773 using 10 examples
+Ave LogProb at iter 2 = -4453.33447 using 10 examples  change =  167.59326
+Ave LogProb at iter 3 = -4452.05615 using 10 examples  change =    1.27832
+Ave LogProb at iter 4 = -4451.67920 using 10 examples  change =    0.37695
+Ave LogProb at iter 5 = -4451.41113 using 10 examples  change =    0.26807
+Ave LogProb at iter 6 = -4451.34863 using 10 examples  change =    0.06250
+Ave LogProb at iter 7 = -4451.32422 using 10 examples  change =    0.02441
+Ave LogProb at iter 8 = -4451.30957 using 10 examples  change =    0.01465
+Ave LogProb at iter 9 = -4451.30127 using 10 examples  change =    0.00830
+Ave LogProb at iter 10 = -4451.29639 using 10 examples  change =    0.00488
+Estimation converged at iteration 10
+~~~~~~~~~~~ modele quatre ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l quatre -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//quatre -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//quatre . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quatre
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 61, Min length = 18
+Ave LogProb at iter 1 = -2687.11792 using 10 examples
+Ave LogProb at iter 2 = -2595.89990 using 10 examples  change =   91.21802
+Ave LogProb at iter 3 = -2594.76685 using 10 examples  change =    1.13306
+Ave LogProb at iter 4 = -2594.22070 using 10 examples  change =    0.54614
+Ave LogProb at iter 5 = -2593.95776 using 10 examples  change =    0.26294
+Ave LogProb at iter 6 = -2593.55469 using 10 examples  change =    0.40308
+Ave LogProb at iter 7 = -2592.99536 using 10 examples  change =    0.55933
+Ave LogProb at iter 8 = -2592.66479 using 10 examples  change =    0.33057
+Ave LogProb at iter 9 = -2592.30859 using 10 examples  change =    0.35620
+Ave LogProb at iter 10 = -2591.96191 using 10 examples  change =    0.34668
+Ave LogProb at iter 11 = -2591.73145 using 10 examples  change =    0.23047
+Ave LogProb at iter 12 = -2591.54907 using 10 examples  change =    0.18237
+Ave LogProb at iter 13 = -2591.48438 using 10 examples  change =    0.06470
+Ave LogProb at iter 14 = -2591.46826 using 10 examples  change =    0.01611
+Ave LogProb at iter 15 = -2591.45459 using 10 examples  change =    0.01367
+Ave LogProb at iter 16 = -2591.44141 using 10 examples  change =    0.01318
+Ave LogProb at iter 17 = -2591.42944 using 10 examples  change =    0.01196
+Ave LogProb at iter 18 = -2591.41748 using 10 examples  change =    0.01196
+Ave LogProb at iter 19 = -2591.40039 using 10 examples  change =    0.01709
+Ave LogProb at iter 20 = -2591.37842 using 10 examples  change =    0.02197
+Ave LogProb at iter 21 = -2591.35840 using 10 examples  change =    0.02002
+Ave LogProb at iter 22 = -2591.34229 using 10 examples  change =    0.01611
+Ave LogProb at iter 23 = -2591.32031 using 10 examples  change =    0.02197
+Ave LogProb at iter 24 = -2591.27515 using 10 examples  change =    0.04517
+Ave LogProb at iter 25 = -2591.19678 using 10 examples  change =    0.07837
+Ave LogProb at iter 26 = -2591.15771 using 10 examples  change =    0.03906
+Ave LogProb at iter 27 = -2591.15405 using 10 examples  change =    0.00366
+Estimation converged at iteration 27
+~~~~~~~~~~~ modele quinze ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l quinze -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//quinze -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//quinze . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  quinze
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 113, Min length = 44
+Ave LogProb at iter 1 = -3887.02881 using 10 examples
+Ave LogProb at iter 2 = -3666.33594 using 10 examples  change =  220.69287
+Ave LogProb at iter 3 = -3664.55981 using 10 examples  change =    1.77612
+Ave LogProb at iter 4 = -3664.18213 using 10 examples  change =    0.37769
+Ave LogProb at iter 5 = -3663.81763 using 10 examples  change =    0.36450
+Ave LogProb at iter 6 = -3661.57178 using 10 examples  change =    2.24585
+Ave LogProb at iter 7 = -3661.45068 using 10 examples  change =    0.12109
+Ave LogProb at iter 8 = -3661.41333 using 10 examples  change =    0.03735
+Ave LogProb at iter 9 = -3661.39771 using 10 examples  change =    0.01562
+Ave LogProb at iter 10 = -3661.39209 using 10 examples  change =    0.00562
+Ave LogProb at iter 11 = -3661.38989 using 10 examples  change =    0.00220
+Estimation converged at iteration 11
+~~~~~~~~~~~ modele seize ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l seize -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//seize -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//seize . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  seize
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 116, Min length = 54
+Ave LogProb at iter 1 = -4085.38916 using 10 examples
+Ave LogProb at iter 2 = -3886.31396 using 10 examples  change =  199.07520
+Ave LogProb at iter 3 = -3884.14917 using 10 examples  change =    2.16479
+Ave LogProb at iter 4 = -3883.08911 using 10 examples  change =    1.06006
+Ave LogProb at iter 5 = -3882.53174 using 10 examples  change =    0.55737
+Ave LogProb at iter 6 = -3882.50049 using 10 examples  change =    0.03125
+Ave LogProb at iter 7 = -3882.49609 using 10 examples  change =    0.00439
+Estimation converged at iteration 7
+~~~~~~~~~~~ modele sept ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l sept -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//sept -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//sept . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  sept
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 79, Min length = 38
+Ave LogProb at iter 1 = -3625.77271 using 10 examples
+Ave LogProb at iter 2 = -3506.83667 using 10 examples  change =  118.93604
+Ave LogProb at iter 3 = -3505.92725 using 10 examples  change =    0.90942
+Ave LogProb at iter 4 = -3505.65283 using 10 examples  change =    0.27441
+Ave LogProb at iter 5 = -3505.45435 using 10 examples  change =    0.19849
+Ave LogProb at iter 6 = -3505.24609 using 10 examples  change =    0.20825
+Ave LogProb at iter 7 = -3505.04761 using 10 examples  change =    0.19849
+Ave LogProb at iter 8 = -3504.92310 using 10 examples  change =    0.12451
+Ave LogProb at iter 9 = -3504.82275 using 10 examples  change =    0.10034
+Ave LogProb at iter 10 = -3504.75635 using 10 examples  change =    0.06641
+Ave LogProb at iter 11 = -3504.72852 using 10 examples  change =    0.02783
+Ave LogProb at iter 12 = -3504.71753 using 10 examples  change =    0.01099
+Ave LogProb at iter 13 = -3504.71240 using 10 examples  change =    0.00513
+Ave LogProb at iter 14 = -3504.71094 using 10 examples  change =    0.00146
+Estimation converged at iteration 14
+~~~~~~~~~~~ modele six ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l six -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//six -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//six . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  six
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 100, Min length = 44
+Ave LogProb at iter 1 = -3864.39648 using 10 examples
+Ave LogProb at iter 2 = -3682.53394 using 10 examples  change =  181.86255
+Ave LogProb at iter 3 = -3681.14331 using 10 examples  change =    1.39062
+Ave LogProb at iter 4 = -3678.20557 using 10 examples  change =    2.93774
+Ave LogProb at iter 5 = -3677.32275 using 10 examples  change =    0.88281
+Ave LogProb at iter 6 = -3675.94409 using 10 examples  change =    1.37866
+Ave LogProb at iter 7 = -3675.72778 using 10 examples  change =    0.21631
+Ave LogProb at iter 8 = -3675.69092 using 10 examples  change =    0.03687
+Ave LogProb at iter 9 = -3675.65234 using 10 examples  change =    0.03857
+Ave LogProb at iter 10 = -3675.60352 using 10 examples  change =    0.04883
+Ave LogProb at iter 11 = -3675.57861 using 10 examples  change =    0.02490
+Ave LogProb at iter 12 = -3675.57471 using 10 examples  change =    0.00391
+Estimation converged at iteration 12
+~~~~~~~~~~~ modele soixante ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l soixante -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//soixante -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//soixante . . . 
+ States   :   2  3  4  5  6  7  8 (width)
+ Mixes  s1:   1  1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  soixante
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 112, Min length = 68
+Ave LogProb at iter 1 = -5332.23730 using 10 examples
+Ave LogProb at iter 2 = -5159.26318 using 10 examples  change =  172.97412
+Ave LogProb at iter 3 = -5159.11279 using 10 examples  change =    0.15039
+Ave LogProb at iter 4 = -5159.08496 using 10 examples  change =    0.02783
+Ave LogProb at iter 5 = -5159.07666 using 10 examples  change =    0.00830
+Ave LogProb at iter 6 = -5159.07471 using 10 examples  change =    0.00195
+Estimation converged at iteration 6
+~~~~~~~~~~~ modele sur ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l sur -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//sur -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//sur . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:   1  1  1 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  sur
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 102, Min length = 41
+Ave LogProb at iter 1 = -3346.33008 using 10 examples
+Ave LogProb at iter 2 = -3192.75854 using 10 examples  change =  153.57153
+Ave LogProb at iter 3 = -3190.51489 using 10 examples  change =    2.24365
+Ave LogProb at iter 4 = -3188.86475 using 10 examples  change =    1.65015
+Ave LogProb at iter 5 = -3188.13306 using 10 examples  change =    0.73169
+Ave LogProb at iter 6 = -3188.06396 using 10 examples  change =    0.06909
+Ave LogProb at iter 7 = -3188.06079 using 10 examples  change =    0.00317
+Estimation converged at iteration 7
+~~~~~~~~~~~ modele treize ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l treize -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//treize -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//treize . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  treize
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 112, Min length = 37
+Ave LogProb at iter 1 = -3515.20239 using 10 examples
+Ave LogProb at iter 2 = -3337.47388 using 10 examples  change =  177.72852
+Ave LogProb at iter 3 = -3337.00439 using 10 examples  change =    0.46948
+Ave LogProb at iter 4 = -3335.95947 using 10 examples  change =    1.04492
+Ave LogProb at iter 5 = -3333.57422 using 10 examples  change =    2.38525
+Ave LogProb at iter 6 = -3333.41211 using 10 examples  change =    0.16211
+Ave LogProb at iter 7 = -3333.36523 using 10 examples  change =    0.04688
+Ave LogProb at iter 8 = -3333.33130 using 10 examples  change =    0.03394
+Ave LogProb at iter 9 = -3333.29370 using 10 examples  change =    0.03760
+Ave LogProb at iter 10 = -3333.27295 using 10 examples  change =    0.02075
+Ave LogProb at iter 11 = -3333.27100 using 10 examples  change =    0.00195
+Estimation converged at iteration 11
+~~~~~~~~~~~ modele trente ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l trente -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//trente -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//trente . . . 
+ States   :   2  3  4  5  6  7 (width)
+ Mixes  s1:   1  1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  trente
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 78, Min length = 45
+Ave LogProb at iter 1 = -3492.89697 using 10 examples
+Ave LogProb at iter 2 = -3373.03369 using 10 examples  change =  119.86328
+Ave LogProb at iter 3 = -3370.20630 using 10 examples  change =    2.82739
+Ave LogProb at iter 4 = -3368.41333 using 10 examples  change =    1.79297
+Ave LogProb at iter 5 = -3367.87109 using 10 examples  change =    0.54224
+Ave LogProb at iter 6 = -3367.69873 using 10 examples  change =    0.17236
+Ave LogProb at iter 7 = -3367.67651 using 10 examples  change =    0.02222
+Ave LogProb at iter 8 = -3367.67188 using 10 examples  change =    0.00464
+Estimation converged at iteration 8
+~~~~~~~~~~~ modele trois ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l trois -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//trois -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//trois . . . 
+ States   :   2  3  4  5  6 (width)
+ Mixes  s1:   1  1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  trois
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 58, Min length = 24
+Ave LogProb at iter 1 = -2448.25952 using 10 examples
+Ave LogProb at iter 2 = -2368.05493 using 10 examples  change =   80.20459
+Ave LogProb at iter 3 = -2366.98022 using 10 examples  change =    1.07471
+Ave LogProb at iter 4 = -2365.83008 using 10 examples  change =    1.15015
+Ave LogProb at iter 5 = -2365.52344 using 10 examples  change =    0.30664
+Ave LogProb at iter 6 = -2365.24878 using 10 examples  change =    0.27466
+Ave LogProb at iter 7 = -2365.11841 using 10 examples  change =    0.13037
+Ave LogProb at iter 8 = -2364.99268 using 10 examples  change =    0.12573
+Ave LogProb at iter 9 = -2364.79468 using 10 examples  change =    0.19800
+Ave LogProb at iter 10 = -2364.47998 using 10 examples  change =    0.31470
+Ave LogProb at iter 11 = -2364.35767 using 10 examples  change =    0.12231
+Ave LogProb at iter 12 = -2364.28369 using 10 examples  change =    0.07397
+Ave LogProb at iter 13 = -2364.13330 using 10 examples  change =    0.15039
+Ave LogProb at iter 14 = -2363.87354 using 10 examples  change =    0.25977
+Ave LogProb at iter 15 = -2363.76904 using 10 examples  change =    0.10449
+Ave LogProb at iter 16 = -2363.70557 using 10 examples  change =    0.06348
+Ave LogProb at iter 17 = -2363.66260 using 10 examples  change =    0.04297
+Ave LogProb at iter 18 = -2363.63110 using 10 examples  change =    0.03149
+Ave LogProb at iter 19 = -2363.57300 using 10 examples  change =    0.05811
+Ave LogProb at iter 20 = -2363.43872 using 10 examples  change =    0.13428
+Ave LogProb at iter 21 = -2363.33228 using 10 examples  change =    0.10645
+Ave LogProb at iter 22 = -2363.31299 using 10 examples  change =    0.01929
+Ave LogProb at iter 23 = -2363.30591 using 10 examples  change =    0.00708
+Ave LogProb at iter 24 = -2363.30225 using 10 examples  change =    0.00366
+Estimation converged at iteration 24
+~~~~~~~~~~~ modele un ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l un -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//un -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//un . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  un
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 39, Min length = 14
+Ave LogProb at iter 1 = -1542.37671 using 10 examples
+Ave LogProb at iter 2 = -1495.72510 using 10 examples  change =   46.65161
+Ave LogProb at iter 3 = -1495.72546 using 10 examples  change =   -0.00037
+Estimation converged at iteration 3
+~~~~~~~~~~~ modele vingt ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l vingt -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//vingt -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//vingt . . . 
+ States   :   2  3 (width)
+ Mixes  s1:   1  1 ( 39  )
+ Num Using:   0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  vingt
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 143, Min length = 22
+Ave LogProb at iter 1 = -3140.77710 using 10 examples
+Ave LogProb at iter 2 = -3026.59229 using 10 examples  change =  114.18481
+Ave LogProb at iter 3 = -3026.59326 using 10 examples  change =   -0.00098
+Estimation converged at iteration 3
+~~~~~~~~~~~ modele zero ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l zero -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//zero -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//zero . . . 
+ States   :   2  3  4  5 (width)
+ Mixes  s1:   1  1  1  1 ( 39  )
+ Num Using:   0  0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  zero
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 70, Min length = 42
+Ave LogProb at iter 1 = -3412.64893 using 10 examples
+Ave LogProb at iter 2 = -3265.42627 using 10 examples  change =  147.22266
+Ave LogProb at iter 3 = -3265.40723 using 10 examples  change =    0.01904
+Ave LogProb at iter 4 = -3265.40088 using 10 examples  change =    0.00635
+Ave LogProb at iter 5 = -3265.39502 using 10 examples  change =    0.00586
+Ave LogProb at iter 6 = -3265.38721 using 10 examples  change =    0.00781
+Ave LogProb at iter 7 = -3265.37695 using 10 examples  change =    0.01025
+Ave LogProb at iter 8 = -3265.37061 using 10 examples  change =    0.00635
+Ave LogProb at iter 9 = -3265.36865 using 10 examples  change =    0.00195
+Estimation converged at iteration 9
+~~~~~~~~~~~ modele pause ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l pause -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//pause -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//pause . . . 
+ States   :   2  3  4 (width)
+ Mixes  s1:  32 32 32 ( 39  )
+ Num Using:   0  0  0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  pause
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+7 Examples loaded, Max length = 532, Min length = 103
+Ave LogProb at iter 1 = -16030.87305 using 7 examples
+Ave LogProb at iter 2 = -14247.93457 using 7 examples  change = 1782.93848
+Ave LogProb at iter 3 = -14182.96680 using 7 examples  change =   64.96777
+Ave LogProb at iter 4 = -14137.83398 using 7 examples  change =   45.13281
+Ave LogProb at iter 5 = -14104.22656 using 7 examples  change =   33.60742
+Ave LogProb at iter 6 = -14075.74512 using 7 examples  change =   28.48145
+Ave LogProb at iter 7 = -14049.08594 using 7 examples  change =   26.65918
+Ave LogProb at iter 8 = -14027.11914 using 7 examples  change =   21.96680
+Ave LogProb at iter 9 = -14008.05371 using 7 examples  change =   19.06543
+Ave LogProb at iter 10 = -13991.22363 using 7 examples  change =   16.83008
+Ave LogProb at iter 11 = -13977.56250 using 7 examples  change =   13.66113
+Ave LogProb at iter 12 = -13965.96191 using 7 examples  change =   11.60059
+Ave LogProb at iter 13 = -13954.55273 using 7 examples  change =   11.40918
+Ave LogProb at iter 14 = -13942.01660 using 7 examples  change =   12.53613
+Ave LogProb at iter 15 = -13932.03418 using 7 examples  change =    9.98242
+Ave LogProb at iter 16 = -13926.36719 using 7 examples  change =    5.66699
+Ave LogProb at iter 17 = -13921.15137 using 7 examples  change =    5.21582
+Ave LogProb at iter 18 = -13916.58496 using 7 examples  change =    4.56641
+Ave LogProb at iter 19 = -13911.87793 using 7 examples  change =    4.70703
+Ave LogProb at iter 20 = -13906.66406 using 7 examples  change =    5.21387
+Ave LogProb at iter 21 = -13901.52441 using 7 examples  change =    5.13965
+Ave LogProb at iter 22 = -13898.28809 using 7 examples  change =    3.23633
+Ave LogProb at iter 23 = -13896.31738 using 7 examples  change =    1.97070
+Ave LogProb at iter 24 = -13893.79102 using 7 examples  change =    2.52637
+Ave LogProb at iter 25 = -13890.95508 using 7 examples  change =    2.83594
+Ave LogProb at iter 26 = -13888.85449 using 7 examples  change =    2.10059
+Ave LogProb at iter 27 = -13887.35449 using 7 examples  change =    1.50000
+Ave LogProb at iter 28 = -13886.00000 using 7 examples  change =    1.35449
+Ave LogProb at iter 29 = -13884.59961 using 7 examples  change =    1.40039
+Ave LogProb at iter 30 = -13882.36426 using 7 examples  change =    2.23535
+Ave LogProb at iter 31 = -13880.28711 using 7 examples  change =    2.07715
+Ave LogProb at iter 32 = -13878.44824 using 7 examples  change =    1.83887
+Ave LogProb at iter 33 = -13876.26758 using 7 examples  change =    2.18066
+Ave LogProb at iter 34 = -13873.81934 using 7 examples  change =    2.44824
+Ave LogProb at iter 35 = -13870.71094 using 7 examples  change =    3.10840
+Ave LogProb at iter 36 = -13867.84668 using 7 examples  change =    2.86426
+Ave LogProb at iter 37 = -13866.24316 using 7 examples  change =    1.60352
+Ave LogProb at iter 38 = -13865.10840 using 7 examples  change =    1.13477
+Ave LogProb at iter 39 = -13863.93555 using 7 examples  change =    1.17285
+Ave LogProb at iter 40 = -13862.54492 using 7 examples  change =    1.39062
+Ave LogProb at iter 41 = -13860.14551 using 7 examples  change =    2.39941
+Ave LogProb at iter 42 = -13857.48535 using 7 examples  change =    2.66016
+Ave LogProb at iter 43 = -13854.59668 using 7 examples  change =    2.88867
+Ave LogProb at iter 44 = -13853.12500 using 7 examples  change =    1.47168
+Ave LogProb at iter 45 = -13851.97363 using 7 examples  change =    1.15137
+Ave LogProb at iter 46 = -13851.03809 using 7 examples  change =    0.93555
+Ave LogProb at iter 47 = -13850.00488 using 7 examples  change =    1.03320
+Ave LogProb at iter 48 = -13849.03613 using 7 examples  change =    0.96875
+Ave LogProb at iter 49 = -13848.31934 using 7 examples  change =    0.71680
+Ave LogProb at iter 50 = -13847.76855 using 7 examples  change =    0.55078
+Ave LogProb at iter 51 = -13847.20410 using 7 examples  change =    0.56445
+Ave LogProb at iter 52 = -13846.52832 using 7 examples  change =    0.67578
+Ave LogProb at iter 53 = -13845.56934 using 7 examples  change =    0.95898
+Ave LogProb at iter 54 = -13844.85449 using 7 examples  change =    0.71484
+Ave LogProb at iter 55 = -13844.50977 using 7 examples  change =    0.34473
+Ave LogProb at iter 56 = -13844.24902 using 7 examples  change =    0.26074
+Ave LogProb at iter 57 = -13843.88867 using 7 examples  change =    0.36035
+Ave LogProb at iter 58 = -13843.55664 using 7 examples  change =    0.33203
+Ave LogProb at iter 59 = -13842.90820 using 7 examples  change =    0.64844
+Ave LogProb at iter 60 = -13841.78711 using 7 examples  change =    1.12109
+Ave LogProb at iter 61 = -13841.31738 using 7 examples  change =    0.46973
+Ave LogProb at iter 62 = -13840.95312 using 7 examples  change =    0.36426
+Ave LogProb at iter 63 = -13840.52246 using 7 examples  change =    0.43066
+Ave LogProb at iter 64 = -13840.16309 using 7 examples  change =    0.35938
+Ave LogProb at iter 65 = -13839.72852 using 7 examples  change =    0.43457
+Ave LogProb at iter 66 = -13839.20117 using 7 examples  change =    0.52734
+Ave LogProb at iter 67 = -13838.75879 using 7 examples  change =    0.44238
+Ave LogProb at iter 68 = -13838.30273 using 7 examples  change =    0.45605
+Ave LogProb at iter 69 = -13838.02148 using 7 examples  change =    0.28125
+Ave LogProb at iter 70 = -13837.86816 using 7 examples  change =    0.15332
+Ave LogProb at iter 71 = -13837.71191 using 7 examples  change =    0.15625
+Ave LogProb at iter 72 = -13837.48145 using 7 examples  change =    0.23047
+Ave LogProb at iter 73 = -13837.22363 using 7 examples  change =    0.25781
+Ave LogProb at iter 74 = -13837.02930 using 7 examples  change =    0.19434
+Ave LogProb at iter 75 = -13836.86133 using 7 examples  change =    0.16797
+Ave LogProb at iter 76 = -13836.67285 using 7 examples  change =    0.18848
+Ave LogProb at iter 77 = -13836.50293 using 7 examples  change =    0.16992
+Ave LogProb at iter 78 = -13836.21973 using 7 examples  change =    0.28320
+Ave LogProb at iter 79 = -13835.74316 using 7 examples  change =    0.47656
+Ave LogProb at iter 80 = -13835.29395 using 7 examples  change =    0.44922
+Ave LogProb at iter 81 = -13834.62402 using 7 examples  change =    0.66992
+Ave LogProb at iter 82 = -13834.27051 using 7 examples  change =    0.35352
+Ave LogProb at iter 83 = -13834.00586 using 7 examples  change =    0.26465
+Ave LogProb at iter 84 = -13833.66113 using 7 examples  change =    0.34473
+Ave LogProb at iter 85 = -13833.29492 using 7 examples  change =    0.36621
+Ave LogProb at iter 86 = -13832.98340 using 7 examples  change =    0.31152
+Ave LogProb at iter 87 = -13832.60156 using 7 examples  change =    0.38184
+Ave LogProb at iter 88 = -13832.21289 using 7 examples  change =    0.38867
+Ave LogProb at iter 89 = -13832.05566 using 7 examples  change =    0.15723
+Ave LogProb at iter 90 = -13831.88965 using 7 examples  change =    0.16602
+Estimation aborted at iteration 90
+dimanche 21 décembre 2014, 14:43:19 (UTC+0100)
