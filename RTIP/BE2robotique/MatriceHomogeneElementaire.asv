@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function [T] = MatriceHomogeneElementaire(type,axe,valeur)
 
 switch type
@@ -58,4 +59,66 @@ end
  
      
  
+=======
+function [T] = MatriceHomogeneElementaire(type,axe,valeur)
+
+switch type
+    case 't'
+        x=0;
+        y=0;
+        z=0;
+        
+        switch axe
+            case 'x'
+                x=valeur;
+            case 'y'
+                y=valeur;
+            case 'z'
+                z=valeur;
+        end
+        T=[[1 , 0 , 0 , x];
+            [0 , 1 , 0 , y];
+            [0 , 0 , 1 , z];
+            [0 , 0 , 0 , 1]]
+        
+        
+    case 'r'
+        a11=1;
+        a22=1;
+        a33=1;
+        a12=0;
+        a13=0;
+        a21=0;
+        a23=0;
+        a31=0;
+        a32=0;
+        switch axe
+            case 'x'
+                a22=cos(valeur);
+                a33=a22;
+                a32=sin(valeur);
+                a23=-sin(valeur);
+                
+            case 'y'
+                a11=cos(valeur);
+                a33=cos(valeur);
+                a13=sin(valeur);
+                a31=-sin(valeur);
+            case 'z'
+                a11=cos(valeur);
+                a22=cos(valeur);
+                a12=-sin(valeur);
+                a21=sin(valeur);
+        end
+        
+        
+end
+                
+                
+                
+ 
+ 
+     
+ 
+>>>>>>> 25b88a0d14b548b32fefd94b9a51113781a0067a
   

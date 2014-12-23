@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function [T] = MatriceHomogeneMGD(tableurDH)
 
 matriceTi=[];
@@ -13,4 +14,21 @@ for i=1:length(tableurDH)
     
     matriceTi(i)=T;
     
+=======
+function [T] = MatriceHomogeneMGD(tableurDH)
+
+matriceTi=[];
+Tij=
+
+for i=1:length(tableurDH)
+    
+    a=tableurDH(i,1);
+    alpha=tableurDH(i,2);
+    r=tableurDH(i,3);
+    theta=tableurDH(i,4);
+    T=MatriceHomogeneLiaison(a,alpha,r,theta);
+    
+    matriceTi(i)=T;
+    
+>>>>>>> 25b88a0d14b548b32fefd94b9a51113781a0067a
 end
