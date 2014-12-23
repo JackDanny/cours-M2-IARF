@@ -123,3 +123,49 @@ Java Model Exception: Java Model Status [Unknown javadoc format for System {key=
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1009 2014-11-14 00:58:27.901
 !MESSAGE Unknown javadoc format for System {key=Ljava/lang/System;} [in System.class [in java.lang [in /usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar]]]
+!SESSION 2014-12-18 11:40:37.218 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=fr_FR
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2014-12-18 11:40:50.406
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-12-18 11:40:55.298
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-12-18 11:40:55.298
+!MESSAGE Unable to restore perspective: Workspace - Java.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-12-18 11:40:55.298
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-12-18 11:40:55.298
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-12-18 11:40:55.298
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-12-18 11:40:55.298
+!MESSAGE OK

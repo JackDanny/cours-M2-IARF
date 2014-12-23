@@ -1,0 +1,88 @@
+dimanche 21 décembre 2014, 04:22:21 (UTC+0100)
+
+~~~ modele cinq deja calcule ! ~~~
+~~~ modele cinq deja calcule ! ~~~
+~~~ modele cinquante deja calcule ! ~~~
+~~~ modele deux deja calcule ! ~~~
+~~~ modele diviser deja calcule ! ~~~
+~~~ modele dix deja calcule ! ~~~
+~~~ modele douze deja calcule ! ~~~
+~~~ modele egal deja calcule ! ~~~
+~~~~~~~~~~~ modele et ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l et -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//et -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//et . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  et
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 32, Min length = 11
+Example 1 skipped
+Example 2 skipped
+Example 3 skipped
+Example 4 skipped
+Example 5 skipped
+Example 6 skipped
+Example 7 skipped
+Example 8 skipped
+Example 9 skipped
+Example 10 skipped
+  ERROR [+2226]  ReEstimateModel: No Usable Training Examples
+ FATAL ERROR - Terminating program HRest
+~~~ modele fois deja calcule ! ~~~
+~~~ modele huit deja calcule ! ~~~
+~~~ modele moins deja calcule ! ~~~
+~~~ modele multiplier deja calcule ! ~~~
+~~~ modele neuf deja calcule ! ~~~
+~~~ modele onze deja calcule ! ~~~
+~~~ modele par deja calcule ! ~~~
+~~~ modele plus deja calcule ! ~~~
+~~~ modele quarante deja calcule ! ~~~
+~~~ modele quatorze deja calcule ! ~~~
+~~~ modele quatre deja calcule ! ~~~
+~~~ modele quinze deja calcule ! ~~~
+~~~ modele seize deja calcule ! ~~~
+~~~ modele sept deja calcule ! ~~~
+~~~ modele six deja calcule ! ~~~
+~~~ modele soixante deja calcule ! ~~~
+~~~ modele sur deja calcule ! ~~~
+~~~ modele treize deja calcule ! ~~~
+~~~ modele trente deja calcule ! ~~~
+~~~ modele trois deja calcule ! ~~~
+~~~~~~~~~~~ modele un ~~~~~~~~~~
+HRest -A -C Modeles/htk.conf -l un -L Labels/ -M Modeles/appris/ -e 0.005 -i 90 -T 1 -m 3 Modeles/init//un -S Listes/wav.all.lst 
+Reestimating HMM Modeles/init//un . . . 
+ States   :   2 (width)
+ Mixes  s1:   1 ( 39  )
+ Num Using:   0
+ Parm Kind:  MFCC_E_D_A
+ Number of owners = 1
+ SegLab   :  un
+ MaxIter  :  90
+ Epsilon  :  0.005000
+ Updating :  Transitions Means Variances 
+
+ - system is PLAIN
+10 Examples loaded, Max length = 39, Min length = 14
+Example 1 skipped
+Example 2 skipped
+Example 3 skipped
+Example 4 skipped
+Example 5 skipped
+Example 6 skipped
+Example 7 skipped
+Example 8 skipped
+Example 9 skipped
+Example 10 skipped
+  ERROR [+2226]  ReEstimateModel: No Usable Training Examples
+ FATAL ERROR - Terminating program HRest
+~~~ modele vingt deja calcule ! ~~~
+~~~ modele zero deja calcule ! ~~~
+~~~ modele pause deja calcule ! ~~~
+dimanche 21 décembre 2014, 04:22:23 (UTC+0100)

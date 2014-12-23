@@ -1,0 +1,5 @@
+HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.all.lst Modeles/dictionnaire Modeles/liste-mots 
+  ERROR [+5010]  InitSource: Cannot open source file Modeles/appris/et
+  ERROR [+7010]  LoadHMMSet: Can't find file
+  ERROR [+3228]  Initialise: LoadHMMSet failed
+ FATAL ERROR - Terminating program HVite

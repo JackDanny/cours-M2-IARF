@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0091)http://moodle.univ-tlse3.fr/pluginfile.php/91644/course/section/12725/feuille120142015.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Feuille 1. Projet IARF</title>
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css">
+body {max-width : 21cm;}
+/* Century Schoolbook font is very similar to Computer Modern Math: cmmi */
+.MATH    { font-family: "Century Schoolbook", serif; }
+.MATH I  { font-family: "Century Schoolbook", serif; font-style: italic }
+.BOLDMATH { font-family: "Century Schoolbook", serif; font-weight: bold }
+
+/* heading styles */
+H1		{  }
+H2		{}
+H3		{  }
+H4		{  }
+H5		{  }
+
+/* mathematics styles */
+DIV.displaymath		{ }	/* math displays */
+TD.eqno			{ }	/* equation-number cells */
+
+.invisible {display:none;text-align:justify; }
+
+
+p.code{white-space:pre;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -o-pre-wrap;
+ background: #faf8f0;
+border: 2px solid #003B62;
+display:none;
+padding:10px;
+}
+
+</style>
+<script type="text/javascript">
+<!--
+  function afficher(id) {
+	elem = document.getElementById(id);
+	elem.style.display = (elem.style.display == 'block') ? 'none' : 'block' ;
+	return false;
+}
+// -->
+</script> 
+<style type="text/css"></style></head>
+<body>
+Projet. Master 2- Parcours IARF - Univ. Toulouse III<br><br>
+<p>
+
+</p><h1 align="center"><a name="SECTION00010000000000000000">
+Feuille de projet n<span class="MATH">°</span> 1 : SAT4j</a>
+</h1>
+
+<h1> I. Présentation de SAT4j</h1>
+
+<h2><a name="SECTION00011000000000000000" href="" onclick="return afficher(&#39;intro&#39;);">
+1. Introduction</a>
+</h2>
+<p id="intro" class="invisible">
+Le logiciel SAT4j solver est un programme capable d'évaluer une expression
+de logique propositionnelle et de déterminer si elle est
+contradictoire. Si elle n'est pas contradictoire elle est dîte <i>satisfiable</i>.
+
+<br>
+SAT4J 2.1 fournit une librairie de résolveurs SAT en Java qui est libre sous
+les deux licences publiques Eclipse et GNU LGPL (licence développé au CRIL de
+Lens en France). Le projet SAT4j est hébergé sur le site OW2 forge. Tout
+résolveur SAT4J peut aisément être intégré dans un programme Java.
+
+</p>
+
+<h2><a name="SECTION00012000000000000000" href="" onclick="return afficher(&#39;entreessorties&#39;);">
+2. Entrées/Sorties d'un résolveur SAT </a>
+</h2>
+<div id="entreessorties" class="invisible">
+Un résolveur SAT prend en entrée un fichier contenant une expression au format
+DIMACS CNF simplifié, qui est un format de fichier texte. Le solveur SAT
+retourne soit SATISFIABLE soit UNSATISFIABLE, selon si l'expression fournie
+l'est ou pas, il peut aussi donner des résultats détaillés dans un fichier texte
+dans lequel la première ligne sera "SAT" (si l'expression est satisfiable) ou 
+"UNSAT" (si elle ne l'est pas). Si c'est SAT, la seconde ligne contiendra un
+ensemble d'assignations aux variables booléennes (appelé modèle) qui satisfait
+l'expression fournie en entrée. (Il peut y avoir d'autre modèles possibles de
+l'expression, c'est simplement l'un d'entre eux)
+
+<br>
+L'entrée d'un résolveur SAT est une formule propositionnelle. Une formule
+propositionnelle est une expression contenant des variables qui peuvent
+seulement avoir les valeurs vrai ou faux, ces variables sont liées par des
+connecteurs booléens ET, OU, NON, IMPLIQUE... Avant le calcul, la formule doit
+être traduite dans le format requis par le résolveur. La plupart des résolveurs
+SAT utilisent la forme normale conjonctive (CNF), cela signifie que la formule
+est écrite sous la forme d'une conjonction (ET) de clauses, où une clause est une
+disjonction (OU) de variables ou de négation de variables.
+
+<br>
+Les fichiers au format DIMACS-CNF (c'est une norme imposée lors des compétitions
+entre résolveurs) peuvent contenir différents types de lignes. Le premier
+caractère de la ligne (suivi par un espace) détermine son type :
+
+<ul>
+<li>commentaires : chaque ligne de commentaire commence avec un "c"
+  minuscule, cette ligne est ignorée par le programme.
+</li>
+<li>ligne problème : il n'y au qu'une ligne problème par fichier d'entrée. La
+  ligne problème doit apparaître devant la description de la formule. Elle
+  commence par "p". Elle doit toujours avoir la forme "p cnf VARIABLES
+  CLAUSES", où VARIABLES et CLAUSES sont les nombres de variables (soit <span class="MATH">n</span> ce nombre) et
+  de clauses (soit <span class="MATH">m</span> ce nombre) de la formule, et signifie que le problème est
+  de déterminer la satisfiabilité d'une telle formule exprimée en CNF.
+</li>
+<li>la formule : elle est décrite immédiatement après la ligne problème. Les
+  variables sont numérotées de <span class="MATH">1</span>
+  à <span class="MATH">n</span>. 
+Chaque clause est représentée par une
+  séquence d'entiers séparés par un espace. La négation d'une variable <span class="MATH">i</span> est
+  représentée par <span class="MATH">-i</span>. Chaque clause est terminée par la valeur 0 (on n'est pas
+  obligé d'aller à la ligne après chaque clause).
+</li>
+</ul>
+
+<br>
+Si l'on désire connaître la satisfaisabilité de la formule <span class="MATH">(x1 OR x3 OR (NOT
+x4))  AND  (x4) AND (x2 OR (NOT x3))</span>. On la transcrit dans un fichier d'entrée
+comme suit :
+<pre>c Here is an example of a formula to analyze
+c
+p cnf 4 3
+1 3 -4 0
+4 0
+2 -3 0
+</pre>
+
+<br>
+Le résolveur SAT répondra que la formule est satisfiable et donnera comme modèle
+possible : -1 2 3 4 0. Ce qui signifie que dans l'assignation (x1=faux, x2=vrai,
+x3=vrai, x4=vrai) la formule est vraie. Donc il n'y a pas de contradiction.
+
+</div>
+
+<h2><a name="SECTION00013000000000000000" href="" onclick="return afficher(&#39;fiabilite&#39;);">
+3. Fiabilité du logiciel SAT4j</a>
+</h2>
+<div id="fiabilite" class="invisible">
+La librairie SAT4j contient les résolveurs les plus efficaces choisis parmi les
+vainqueurs des compétitions annuelles de SAT (organisées depuis 2002). Grace à
+cette compétition la communauté des chercheurs SAT a beaucoup progressée au long
+des dernières années. Beaucoup de problèmes (par exemples les problèmes de
+vérification de logiciels ou de composants) qui semblait complètement hors de
+portée il y a une dizaine d'année peuvent maintenant être traités
+facilement. Des nouveaux algorithmes, des meilleures heuristiques, des
+rafinements dans les techniques d'implémentation ont été la clé de ce succès. La
+compétition SAT permet de comparer les résolveurs sur des ensembles de tests à
+grande échelle (appelés benchmarks) : avec des problèmes de tailles croissantes
+allant de 450 variables booléennes à 1534 et des nombres de clauses variant
+entre 19084 et 132295.
+
+<p>
+La nouvelle version d'Eclipse, aussi connue sous le nom "ganymede" se sert de
+SAT4J pour gérer les dépendances entre les plugins pendant l'installation et les
+mises à jour. (Voir l'annonce de Pascal Rapicault sur la mailing list de SAT4J
+mailing. Les revues de presse : InfoQ et SD Times). En conséquence, SAT4J sera
+distribuées sur la plupart des distributions Linux en un paquet séparé (RPM,
+DEB).
+
+</p><p>
+Les champs d'application de SAT4J sont :
+
+</p><ul>
+<li>la bioinformatique : SAT4J est utilisée dans GNA.sim développé par
+  Genostar, et SATlotyper développé par l'institut Max Planck.
+</li>
+<li>ingéniérie logicielle : la nouvelle version de Maven (outil logiciel de
+  gestion de projet développé par Apache Software Community) utilisera aussi
+  SAT4J pour gérer les dépendances d'artéfacts, AProVE (Automatic Program Verification Environment,
+  système de démonstration automatique de terminaison) utilise aussi SAT4j, qui
+  est aussi utilisé dans des produits d'outils "online" comme AHEAD, FAMA FW, Feature IDE, SPLOT...
+</li>
+<li>la vérification et validation de programme, SAT4j est aussi utilisé par
+  FastCheck (approche pragmatique de la détection d'erreur dans des programmes
+  C).
+</li>
+</ul>
+</div>
+
+<h2><a name="SECTION00014000000000000000" href="" onclick="return afficher(&#39;instal&#39;);">
+4. Installation et vérification</a>
+</h2>
+<div id="instal" class="invisible">
+
+<ol>
+  <li> Téléchargez sat4j sur le
+    site <a href="http://www.sat4j.org/" target="_blank">http://www.sat4j.org</a> 
+(cliquez sur <i>Download</i>
+  puis prenez le fichier <code>sat4j-core-v20130525.zip</code>, vous extraierez du
+  fichier zip le fichier <code>org.sat4j.core.jar</code>)
+</li>
+<li> Créez le fichier de l'exemple : <span class="MATH"> (x1 OR x3 OR (NOT
+x4))  AND  (x4) AND (x2 OR (NOT x3))</span> et vérifiez que vous obtenez les bons
+résultats en lançant la commande : <br> <code> java -jar org.sat4j.core.jar example</code>
+</li>
+</ol>
+
+</div>
+
+<h1> II. Quelques problèmes à représenter puis résoudre grâce à SAT4j
+</h1>
+
+<h2><a name="SECTION00022000000000000000" href="" onclick="return afficher(&#39;coherent&#39;);">
+1. Vérifier si un ensemble de faits est cohérent</a>
+</h2>
+<div id="coherent" class="invisible">
+Trois personnes accusées de fraude fiscale prêtent les serments
+suivants : 
+
+<ul type="none"><li><strong>Dupont :</strong> Legrand est coupable et Martin est innocent.</li>
+<li><strong>Legrand :</strong> Si Dupont est coupable, alors Martin l’est aussi.</li> 
+<li><strong>Martin :</strong> Je suis innocent, mais au moins l’un des deux est coupable.</li>
+</ul>
+
+<ol><li> Les trois témoignages sont-ils compatibles ? <a href="" onclick="return afficher(&#39;fraude&#39;);">Solution</a></li>
+<p id="fraude" class="code">Vérifier que : <code>(L et non M) et (D → M) et (non M et (L ou D))</code> est satisfiable </p>
+<li> Prouvez qu'on peut déduire que Legrand est coupable et que Martin et Dupont sont innocents. <a href="" onclick="return afficher(&#39;fraude2&#39;);">Solution</a></li>
+<p id="fraude2" class="code"> Vérifier que : <code>(L et non M) et (D → M) et (non M et (L ou D))</code>  permet d'inférer <code>L et non M et non D</code>. 
+Cela revient à tester si <code> (L et non M) et (D → M) et (non M et (L ou D)) et (non L ou M ou D) </code> est insatisfiable. </p>
+</ol>
+</div>
+
+<h2><a name="SECTION00021000000000000000" href="" onclick="return afficher(&#39;valid&#39;);">
+2. Décider si des raisonnements sont valides</a>
+</h2>
+<div id="valid" class="invisible">
+Formalisez les deux exemples suivants et vérifiez (grâce à SAT4j) si les
+discours sont dignes ou non d'être approuvés rationnellement 
+(on veut donc vérifier si les discours sont vrais dans tous les cas possibles,
+c'est-à-dire si toute interprétation les satisfait (SAT ne renverra qu'une seule
+interprétation qui les satisfait) il faut donc plutot vérifier qu'aucune
+interprétation ne satisfait leur contraire = leur contraire est insatisfiable =&gt;
+UNSAT). 
+
+<ol>
+<li>Si Paul étudiait (E),  il réussirait (R). Or il ne réussit pas. Donc, il
+  n’étudie pas. 
+<a href="" onclick="return afficher(&#39;paul&#39;);">Solution</a></li>
+<p id="paul" class="code">Vérifier que : <code>(E → R et non R) → non E</code> est toujours satisfaite (pour toute valeur de E et R).
+Équivaut à vérifier que : <code>(E → R) et (non R) et E</code> est inconsistant (UNSAT).
+On peut conclure que la formule est VALIDE.</p> 
+<li>On peut faire confiance à Saddam (=S) si on peut faire confiance à W (W) et
+  vice-versa [le si peut se lire dans les deux sens]. Si on peut faire confiance
+  à Saddam ou à W, on peut faire confiance à Mario (M). Or, on peut faire
+  confiance à Mario. Donc, on peut faire confiance à W. 
+<a href="" onclick="return afficher(&#39;sadam&#39;);">Solution</a></li>
+<p id="sadam" class="code">Il faut prouver que :<code>((W → S) et (S → W) et ((W ou S) → M) et M)</code> permet de déduire <code>W</code> dans tous les cas possibles.
+Donc tester si <code>((W → S) et (S → W) et ((W ou S) → M) et M) et non W</code> 
+donne UNSAT. Ce n'est pas le cas, donc ce raisonnement N'EST PAS VALIDE! </p>
+</ol>
+</div>
+
+<h2><a name="SECTION00023000000000000000" href="" onclick="return afficher(&#39;coloration&#39;);">
+3. Coloration</a>
+</h2>
+<div id="coloration" class="invisible">
+Les utilisations de la notion de coloration définie en théorie des graphes sont
+nombreuses, affectation optimale d'éléments à des entités de façon à ce que des
+entités dîtes incompatibles n'aient pas le même élément. Ce problème s'applique
+lors de la création d'emploi du temps, lors de l'affectation de tâches à des
+machines, de zones de recouvrement à des satellites...
+
+<p>
+La liste d'incompatibilité est une liste de paires d'entité, donc représentable
+par un graphe dont les sommets sont les entités et les arcs sont les
+incompatibilités, une k-coloration du graphe est
+l'attribution d'une couleur (représentée par un entier de 1 à k) à chaque sommet 
+telle que deux entités incompatibles
+n'aient pas la même couleur.
+
+</p><p>
+
+</p><ol>
+<li>on considère le problème suivant, on a 3 sommets A,B, C et 2 arcs (A,B) et
+  (A,C) formalisez-le en DIMACS CNF pour que SAT4j réponde SAT
+  ssi il existe au moins une 2-coloration pour ce graphe. On prendra 2 variables
+  par sommet (A1 signifiant A peut être coloriée de la couleur 1 et A2
+  signifiant A peut être coloriée de la couleur 2 etc.)
+</li>
+<li>écrire un programme qui étant donné un fichier qui code un graphe
+  (<a href="" onclick="return afficher(&#39;ex&#39;);">grapheABAC.col</a>)
+<p id="ex" class="code">c ceci est un fichier qui code le graphe
+c possedant trois sommets A B C
+c avec deux arcs AB et AC
+c - la ligne "p edge 3 2" signifie qu on utilise le format edge
+c puis qu on a 3 sommets qui seront appeles 1 2 et 3
+c et qu on aura 2 aretes
+c - les lignes commencant par des e representent des aretes 
+p edge 3 2
+e 1 2
+e 1 3
+</p>
+et un entier k, créé un fichier DIMACS CNF pour que SAT4j réponde SAT ssi
+  il existe une k-coloration pour ce graphe, et donne la couleur de chaque sommet.
+</li>
+<li>testez votre programme sur les 2 exercices suivants :
+<ol type="a">
+<li> Déterminez le nombre chromatique de ce graphe.
+<center><img src="./Feuille 1. Projet IARF_files/colo3.gif" height="144" width="156"></center>
+</li>
+<li> A, B, C, D, E, F, G et H désignent huit poissons. Dans le tableau
+  ci-dessous, on a marqué qui est prédateur de qui.
+<center><table border="1" cellpadding="1" cellspacing="2">
+<tbody><tr align="CENTER">
+	<td align="LEFT" bgcolor="#CC9999">le poisson</td>
+	<td>A</td>
+	<td>B</td>
+	<td>C</td>
+	<td>D</td>
+	<td>E</td>
+	<td>F</td>
+	<td>G</td>
+	<td>H</td>
+</tr>
+<tr align="CENTER">
+	<td align="LEFT" bgcolor="#CC9999">mange</td>
+	<td>D,G</td>
+	<td>A,E,F,G</td>
+	<td>A,D,F</td>
+	<td>A,E,H</td>
+	<td>B,D</td>
+	<td>E</td>
+	<td>C,E</td>
+	<td>A,C</td>
+</tr>
+</tbody></table></center>
+Quel nombre minimum d'aquariums faut-il?
+</li>
+</ol>
+</li><li> Exprimez la résolution d'un Sudoku 4x4 en termes 
+  de coloration de graphe. Décrivez le graphe (nombre de sommets, nombre 
+  d'arêtes, etc.). Écrire un programme qui génére le fichier DIMACS CNF
+  associé au sudoku suivant,  puis résolvez-le avec SAT4j.
+<center><table border="3" cellpadding="2" cellspacing="2" rules="groups" bordercolor="green" frame="border">
+<colgroup span="2"></colgroup>
+<colgroup span="2"></colgroup>
+
+<tbody><tr align="CENTER">
+	<td width="25%">4</td><td width="25%">&nbsp;</td><td width="25%">&nbsp;</td><td width="25%">&nbsp;</td>
+</tr>
+<tr align="CENTER">
+	<td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+</tr>
+
+</tbody><tbody>
+<tr align="CENTER">
+	<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>4</td>
+</tr>
+<tr align="CENTER">
+	<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td>
+</tr>
+</tbody></table></center>
+</li>
+
+<li> Puis faîtes tourner votre moulinette coloration sur les graphes à plus
+  grand nombre de sommets suivants afin de pouvoir utiliser SAT4j pour
+  trouver une coloration.
+<ol type="a">
+<li> un graphe à 11 sommets 4-coloriable 
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP1/myciel3.col" target="_blank">myciel3.col</a> 
+</li>
+<li> un graphe à 20 sommets 3-coloriable 
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP1/flat20_3_0.col" target="_blank">flat20_3_0.col</a> 
+</li>
+<li> un graphe à 450 sommets 5-coloriable 
+<a href="http://moodle.ups-tlse.fr/file.php/1408/TP1/le450_5a.col" target="_blank">le450_5a.col</a> 
+</li>
+</ol>
+</li>
+</ol>
+ <p>
+</p></div>
+<h2><a name="SECTION00012000000000000000" href="" onclick="return afficher(&#39;sat4jcsp&#39;);">
+4. Utilisation de SAT4j-CSP </a>
+</h2>
+<div id="sat4jcsp" class="invisible">
+SAT4j fournit un résolveur d'instance de CSP, il suffit de récupérer le
+fichier <a href="http://forge.ow2.org/project/download.php?group_id=228&file_id=13025" target="_blank">sat4j-csp.jar</a>.
+
+La commande pour résoudre une instance de CSP est la suivante :
+<pre>java -jar sat4j-csp.jar cspfile.xml</pre>
+
+Le résolveur SAT4j-csp prend en entrée un fichier au
+format <a href="http://cpai.ucc.ie/06/format2.pdf">XML CSP format 2.0</a> 
+(norme imposée lors des compétitions entre résolveurs), voici un <a href="http://moodle.ups-tlse.fr/file.php/1408/TP2/formatXMLCSP.xml.txt">fichier standard au format XML</a>.
+
+<ol>
+ <li> Créez le fichier au format XML_CSP_2.0 pour trouver une
+ solution au problème suivant :
+ un fermier possède 7 animaux dans sa ferme : des cochons et des poules. En
+ tout, ces animaux ont 22 pattes. Combien de cochons (4 pattes) et de poules
+ (2 pattes) le fermier possède-t'il?
+
+Pour trouver les résultats, vous lancerez la commande : <br>
+<code> java -jar sat4j-csp.jar cochonspoules.xml</code>
+</li>
+<li> Shopping : un enfant se rend dans un magasin et achète 4 objets. Quand
+  le caissier lui demande de payer 8 Euros, il remarque qu'il a multiplié
+  accidentellement les prix des objets entre eux au lieu de les
+  additionner. Alors le caissier ajoute les prix des 4 objets et est surpris
+  de constater qu'il obtient le même résultat 8 Euros. Combien coûte
+  chaque objet? 
+<p>
+(essayez ensuite avec 7.11 euros, dans ce cas, pour traiter le problème on pourra considérer que l'on ne dépasse pas la précision des centimes et raisonner en centimes (nombres entiers)).
+</p></li>
+<li> Traduire le problème de coloration avec trois couleurs du graphe à quatre
+  sommets A, B, C et
+  D et 5 arcs (AB), (AC), (BC), (BD) et (CD) au format CSP et le
+  résoudre.
+</li>
+</ol>
+</div>
+
+
+
+</body></html>
