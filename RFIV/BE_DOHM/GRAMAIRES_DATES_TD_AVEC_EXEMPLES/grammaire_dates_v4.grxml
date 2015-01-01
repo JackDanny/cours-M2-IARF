@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- fichier grammaire_date.grxml -->
+
+<grammar version="1.0" root="Date_v4" xml:lang="fr" >
+
+<meta name="description" content="date_version_1"/>
+<meta name="author" content="I. FERRANE"/>
+<meta name="copyright" content="free for any purpose"/>
+
+
+<!-- regle Date_v4 se reecrit Jour [+ NB_Jour [ + Mois [+ Annee]]] -->
+     <rule id = "Date_v4" scope = "public">
+           <item> <ruleref uri="#Jour"/>  </item>
+           <item repeat="0-1"> <ruleref uri="#NB_Jour"/>
+                               <item repeat="0-1"> <ruleref uri="#Mois"/>
+                                                   <item repeat="0-1"> <ruleref uri="#Annee"/> </item>
+                               </item>
+           </item>
+     </rule>
+
+     <rule id="Jour">
+                <one-of>
+                        <item> lundi </item>
+                        <item> mardi </item>
+                        <item> mercredi </item>
+                        <item> jeudi </item>
+                        <item> vendredi </item>
+                        <item> samedi </item>
+                        <item> dimanche </item>
+                </one-of>
+     </rule>
+
+     <rule id="NB_Jour">
+                <one-of>
+                        <item> premier </item>
+                        <item> deux </item>
+                        <item> trois </item>
+                        <item> quatre </item>
+                        <item> cinq </item>
+                        <item> six </item>
+                        <item> sept </item>
+                        <item> huit </item>
+                        <item> neuf </item>
+                        <item> dix </item>
+                        <item> onze </item>
+                        <item> douze </item>
+                        <item> treize </item>
+                        <item> quatorze </item>
+                        <item> quinze </item>
+                        <item> seize </item>
+                        <item> dix-sept </item>
+                        <item> dix-huit </item>
+                        <item> dix-neuf </item>
+                        <item> vingt </item>
+                        <item> vingt-et-un </item>
+                        <item> vingt-deux </item>
+                        <item> vingt-trois </item>
+                        <item> vingt-quatre </item>
+                        <item> vingt-cinq </item>
+                        <item> vingt-six </item>
+                        <item> vingt-sept </item>
+                        <item> vingt-huit </item>
+                        <item> vingt-neuf </item>
+                        <item> trente </item>
+                        <item> trente-et-un </item>
+                </one-of>
+     </rule>
+
+     <rule id="Mois">
+                <one-of>
+                        <item> janvier  </item>
+                        <item> fevrier  </item>
+                        <item> mars     </item>
+                        <item> avril    </item>
+                        <item> mai      </item>
+                        <item> juin     </item>
+                        <item> juillet  </item>
+                        <item> aout     </item>
+                        <item> septembre  </item>
+                        <item> octobre    </item>
+                        <item> novembre   </item>
+                        <item> decembre   </item>
+                </one-of>
+	</rule>
+	
+      <rule id="Annee">      
+               <one-of>
+                       <item> deux mille treize </item>
+                       <item> deux mille quatorze </item>
+                       <item> deux mille quize </item>
+               </one-of>
+      </rule>
+
+</grammar>
