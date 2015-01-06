@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="personne" xml:lang="fr">
+
+<meta name="description" content="Liste Personnes"/>
+<meta name="author" content="Veysseire Daniel"/>
+<meta name="copyright" content="M2 IRR"/>
+
+<!-- Axiome Personne >=> prenom nom | nom prenom -->
+
+<rule id="personne" scope="public">
+		<item repeat="0-1"> J'ai rendez-vous avec </item>
+		<one-of>
+			<item> 
+				<ruleref uri="#prenom"/>
+				<ruleref uri="#nom"/>
+			</item>
+			<item> 
+				<ruleref uri="#nom"/>
+				<ruleref uri="#prenom"/>
+			</item>	
+		</one-of>
+</rule>
+
+
+
+
+
+<!-- liste des prenoms -->
+<rule id="prenom" scope="public">
+		<one-of>
+			<item> Pierre    <tag> out.nb = Pierre </tag> </item>
+		</one-of>
+</rule>
+	
+
+<!-- liste des noms -->
+<rule id="nom" scope="public">
+		<one-of>
+			<item> Dupond    <tag> out.nb = Dupond </tag> </item>
+		</one-of>
+</rule>
+	
+	
+	
+</grammar>

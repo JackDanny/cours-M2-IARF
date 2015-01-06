@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="horaire" xml:lang="fr">
+
+<meta name="description" content="horaire"/>
+<meta name="author" content="Veysseire Daniel"/>
+<meta name="copyright" content="M2 IRR"/>
+
+<!-- Axiome horaire -->
+
+<rule id="horaire" scope="public">
+		
+		
+		
+		<ruleref uri="#heure"/> <tag> out.heure = rules.heure.heure; out.minutes = 0 </tag>
+		
+		<one-of>
+			<!-- pas sure pour le % comme modulo et si out.heure = (out.heure-1) %24 -->
+			<item> moins le quart <tag> out.heure = (rules.heure.heure - 1) % 24 ; out.minutes = 45</tag> </item>
+			<item> et quart <tag> out.minutes = 15 </tag> </item>
+			<item> et demie <tag> out.minutes = 30 </tag> </item>
+			
+			<item> 
+				<item repeat="0-1"> et </item> 
+				<ruleref uri="#minutes"/> <tag> out.minutes = rules.minutes.minutes </tag> 
+				<item repeat="0-1"> minutes </item> 
+			</item>
+		</one-of>
+		
+		<tag> out.total_mn = ( 60 * out.heure) + out.minutes </tag>
+</rule>
+
+
+<!-- Heure -->
+<rule id="heure" scope="public">
+	<one-of>
+	<item> minuit <tag> out.heure = 0 </tag></item>
+	<item> une heure <tag> out.heure = 1 </tag></item>
+	<item> deux heures <tag> out.heure = 2 </tag></item>
+	<item> trois heures <tag> out.heure = 3 </tag></item>
+	<item> quatres heures <tag> out.heure = 4 </tag></item>
+	<item> cinq heures <tag> out.heure = 5 </tag></item>
+	<item> six heures <tag> out.heure = 6 </tag></item>
+	<item> sept heures <tag> out.heure = 7 </tag></item>
+	<item> huit heures <tag> out.heure = 8 </tag></item>
+	<item> neuf heures <tag> out.heure = 9 </tag></item>
+	<item> dix heures <tag> out.heure = 10 </tag></item>
+	<item> onze heures <tag> out.heure = 11 </tag></item>
+	<item> midi <tag> out.heure = 12 </tag></item>
+	<item> douze heures <tag> out.heure = 12 </tag></item>
+	<item> treize heures <tag> out.heure = 13 </tag></item>
+	<item> quatorze heures <tag> out.heure = 14 </tag></item>
+	<item> quinze heures <tag> out.heure = 15 </tag></item>
+	<item> seize heures <tag> out.heure = 16 </tag></item>
+	<item> dix sept heures <tag> out.heure = 17 </tag></item>
+	<item> dix huit heures <tag> out.heure = 18 </tag></item>
+	<item> dix neuf heures <tag> out.heure = 19 </tag></item>
+	<item> vingt heures <tag> out.heure = 20 </tag></item>
+	<item> vingt et une heures <tag> out.heure = 21 </tag></item>
+	<item> vingt deux heures <tag> out.heure = 22 </tag></item>
+	<item> vingt trois heures <tag> out.heure = 23 </tag></item>
+	</one-of>
+</rule>
+
+
+<!-- Minutes -->
+<rule id="minutes" scope="public">
+
+<one-of> 
+	<item> zero    <tag> out.minutes = 0 </tag> </item>
+	<item> <ruleref uri="#chiffres"/> <tag> out.minutes= rules.chiffres.nb </tag> </item>
+	<item>
+		<ruleref uri="#dizaines"/> <tag> out.minutes= rules.dizaines.nb </tag>
+	</item>
+
+</one-of>
+
+
+
+</rule>
+
+
+<!-- Chiffres de 0 a 9 -->
+<rule id="chiffres" scope="public">
+		<one-of>
+			
+			<item> un      <tag> out.nb = 1 </tag> </item>
+			<item> deux    <tag> out.nb = 2 </tag> </item>
+			<item> trois   <tag> out.nb = 3 </tag> </item>
+			<item> quatre  <tag> out.nb = 4 </tag> </item>
+			<item> cinq    <tag> out.nb = 5 </tag> </item>
+			<item> six     <tag> out.nb = 6 </tag> </item>
+			<item> sept    <tag> out.nb = 7 </tag> </item>
+			<item> huit    <tag> out.nb = 8 </tag> </item>
+			<item> neuf    <tag> out.nb = 9 </tag> </item>
+		</one-of>
+</rule>
+
+
+<!-- les dizaines de dix à 59-->
+<rule id="dizaines">
+			<one-of>
+				<item> <ruleref uri="#dizaines2" /> et un <tag> out.nb = rules.dizaines2.nb + 1 </tag> </item>
+				<item> 
+					<ruleref uri="#dizaines2" />
+					<ruleref uri="#chiffres" />
+                    <tag> out.nb = rules.dizaines2.nb + rules.chiffres.nb  </tag>
+				</item> 
+				<item> 
+					<ruleref uri="#dizaines1" />
+				</item>
+				
+				<item> <ruleref uri="#dizaines2" /> <tag> out.nb = rules.dizaines2.nb </tag> </item>
+				
+			</one-of>
+</rule>
+
+<rule id="dizaines1">
+			<one-of>
+				<item> dix <tag> out.nb = 10 </tag></item> 
+				<item> douze          <tag> out.nb = 12;  </tag> </item>
+				<item> treize         <tag> out.nb = 13;  </tag> </item>
+				<item> quatorze       <tag> out.nb = 14;  </tag> </item>
+				<item> quinze         <tag> out.nb = 15;  </tag> </item>
+				<item> seize          <tag> out.nb = 16;  </tag> </item>
+				<item> dix sept       <tag> out.nb = 17;  </tag> </item>
+				<item> dix huit       <tag> out.nb = 18;  </tag> </item>
+				<item> dix neuf       <tag> out.nb = 19;  </tag> </item>
+			</one-of>
+			
+		</rule>
+
+<rule id="dizaines2">
+			<one-of>
+				<item> vingt          <tag> out.nb = 20; </tag> </item>
+				<item> trente         <tag> out.nb = 30; </tag> </item>
+				<item> quarante       <tag> out.nb = 40; </tag> </item>
+				<item> cinquante      <tag> out.nb = 50; </tag> </item>
+				
+			</one-of>
+			
+</rule>
+
+
+
+
+</grammar>
