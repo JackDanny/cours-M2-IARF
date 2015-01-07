@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<grammar version="1.0" root="lieu" xml:lang="fr">
+
+<meta name="description" content="Liste lieus"/>
+<meta name="author" content="Veysseire Daniel"/>
+<meta name="copyright" content="M2 IRR"/>
+
+<!-- Axiome lieu -->
+
+<rule id="lieu" scope="public">
+		<item repeat="0-1"> J'ai rendez-vous </item>
+		<one-of>
+			<item> 
+				<ruleref uri="#aip"/>
+			</item>
+			<item> 
+				<ruleref uri="#ups"/>
+			</item>	
+			<item> 
+				<ruleref uri="#capitole"/>
+			</item>	
+			
+			<item> 
+				<ruleref uri="#gare"/>
+			</item>	
+		</one-of>
+</rule>
+
+
+
+
+
+<!-- AIP -->
+<rule id="aip" scope="public">
+		<one-of>
+			<item> à l' </item>
+		</one-of>
+		<item> AIP    <tag> out.lieu = AIP </tag> </item>
+</rule>
+	
+
+<!-- UPS -->
+<rule id="ups" scope="public">
+		<one-of>
+			<item> à l' </item>
+			<item> à la </item>
+		</one-of>
+		<one-of>
+		<item> UPS <tag> out.lieu = UPS </tag> </item>
+		<item> Université Paul Sabatier <tag> out.lieu = UPS </tag> </item>
+		<item> fac <tag> out.lieu = UPS </tag> </item>
+		
+		</one-of>
+</rule>
+	
+	
+<!-- CAPITOLE -->
+<rule id="capitole" scope="public">
+		<one-of>
+			<item> au </item>
+			<item> place du </item>
+		</one-of>
+		<one-of>
+		<item> capitole <tag> out.lieu = CAPITOLE </tag> </item>
+		<item> cap <tag> out.lieu = CAPITOLE </tag> </item>
+		</one-of>
+</rule>
+
+	
+<!-- GARE -->
+<rule id="gare" scope="public">
+		<one-of>
+			<item repeat="0-1"> a la </item>
+			<item> a </item>
+		</one-of>
+		
+		<item repeat="0-1"> gare <tag> out.lieu = GARE </tag> </item>
+		<item repeat="0-1"> matabiau <tag> out.lieu = GARE </tag> </item>
+</rule>
+
+
+	
+	
+</grammar>

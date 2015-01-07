@@ -1,0 +1,51 @@
+
+OptimTalk Grammar Tester (version 1.10)
+========================
+Copyright (c) 2004-2010 OptimSys, s.r.o., Czech Republic
+  http://www.optimsys.cz
+
+Testing grammar file:/C:/Documents and Settings/Isabelle/Mes documents/OPTIMTALK_NEW/grammaire_dates_v4_tag.grxml
+Enter an utternace or press Enter to finish: 
+lundi
+Semantic result: {
+  text: "lundi"
+}
+Enter an utternace or press Enter to finish: 
+lundi dix
+Semantic result: {
+  text: "lundi dix",
+  nb_jour: 10
+}
+Enter an utternace or press Enter to finish: 
+lundi dix mai
+Semantic result: {
+  text: "lundi dix mai",
+  nb_jour: 10,
+  nb_mois: 5
+}
+Enter an utternace or press Enter to finish: 
+lundi dix mai deux mille treize
+Semantic result: {
+  text: "lundi dix mai deux mille treize",
+  nb_jour: 10,
+  nb_mois: 5,
+  nb_annee: 2013
+}
+Enter an utternace or press Enter to finish: 
+dix
+DOES NOT MATCH
+Enter an utternace or press Enter to finish: 
+janvier
+DOES NOT MATCH
+Enter an utternace or press Enter to finish: 
+mercredi vingt-cinq decembre deux mille treize
+Semantic result: {
+  text: "mercredi vingt-cinq decembre deux mille treize",
+  nb_jour: 25,
+  nb_mois: 12,
+  nb_annee: 2013
+}
+Enter an utternace or press Enter to finish: 
+noel
+DOES NOT MATCH
+Enter an utternace or press Enter to finish: 

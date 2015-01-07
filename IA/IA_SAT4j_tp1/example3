@@ -1,0 +1,11 @@
+c Here is an example of a formula to analyze
+c
+p cnf 2 3
+-1 2 0
+-2 0
+1 0
+
+
+
+
+
