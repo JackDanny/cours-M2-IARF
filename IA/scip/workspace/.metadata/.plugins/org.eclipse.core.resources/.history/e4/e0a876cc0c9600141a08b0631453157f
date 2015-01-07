@@ -1,0 +1,188 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+
+		//on indique le chemin du fichier d'entrée
+		System.out.println("entrez le chemin du fichier d'entree avec l'extension");
+		BufferedReader BR1 = new BufferedReader(new InputStreamReader(System.in));
+		
+		String cheminFichierEntree = null;
+
+		try {
+			cheminFichierEntree = BR1.readLine();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+
+
+		BufferedReader IN = null;
+
+		try {
+
+
+			IN = new BufferedReader(new FileReader(cheminFichierEntree ));
+			//IN = new BufferedReader(new FileReader("a.msc"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int nbChansons=0;
+		int nbDisques=0;
+		String ligne = null;
+		String[] champs = null;
+
+		//ArrayList <Integer> ensemble = new ArrayList < Integer >();
+
+		ArrayList < ArrayList <Integer> > contraintes = new ArrayList <ArrayList <Integer> >();
+
+
+
+		// on a la ligne qui commence par p
+		boolean ligneGraphe = false;
+
+		int chansonCourante;
+		int disqueCourant=1;
+		try {
+
+			while ((ligne = IN.readLine()) != null && (!ligneGraphe)) {
+				champs = ligne.split(" ");
+
+				if ((champs.length == 4) && (champs[0].compareTo("p") == 0 && champs[1].compareTo("set") == 0)) {
+					//System.out.println(ligne);
+
+					nbChansons = Integer.parseInt(champs[2]);
+					nbDisques = Integer.parseInt(champs[3]);
+					ligneGraphe = true;
+					for(int i=0;i<nbChansons;i++){
+						ArrayList <Integer> contraintevide = new ArrayList <Integer>();
+						contraintes.add(contraintevide);
+					}
+					//ce break sert à ne pas lire une ligne en plus dans la boucle
+					break;
+
+
+
+				} 
+				else {
+					System.out.println("pas de fichier graphe");
+				}
+
+			}
+
+
+			//System.out.println(ligneGraphe);
+			if (ligneGraphe) {
+				while ((ligne = IN.readLine()) != null) {
+					champs = ligne.split(" ");
+					// System.out.println(champs[0]);
+
+					if (champs[0].compareTo("s") == 0) {
+						System.out.println("length "+champs.length);
+						//System.out.println(champs.length);
+						for(int i=1;i<champs.length;i++){
+
+							System.out.print(champs[i]+" ");
+							chansonCourante = Integer.parseInt(champs[i])-1;
+							//System.out.println(chansonCourante);
+							(contraintes.get(chansonCourante)).add(disqueCourant);
+
+						}
+						System.out.println();
+						disqueCourant++;
+						champs=null;
+					} 
+					else {
+						System.out.println("ligne bizarre:");
+						System.out.println(ligne);
+					}
+
+				}
+
+			}
+
+
+			for(int i=0;i<contraintes.size();i++){
+				for(int j=0;j<contraintes.get(i).size();j++){
+					System.out.println("chanson " + (i+1) + " disque " + contraintes.get(i).get(j));
+				}
+
+			}
+
+
+
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+
+		try {
+			PrintWriter fic = new PrintWriter(new FileWriter("superFichier.lp"));
+			fic.println("Minimize ");
+
+			for(int i=0;i<nbDisques;i++){
+				fic.print("S"+(i+1));
+				if(i != nbDisques-1){
+					fic.print("+");
+				}
+			}
+			fic.println();
+			fic.println("Subject To");
+
+			int nbcontrainte=1;
+			for(int i=0;i<contraintes.size();i++){
+				fic.print("c"+nbcontrainte+":");
+				nbcontrainte++;
+				for(int j=0;j<contraintes.get(i).size();j++){
+
+					fic.print("S"+contraintes.get(i).get(j));
+					if(j != contraintes.get(i).size()-1){
+						fic.print("+");
+
+					}
+				}
+				fic.print(">=1");
+				fic.println();
+
+			}
+			fic.println("Bounds");
+
+			fic.println("Generals");
+			for(int i=0;i<nbDisques;i++){
+				fic.print("S"+(i+1));
+				fic.print(" ");
+			}
+			fic.println();
+			fic.print("End");
+
+
+			fic.close();
+
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+
+
+	}
+}
+

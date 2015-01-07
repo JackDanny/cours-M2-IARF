@@ -1,0 +1,269 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		
+		
+		BufferedReader IN = null;
+
+		try {
+			IN = new BufferedReader(new FileReader("frb30-15-1.msc"));
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int nbChansons;
+		int nbDisques;
+		String ligne = null;
+		String[] champs = null;
+		
+		//ArrayList <Integer> ensemble = new ArrayList < Integer >();
+		
+		ArrayList < ArrayList <Integer> > contraintes = new ArrayList <ArrayList <Integer> >();
+
+		
+		
+		// on a la ligne qui commence par p
+		boolean ligneGraphe = false;
+		try {
+
+			while ((ligne = IN.readLine()) != null && (!ligneGraphe)) {
+				champs = ligne.split(" ");
+
+				if ((champs.length == 4) && (champs[0].compareTo("p") == 0 && champs[1].compareTo("set") == 0)) {
+					//System.out.println(ligne);
+
+					nbChansons = Integer.parseInt(champs[2]);
+					nbDisques = Integer.parseInt(champs[3]);
+					ligneGraphe = true;
+					for(int i=1;i<nbChansons;i++){
+						ArrayList <Integer> contraintevide = new ArrayList <Integer>();
+						contraintes.add(contraintevide);
+					}
+					
+					
+
+				} 
+				else {
+					System.out.println("pas de fichier graphe");
+				}
+
+			}
+
+			int chansonCourante;
+			int disqueCourant=0;
+			//System.out.println(ligneGraphe);
+			if (ligneGraphe) {
+				while ((ligne = IN.readLine()) != null) {
+					champs = ligne.split(" ");
+					// System.out.println(champs[0]);
+
+					if (champs[0].compareTo("s") == 0) {
+						
+						for(int i=1;i<champs.length;i++){
+						
+							chansonCourante = Integer.parseInt(champs[i]);
+							(contraintes.get(chansonCourante)).add(disqueCourant);
+							
+						}
+						 disqueCourant++;
+					} 
+					else {
+						System.out.println("ligne bizarre:");
+						System.out.println(ligne);
+					}
+
+				}
+
+			}
+
+
+			for(int i=0;i<contraintes.size();i++){
+				for(int j=0;j<contraintes.get(i).size();j++){
+				System.out.println("chanson " + i + " disque " + contraintes.get(i).get(j));
+				}
+
+			}
+
+
+
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+/*
+		try {
+			PrintWriter fic = new PrintWriter(new FileWriter("superFichier"));
+			fic.println("p cnf " + nbVariable + " " +  nbClauses);
+
+			//liste avec toutes les variables tries
+			int[] var= new int[nbVariable];
+
+
+			//			for(int i =0;i<nbVariable;i++){
+			//
+			//				System.out.println(var[i]);
+			//
+			//			}
+			//			
+			
+			
+			int[][] listevar= new int[k][k];
+			for(int j=0;j<nbSommets;j++){
+				for(int i=0;i<k;i++){
+					var[i]=-(i+k*j+1);
+
+
+				}
+				
+				
+				
+//								System.out.println("sommet num " + (j+1));
+//								for(int i=0;i<k;i++){
+//									System.out.println("variable " + var[i]);
+//										
+//							}
+				listevar=contrainteCouleurs(var,k);
+
+				
+				for(int i=0;i<k;i++){
+
+//					for(int l=0;l<k;l++){
+//
+//						System.out.println("contrainte numero "+i);
+//						System.out.println(listevar[i][l] + " ");
+//					}
+					
+					
+					System.out.println("aha");
+					System.out.println(intlist2String(listevar[i],k));
+					fic.println(intlist2String(listevar[i],k) + "0");
+				}
+
+
+
+			}
+			
+//			for(int i = 0; i< nbArc; i++){
+//				System.out.println("arcs "+ i);
+//				System.out.println(tabArc.get(i)[0]);
+//				System.out.println(tabArc.get(i)[1]);
+//				       
+//				       
+//			}
+//			
+			int[] listeallvariable = new int[nbVariable];
+			
+			for(int i=0 ;i< nbVariable ;i++){
+				
+				listeallvariable[i] = -(i+1);
+			}
+			
+			
+			
+			for(int numArc = 0; numArc< nbArc; numArc++){
+
+				int sommet1 = tabArc.get(numArc)[0];
+				int sommet2 = tabArc.get(numArc)[1];
+				
+				
+				for(int i=0;i<k;i++){
+					
+					fic.print(listeallvariable[((sommet1-1)*k)+i] + " ");
+				    fic.print(listeallvariable[((sommet2-1)*k)+i] +" 0\n");
+					    
+					
+					
+					
+				}
+				
+				       
+			}
+			
+			
+
+
+
+			
+			
+			
+			
+			
+			fic.close();
+
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+	public static int[][] contrainteCouleurs(int[] coulSommets,int k){
+		int[][] contraintes= new int[k][k];
+
+
+		for(int i=0;i<k;i++){
+			int[] contrainteActuel = coulSommets.clone();
+			contrainteActuel[i] = -contrainteActuel[i];
+			contraintes[i] = contrainteActuel;
+
+		}
+
+
+
+
+
+		return contraintes;
+
+	}
+	
+	
+	public static String intlist2String(int[] listInt,int longueur){
+		
+		String s = "";
+		for(int i=0;i<longueur;i++){
+			s=s.concat(String.valueOf(listInt[i]) + " ");
+		}
+		
+		return s;
+	}
+
+}
+*/
+

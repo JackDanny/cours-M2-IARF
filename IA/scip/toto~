@@ -1,0 +1,6 @@
+read /home/jackdanny/Bureau/M2/cours-M2-IARF/IA/scip/workspace/parserSacADos/jambon
+optimize
+display solution
+write solution /home/jackdanny/Bureau/M2/cours-M2-IARF/IA/scip/workspace/parserSacADos/jambon.sol
+
+

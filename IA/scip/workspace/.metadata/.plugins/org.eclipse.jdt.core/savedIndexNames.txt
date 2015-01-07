@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/home/jackdanny/Bureau/M2/cours-M2-IARF/IA/scip/workspace/.metadata/.plugins/org.eclipse.jdt.core
+1890320711.index
+1688407649.index

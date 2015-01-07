@@ -1,0 +1,6 @@
+read /home/jackdanny/Bureau/M2/cours-M2-IARF/IA/scip/sacADos/ks_1000.lp
+optimize
+display solution
+write solution /home/jackdanny/Bureau/M2/cours-M2-IARF/IA/scip/sacADos/ks_1000.sol
+
+
