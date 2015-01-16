@@ -1,0 +1,119 @@
+Aligned transcription: Labels/cinq_jeremy_2013.lab vs Resultats/cinq_jeremy_2013.rec
+ LAB: cinq     
+ REC: quarante 
+Aligned transcription: Labels/cinq_louis_2013.lab vs Resultats/cinq_louis_2013.rec
+ LAB: cinq 
+ REC: sept 
+Aligned transcription: Labels/cinq_rohdri_2013.lab vs Resultats/cinq_rohdri_2013.rec
+ LAB:       cinq      
+ REC: pause cinquante 
+Aligned transcription: Labels/cinq_veysseire_2014.lab vs Resultats/cinq_veysseire_2014.rec
+ LAB: cinq     
+ REC: quarante 
+Aligned transcription: Labels/cinquante_veysseire_2014.lab vs Resultats/cinquante_veysseire_2014.rec
+ LAB: cinquante 
+ REC: quarante  
+Aligned transcription: Labels/deux_jeremy_2013.lab vs Resultats/deux_jeremy_2013.rec
+ LAB: deux 
+ REC: neuf 
+Aligned transcription: Labels/deux_louis_2013.lab vs Resultats/deux_louis_2013.rec
+ LAB: deux  
+ REC: douze 
+Aligned transcription: Labels/deux_veysseire_2014.lab vs Resultats/deux_veysseire_2014.rec
+ LAB: deux  
+ REC: vingt 
+Aligned transcription: Labels/diviser_jeremy_2013.lab vs Resultats/diviser_jeremy_2013.rec
+ LAB: diviser 
+ REC: douze   
+Aligned transcription: Labels/diviser_louis_2013.lab vs Resultats/diviser_louis_2013.rec
+ LAB: diviser 
+ REC: sept    
+Aligned transcription: Labels/diviser_veysseire_2014.lab vs Resultats/diviser_veysseire_2014.rec
+ LAB: diviser 
+ REC: six     
+Aligned transcription: Labels/dix_jeremy_2013.lab vs Resultats/dix_jeremy_2013.rec
+ LAB: dix  
+ REC: huit 
+Aligned transcription: Labels/dix_louis_2013.lab vs Resultats/dix_louis_2013.rec
+ LAB: dix  
+ REC: sept 
+Aligned transcription: Labels/dix_rohdri_2013.lab vs Resultats/dix_rohdri_2013.rec
+ LAB: dix 
+ REC: six 
+Aligned transcription: Labels/dix_veysseire_2014.lab vs Resultats/dix_veysseire_2014.rec
+ LAB: dix 
+ REC: six 
+Aligned transcription: Labels/et_veysseire_2014.lab vs Resultats/et_veysseire_2014.rec
+ LAB: et   
+ REC: huit 
+Aligned transcription: Labels/fois_veysseire_2014.lab vs Resultats/fois_veysseire_2014.rec
+ LAB: fois     
+ REC: quarante 
+Aligned transcription: Labels/huit_louis_2013.lab vs Resultats/huit_louis_2013.rec
+ LAB: huit 
+ REC: neuf 
+Aligned transcription: Labels/huit_veysseire_2014.lab vs Resultats/huit_veysseire_2014.rec
+ LAB: huit 
+ REC: six  
+Aligned transcription: Labels/moins_jeremy_2013.lab vs Resultats/moins_jeremy_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/moins_louis_2013.lab vs Resultats/moins_louis_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/moins_veysseire_2014.lab vs Resultats/moins_veysseire_2014.rec
+ LAB: moins    
+ REC: quarante 
+Aligned transcription: Labels/multiplier_jeremy_2013.lab vs Resultats/multiplier_jeremy_2013.rec
+ LAB: multiplier 
+ REC: quatorze   
+Aligned transcription: Labels/multiplier_louis_2013.lab vs Resultats/multiplier_louis_2013.rec
+ LAB: multiplier 
+ REC: huit       
+Aligned transcription: Labels/multiplier_veysseire_2014.lab vs Resultats/multiplier_veysseire_2014.rec
+ LAB: multiplier 
+ REC: huit       
+Aligned transcription: Labels/neuf_jeremy_2013.lab vs Resultats/neuf_jeremy_2013.rec
+ LAB: neuf 
+ REC: sept 
+Aligned transcription: Labels/neuf_rohdri_2013.lab vs Resultats/neuf_rohdri_2013.rec
+ LAB: neuf  
+ REC: douze 
+Aligned transcription: Labels/neuf_veysseire_2014.lab vs Resultats/neuf_veysseire_2014.rec
+ LAB: neuf 
+ REC: huit 
+Aligned transcription: Labels/onze_veysseire_2014.lab vs Resultats/onze_veysseire_2014.rec
+ LAB: onze     
+ REC: soixante 
+Aligned transcription: Labels/par_veysseire_2014.lab vs Resultats/par_veysseire_2014.rec
+ LAB: par      
+ REC: quarante 
+Aligned transcription: Labels/plus_jeremy_2013.lab vs Resultats/plus_jeremy_2013.rec
+ LAB: plus 
+ REC: neuf 
+Aligned transcription: Labels/plus_louis_2013.lab vs Resultats/plus_louis_2013.rec
+ LAB: plus  
+ REC: douze 
+Aligned transcription: Labels/plus_veysseire_2014.lab vs Resultats/plus_veysseire_2014.rec
+ LAB: plus     
+ REC: quatorze 
+Aligned transcription: Labels/quatre_jeremy_2013.lab vs Resultats/quatre_jeremy_2013.rec
+ LAB: quatre 
+ REC: sept   
+Aligned transcription: Labels/quatre_louis_2013.lab vs Resultats/quatre_louis_2013.rec
+ LAB: quatre 
+ REC: neuf   
+Aligned transcription: Labels/quatre_veysseire_2014.lab vs Resultats/quatre_veysseire_2014.rec
+ LAB: quatre   
+ REC: quarante 
+Aligned transcription: Labels/sept_louis_2013.lab vs Resultats/sept_louis_2013.rec
+ LAB: sept  
+ REC: vingt 
+Aligned transcription: Labels/sur_veysseire_2014.lab vs Resultats/sur_veysseire_2014.rec
+ LAB: sur 
+ REC: six 
+Aligned transcription: Labels/tousSons.lab vs Resultats/tousSons.rec
+ LAB: tousSons 
+ REC: quarante 
+  ERROR [+3331]  Index: Label tousSons not in list[0 of 32]
+ FATAL ERROR - Terminating program HResults

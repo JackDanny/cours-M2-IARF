@@ -1,0 +1,230 @@
+  ERROR [+6510]  LOpen: Unable to open label file Labels/cinq_jeremy_2013.lab
+ FATAL ERROR - Terminating program HResults
+Aligned transcription: Labels/cinq_jeremy_2013.lab vs Resultats/cinq_jeremy_2013.rec
+ LAB: cinq     
+ REC: quarante 
+Aligned transcription: Labels/cinq_louis_2013.lab vs Resultats/cinq_louis_2013.rec
+ LAB: cinq 
+ REC: sept 
+Aligned transcription: Labels/cinq_rohdri_2013.lab vs Resultats/cinq_rohdri_2013.rec
+ LAB:       cinq      
+ REC: pause cinquante 
+Aligned transcription: Labels/deux_jeremy_2013.lab vs Resultats/deux_jeremy_2013.rec
+ LAB: deux 
+ REC: neuf 
+Aligned transcription: Labels/deux_louis_2013.lab vs Resultats/deux_louis_2013.rec
+ LAB: deux  
+ REC: douze 
+Aligned transcription: Labels/diviser_jeremy_2013.lab vs Resultats/diviser_jeremy_2013.rec
+ LAB: diviser 
+ REC: douze   
+Aligned transcription: Labels/diviser_louis_2013.lab vs Resultats/diviser_louis_2013.rec
+ LAB: diviser 
+ REC: sept    
+Aligned transcription: Labels/dix_jeremy_2013.lab vs Resultats/dix_jeremy_2013.rec
+ LAB: dix  
+ REC: huit 
+Aligned transcription: Labels/dix_louis_2013.lab vs Resultats/dix_louis_2013.rec
+ LAB: dix  
+ REC: sept 
+Aligned transcription: Labels/dix_rohdri_2013.lab vs Resultats/dix_rohdri_2013.rec
+ LAB: dix 
+ REC: six 
+Aligned transcription: Labels/huit_louis_2013.lab vs Resultats/huit_louis_2013.rec
+ LAB: huit 
+ REC: neuf 
+Aligned transcription: Labels/moins_jeremy_2013.lab vs Resultats/moins_jeremy_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/moins_louis_2013.lab vs Resultats/moins_louis_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/multiplier_jeremy_2013.lab vs Resultats/multiplier_jeremy_2013.rec
+ LAB: multiplier 
+ REC: quatorze   
+Aligned transcription: Labels/multiplier_louis_2013.lab vs Resultats/multiplier_louis_2013.rec
+ LAB: multiplier 
+ REC: huit       
+Aligned transcription: Labels/neuf_jeremy_2013.lab vs Resultats/neuf_jeremy_2013.rec
+ LAB: neuf 
+ REC: sept 
+Aligned transcription: Labels/neuf_rohdri_2013.lab vs Resultats/neuf_rohdri_2013.rec
+ LAB: neuf  
+ REC: douze 
+Aligned transcription: Labels/plus_jeremy_2013.lab vs Resultats/plus_jeremy_2013.rec
+ LAB: plus 
+ REC: neuf 
+Aligned transcription: Labels/plus_louis_2013.lab vs Resultats/plus_louis_2013.rec
+ LAB: plus  
+ REC: douze 
+Aligned transcription: Labels/quatre_jeremy_2013.lab vs Resultats/quatre_jeremy_2013.rec
+ LAB: quatre 
+ REC: sept   
+Aligned transcription: Labels/quatre_louis_2013.lab vs Resultats/quatre_louis_2013.rec
+ LAB: quatre 
+ REC: neuf   
+Aligned transcription: Labels/sept_louis_2013.lab vs Resultats/sept_louis_2013.rec
+ LAB: sept  
+ REC: vingt 
+Aligned transcription: Labels/trois_jeremy_2013.lab vs Resultats/trois_jeremy_2013.rec
+ LAB: trois    
+ REC: soixante 
+Aligned transcription: Labels/trois_louis_2013.lab vs Resultats/trois_louis_2013.rec
+ LAB: trois    
+ REC: soixante 
+Aligned transcription: Labels/un_jeremy_2013.lab vs Resultats/un_jeremy_2013.rec
+ LAB: un    
+ REC: vingt 
+Aligned transcription: Labels/un_louis_2013.lab vs Resultats/un_louis_2013.rec
+ LAB: un    
+ REC: vingt 
+Aligned transcription: Labels/un_rohdri_2013.lab vs Resultats/un_rohdri_2013.rec
+ LAB: un       
+ REC: quarante 
+====================== HTK Results Analysis =======================
+  Date: Sun Dec 21 18:57:46 2014
+  Ref : Labels/
+  Rec : Resultats/cinq_jeremy_2013.rec
+      : Resultats/cinq_louis_2013.rec
+      : Resultats/cinq_rohdri_2013.rec
+      : Resultats/deux_jeremy_2013.rec
+      : Resultats/deux_louis_2013.rec
+------------------------ Overall Results --------------------------
+SENT: %Correct=35.71 [H=15, S=27, N=42]
+WORD: %Corr=35.71, Acc=33.33 [H=15, D=0, S=27, I=1, N=42]
+------------------------ Confusion Matrix -------------------------
+       c   d   d   d   h   m   m   n   p   q   q   q   s   s   s   t   v   p 
+       i   e   i   o   u   o   u   e   l   u   u   u   e   i   o   r   i   a 
+       n   u   v   u   i   i   l   u   u   a   a   a   p   x   i   o   n   u 
+       q   x   i   z   t   n   t   f   s   r   t   t   t       x   i   g   s 
+       u       s   e       s   i           a   o   r           a   s   t   e  Del [ %c / %e]
+cinq   1   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0   0    0 [ 0.0/7.1]
+deux   0   1   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [33.3/4.8]
+divi   0   0   1   1   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [33.3/4.8]
+ dix   0   0   0   0   1   0   0   0   0   0   0   0   1   1   0   0   0   0    0 [ 0.0/7.1]
+huit   0   0   0   0   2   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [66.7/2.4]
+moin   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   2   0    0 [33.3/4.8]
+mult   0   0   0   0   1   0   1   0   0   0   1   0   0   0   0   0   0   0    0 [33.3/4.8]
+neuf   0   0   0   1   0   0   0   1   0   0   0   0   1   0   0   0   0   0    0 [33.3/4.8]
+plus   0   0   0   1   0   0   0   1   1   0   0   0   0   0   0   0   0   0    0 [33.3/4.8]
+quat   0   0   0   0   0   0   0   1   0   0   0   1   1   0   0   0   0   0    0 [33.3/4.8]
+sept   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0   1   0    0 [66.7/2.4]
+ six   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0   0   0    0
+troi   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   1   0   0    0 [33.3/4.8]
+  un   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   2   0    0 [ 0.0/7.1]
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+===================================================================
+Aligned transcription: Labels/cinq_jeremy_2013.lab vs Resultats/cinq_jeremy_2013.rec
+ LAB: cinq     
+ REC: quarante 
+Aligned transcription: Labels/cinq_louis_2013.lab vs Resultats/cinq_louis_2013.rec
+ LAB: cinq 
+ REC: sept 
+Aligned transcription: Labels/cinq_rohdri_2013.lab vs Resultats/cinq_rohdri_2013.rec
+ LAB:       cinq      
+ REC: pause cinquante 
+Aligned transcription: Labels/deux_jeremy_2013.lab vs Resultats/deux_jeremy_2013.rec
+ LAB: deux 
+ REC: neuf 
+Aligned transcription: Labels/deux_louis_2013.lab vs Resultats/deux_louis_2013.rec
+ LAB: deux  
+ REC: douze 
+Aligned transcription: Labels/diviser_jeremy_2013.lab vs Resultats/diviser_jeremy_2013.rec
+ LAB: diviser 
+ REC: douze   
+Aligned transcription: Labels/diviser_louis_2013.lab vs Resultats/diviser_louis_2013.rec
+ LAB: diviser 
+ REC: sept    
+Aligned transcription: Labels/dix_jeremy_2013.lab vs Resultats/dix_jeremy_2013.rec
+ LAB: dix  
+ REC: huit 
+Aligned transcription: Labels/dix_louis_2013.lab vs Resultats/dix_louis_2013.rec
+ LAB: dix  
+ REC: sept 
+Aligned transcription: Labels/dix_rohdri_2013.lab vs Resultats/dix_rohdri_2013.rec
+ LAB: dix 
+ REC: six 
+Aligned transcription: Labels/huit_louis_2013.lab vs Resultats/huit_louis_2013.rec
+ LAB: huit 
+ REC: neuf 
+Aligned transcription: Labels/moins_jeremy_2013.lab vs Resultats/moins_jeremy_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/moins_louis_2013.lab vs Resultats/moins_louis_2013.rec
+ LAB: moins 
+ REC: vingt 
+Aligned transcription: Labels/multiplier_jeremy_2013.lab vs Resultats/multiplier_jeremy_2013.rec
+ LAB: multiplier 
+ REC: quatorze   
+Aligned transcription: Labels/multiplier_louis_2013.lab vs Resultats/multiplier_louis_2013.rec
+ LAB: multiplier 
+ REC: huit       
+Aligned transcription: Labels/neuf_jeremy_2013.lab vs Resultats/neuf_jeremy_2013.rec
+ LAB: neuf 
+ REC: sept 
+Aligned transcription: Labels/neuf_rohdri_2013.lab vs Resultats/neuf_rohdri_2013.rec
+ LAB: neuf  
+ REC: douze 
+Aligned transcription: Labels/plus_jeremy_2013.lab vs Resultats/plus_jeremy_2013.rec
+ LAB: plus 
+ REC: neuf 
+Aligned transcription: Labels/plus_louis_2013.lab vs Resultats/plus_louis_2013.rec
+ LAB: plus  
+ REC: douze 
+Aligned transcription: Labels/quatre_jeremy_2013.lab vs Resultats/quatre_jeremy_2013.rec
+ LAB: quatre 
+ REC: sept   
+Aligned transcription: Labels/quatre_louis_2013.lab vs Resultats/quatre_louis_2013.rec
+ LAB: quatre 
+ REC: neuf   
+Aligned transcription: Labels/sept_louis_2013.lab vs Resultats/sept_louis_2013.rec
+ LAB: sept  
+ REC: vingt 
+Aligned transcription: Labels/trois_jeremy_2013.lab vs Resultats/trois_jeremy_2013.rec
+ LAB: trois    
+ REC: soixante 
+Aligned transcription: Labels/trois_louis_2013.lab vs Resultats/trois_louis_2013.rec
+ LAB: trois    
+ REC: soixante 
+Aligned transcription: Labels/un_jeremy_2013.lab vs Resultats/un_jeremy_2013.rec
+ LAB: un    
+ REC: vingt 
+Aligned transcription: Labels/un_louis_2013.lab vs Resultats/un_louis_2013.rec
+ LAB: un    
+ REC: vingt 
+Aligned transcription: Labels/un_rohdri_2013.lab vs Resultats/un_rohdri_2013.rec
+ LAB: un       
+ REC: quarante 
+====================== HTK Results Analysis =======================
+  Date: Sun Dec 21 18:57:52 2014
+  Ref : Labels/
+  Rec : Resultats/cinq_jeremy_2013.rec
+      : Resultats/cinq_louis_2013.rec
+      : Resultats/cinq_rohdri_2013.rec
+      : Resultats/deux_jeremy_2013.rec
+      : Resultats/deux_louis_2013.rec
+------------------------ Overall Results --------------------------
+SENT: %Correct=35.71 [H=15, S=27, N=42]
+WORD: %Corr=35.71, Acc=33.33 [H=15, D=0, S=27, I=1, N=42]
+------------------------ Confusion Matrix -------------------------
+       c   d   d   d   h   m   m   n   p   q   q   q   s   s   s   t   v   p 
+       i   e   i   o   u   o   u   e   l   u   u   u   e   i   o   r   i   a 
+       n   u   v   u   i   i   l   u   u   a   a   a   p   x   i   o   n   u 
+       q   x   i   z   t   n   t   f   s   r   t   t   t       x   i   g   s 
+       u       s   e       s   i           a   o   r           a   s   t   e  Del [ %c / %e]
+cinq   1   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0   0    0 [ 0.0/7.1]
+deux   0   1   0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [33.3/4.8]
+divi   0   0   1   1   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [33.3/4.8]
+ dix   0   0   0   0   1   0   0   0   0   0   0   0   1   1   0   0   0   0    0 [ 0.0/7.1]
+huit   0   0   0   0   2   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [66.7/2.4]
+moin   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   2   0    0 [33.3/4.8]
+mult   0   0   0   0   1   0   1   0   0   0   1   0   0   0   0   0   0   0    0 [33.3/4.8]
+neuf   0   0   0   1   0   0   0   1   0   0   0   0   1   0   0   0   0   0    0 [33.3/4.8]
+plus   0   0   0   1   0   0   0   1   1   0   0   0   0   0   0   0   0   0    0 [33.3/4.8]
+quat   0   0   0   0   0   0   0   1   0   0   0   1   1   0   0   0   0   0    0 [33.3/4.8]
+sept   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0   1   0    0 [66.7/2.4]
+ six   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0   0   0    0
+troi   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   1   0   0    0 [33.3/4.8]
+  un   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   2   0    0 [ 0.0/7.1]
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+===================================================================

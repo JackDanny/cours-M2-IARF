@@ -1,0 +1,88 @@
+HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.test2.lst Modeles/dictionnaire Modeles/liste-mots 
+Read 32 physical / 32 logical HMMs
+Read lattice with 38 nodes / 99 arcs
+Created network with 73 nodes / 134 links
+File: Signaux/Sons_OK/dix_rohdri_2013.wav
+SENT-START six SENT-END  ==  [48 frames] -51.2045 [Ac=-2457.8 LM=0.0] (Act=67.9)
+File: Signaux/Sons_OK/deux_rohdri_2013.wav
+SENT-START deux SENT-END  ==  [27 frames] -57.0706 [Ac=-1540.9 LM=0.0] (Act=66.3)
+File: Signaux/Sons_OK/six_rohdri_2013.wav
+SENT-START six SENT-END  ==  [58 frames] -55.2323 [Ac=-3203.5 LM=0.0] (Act=68.3)
+File: Signaux/Sons_OK/huit_rohdri_2013.wav
+SENT-START huit SENT-END  ==  [40 frames] -55.3990 [Ac=-2216.0 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/plus_rohdri_2013.wav
+SENT-START plus SENT-END  ==  [40 frames] -59.7590 [Ac=-2390.4 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/neuf_rohdri_2013.wav
+SENT-START douze SENT-END  ==  [55 frames] -52.4009 [Ac=-2882.0 LM=0.0] (Act=68.2)
+File: Signaux/Sons_OK/deux_louis_2013.wav
+SENT-START douze SENT-END  ==  [38 frames] -74.3630 [Ac=-2825.8 LM=0.0] (Act=67.3)
+File: Signaux/Sons_OK/diviser_rohdri_2013.wav
+SENT-START diviser SENT-END  ==  [58 frames] -56.4583 [Ac=-3274.6 LM=0.0] (Act=68.3)
+File: Signaux/Sons_OK/sept_louis_2013.wav
+SENT-START vingt SENT-END  ==  [34 frames] -86.0728 [Ac=-2926.5 LM=0.0] (Act=67.0)
+File: Signaux/Sons_OK/deux_jeremy_2013.wav
+SENT-START neuf SENT-END  ==  [41 frames] -77.8831 [Ac=-3193.2 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/multiplier_jeremy_2013.wav
+SENT-START quatorze SENT-END  ==  [95 frames] -87.0113 [Ac=-8266.1 LM=0.0] (Act=68.9)
+File: Signaux/Sons_OK/huit_jeremy_2013.wav
+SENT-START huit SENT-END  ==  [54 frames] -80.2160 [Ac=-4331.7 LM=0.0] (Act=68.1)
+File: Signaux/Sons_OK/diviser_louis_2013.wav
+SENT-START sept SENT-END  ==  [78 frames] -76.3466 [Ac=-5955.0 LM=0.0] (Act=68.7)
+File: Signaux/Sons_OK/dix_jeremy_2013.wav
+SENT-START huit SENT-END  ==  [57 frames] -75.8268 [Ac=-4322.1 LM=0.0] (Act=68.2)
+File: Signaux/Sons_OK/neuf_louis_2013.wav
+SENT-START neuf SENT-END  ==  [30 frames] -78.9094 [Ac=-2367.3 LM=0.0] (Act=66.6)
+File: Signaux/Sons_OK/quatre_rohdri_2013.wav
+SENT-START quatre SENT-END  ==  [41 frames] -67.9835 [Ac=-2787.3 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/six_jeremy_2013.wav
+SENT-START six SENT-END  ==  [50 frames] -84.1068 [Ac=-4205.3 LM=0.0] (Act=68.0)
+File: Signaux/Sons_OK/moins_jeremy_2013.wav
+SENT-START vingt SENT-END  ==  [41 frames] -77.8652 [Ac=-3192.5 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/moins_louis_2013.wav
+SENT-START vingt SENT-END  ==  [41 frames] -72.1599 [Ac=-2958.6 LM=0.0] (Act=67.5)
+File: Signaux/Sons_OK/moins_rohdri_2013.wav
+SENT-START moins SENT-END  ==  [34 frames] -58.6306 [Ac=-1993.4 LM=0.0] (Act=67.0)
+File: Signaux/Sons_OK/huit_louis_2013.wav
+SENT-START neuf SENT-END  ==  [50 frames] -95.4466 [Ac=-4772.3 LM=0.0] (Act=68.0)
+File: Signaux/Sons_OK/cinq_rohdri_2013.wav
+SENT-START pause cinquante SENT-END  ==  [60 frames] -59.2891 [Ac=-3557.3 LM=0.0] (Act=68.3)
+File: Signaux/Sons_OK/un_jeremy_2013.wav
+SENT-START vingt SENT-END  ==  [22 frames] -80.4296 [Ac=-1769.5 LM=0.0] (Act=65.4)
+File: Signaux/Sons_OK/diviser_jeremy_2013.wav
+SENT-START douze SENT-END  ==  [64 frames] -82.0026 [Ac=-5248.2 LM=0.0] (Act=68.4)
+File: Signaux/Sons_OK/plus_louis_2013.wav
+SENT-START douze SENT-END  ==  [42 frames] -76.6045 [Ac=-3217.4 LM=0.0] (Act=67.6)
+File: Signaux/Sons_OK/trois_rohdri_2013.wav
+SENT-START trois SENT-END  ==  [34 frames] -60.4224 [Ac=-2054.4 LM=0.0] (Act=67.0)
+File: Signaux/Sons_OK/un_rohdri_2013.wav
+SENT-START quarante SENT-END  ==  [42 frames] -61.6193 [Ac=-2588.0 LM=0.0] (Act=67.6)
+File: Signaux/Sons_OK/un_louis_2013.wav
+SENT-START vingt SENT-END  ==  [36 frames] -77.2678 [Ac=-2781.6 LM=0.0] (Act=67.2)
+File: Signaux/Sons_OK/plus_jeremy_2013.wav
+SENT-START neuf SENT-END  ==  [53 frames] -83.2408 [Ac=-4411.8 LM=0.0] (Act=68.1)
+File: Signaux/Sons_OK/neuf_jeremy_2013.wav
+SENT-START sept SENT-END  ==  [58 frames] -73.1194 [Ac=-4240.9 LM=0.0] (Act=68.3)
+File: Signaux/Sons_OK/sept_rohdri_2013.wav
+SENT-START sept SENT-END  ==  [55 frames] -61.9150 [Ac=-3405.3 LM=0.0] (Act=68.2)
+File: Signaux/Sons_OK/cinq_louis_2013.wav
+SENT-START sept SENT-END  ==  [44 frames] -88.8674 [Ac=-3910.2 LM=0.0] (Act=67.7)
+File: Signaux/Sons_OK/multiplier_rohdri_2013.wav
+SENT-START multiplier SENT-END  ==  [80 frames] -60.4468 [Ac=-4835.7 LM=0.0] (Act=68.7)
+File: Signaux/Sons_OK/multiplier_louis_2013.wav
+SENT-START huit SENT-END  ==  [97 frames] -81.2715 [Ac=-7883.3 LM=0.0] (Act=69.0)
+File: Signaux/Sons_OK/six_louis_2013.wav
+SENT-START six SENT-END  ==  [42 frames] -86.1559 [Ac=-3618.5 LM=0.0] (Act=67.6)
+File: Signaux/Sons_OK/trois_jeremy_2013.wav
+SENT-START soixante SENT-END  ==  [45 frames] -84.9932 [Ac=-3824.7 LM=0.0] (Act=67.8)
+File: Signaux/Sons_OK/trois_louis_2013.wav
+SENT-START soixante SENT-END  ==  [28 frames] -82.3026 [Ac=-2304.5 LM=0.0] (Act=66.4)
+File: Signaux/Sons_OK/quatre_jeremy_2013.wav
+SENT-START sept SENT-END  ==  [59 frames] -80.8198 [Ac=-4768.4 LM=0.0] (Act=68.3)
+File: Signaux/Sons_OK/dix_louis_2013.wav
+SENT-START sept SENT-END  ==  [36 frames] -87.7100 [Ac=-3157.6 LM=0.0] (Act=67.2)
+File: Signaux/Sons_OK/sept_jeremy_2013.wav
+SENT-START sept SENT-END  ==  [52 frames] -78.5792 [Ac=-4086.1 LM=0.0] (Act=68.1)
+File: Signaux/Sons_OK/quatre_louis_2013.wav
+SENT-START neuf SENT-END  ==  [47 frames] -82.1558 [Ac=-3861.3 LM=0.0] (Act=67.9)
+File: Signaux/Sons_OK/cinq_jeremy_2013.wav
+SENT-START quarante SENT-END  ==  [44 frames] -92.6970 [Ac=-4078.7 LM=0.0] (Act=67.7)

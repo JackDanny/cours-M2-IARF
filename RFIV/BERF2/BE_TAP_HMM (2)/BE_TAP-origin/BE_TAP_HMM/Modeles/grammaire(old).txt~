@@ -1,0 +1,40 @@
+
+
+
+
+$unite1 = un;
+$unite2 = deux | trois| quatre | cinq | six ;
+$unite3 = sept | huit | neuf;
+
+$unite = $unite1 | $unite2 | $unite3;
+
+
+$dizaineext=douze | treize | quatorze | quinze | seize | (dix sept) | (dix huit) | (dix neuf);
+
+$dizaine1 = dix | onze | douze | treize | quatorze | quinze | seize | (dix sept) | (dix huit) | (dix neuf);
+$dizaine2 = vingt | (vingt et un) | (vingt ($unite2 | $unite3));
+$dizaine3 = trente | (trente et un) | (trente ($unite2 | $unite3));
+$dizaine4 = quarante | (quarante et un) | (quarante ($unite2 | $unite3));
+$dizaine5 = cinquante | (cinquante et un) | (cinquante ($unite2 | $unite3));
+$dizaine6 = soixante | (soixante et un) | (soixante ($unite2 | $unite3));
+$dizaine7 = (soixante dix) | (soixante et onze) | (soixante $dizaineext);
+$80 = (quatre vingt);
+$dizaine8 = ($80 $unite);
+$dizaine9 = ($80 $dizaine1);
+
+
+
+$nombre = ($unite | $dizaine1 | $dizaine2 | $dizaine3 | $dizaine4 | $dizaine5 | $dizaine6 | $dizaine7 | $dizaine8 | $dizaine9);
+
+
+
+
+$operator1 = (plus | moins | (multiplier par) | fois | (diviser par) | sur);
+$operator2 = egal;
+
+
+
+
+(SENT-START ( [pause] $nombre [pause] $operator1 [pause] $nombre [pause] ) SENT-END ) 
+
+

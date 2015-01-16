@@ -1,0 +1,44 @@
+HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.test.lst Modeles/dictionnaire Modeles/liste-mots 
+Read 32 physical / 32 logical HMMs
+Read lattice with 279 nodes / 562 arcs
+Created network with 553 nodes / 836 links
+File: test/10dp50.wav
+SENT-START vingt six fois quarante sept SENT-END  ==  [359 frames] -81.1966 [Ac=-29149.6 LM=0.0] (Act=539.1)
+File: test/20+30.wav
+SENT-START vingt sept fois quarante SENT-END  ==  [317 frames] -79.8949 [Ac=-25326.7 LM=0.0] (Act=537.6)
+File: test/36sur40.wav
+SENT-START soixante six moins quarante sept SENT-END  ==  [322 frames] -79.7675 [Ac=-25685.1 LM=0.0] (Act=537.8)
+File: test/62dp50.wav
+SENT-START vingt six diviser par vingt huit SENT-END  ==  [437 frames] -83.8418 [Ac=-36638.9 LM=0.0] (Act=541.0)
+File: test/85x5.wav
+SENT-START quatre vingt sept multiplier par cinquante huit SENT-END  ==  [402 frames] -81.5646 [Ac=-32789.0 LM=0.0] (Act=540.3)
+File: test/11-34.wav
+SENT-START quarante et un fois soixante sept SENT-END  ==  [297 frames] -79.5135 [Ac=-23615.5 LM=0.0] (Act=536.8)
+File: test/2dp15.wav
+SENT-START vingt six fois vingt sept SENT-END  ==  [328 frames] -78.9872 [Ac=-25907.8 LM=0.0] (Act=538.1)
+File: test/49sur31.wav
+SENT-START quarante neuf fois vingt sept SENT-END  ==  [372 frames] -78.1304 [Ac=-29064.5 LM=0.0] (Act=539.5)
+File: test/66sur81.wav
+SENT-START soixante sept fois vingt SENT-END  ==  [415 frames] -82.0713 [Ac=-34059.6 LM=0.0] (Act=540.6)
+File: test/89x11.wav
+SENT-START vingt sept multiplier par vingt six SENT-END  ==  [345 frames] -79.3555 [Ac=-27377.6 LM=0.0] (Act=538.6)
+File: test/13mp82.wav
+SENT-START vingt huit multiplier par vingt sept SENT-END  ==  [391 frames] -81.5536 [Ac=-31887.5 LM=0.0] (Act=540.0)
+File: test/2x30.wav
+SENT-START vingt neuf fois quarante huit SENT-END  ==  [363 frames] -78.8863 [Ac=-28635.7 LM=0.0] (Act=539.2)
+File: test/5-6.wav
+SENT-START cinquante huit fois vingt sept SENT-END  ==  [407 frames] -78.1580 [Ac=-31810.3 LM=0.0] (Act=540.4)
+File: test/80x95egal.wav
+SENT-START soixante sept moins quarante neuf SENT-END  ==  [500 frames] -80.9261 [Ac=-40463.1 LM=0.0] (Act=542.2)
+File: test/91dp62.wav
+SENT-START vingt six fois quarante sept SENT-END  ==  [434 frames] -82.3399 [Ac=-35735.5 LM=0.0] (Act=541.0)
+File: test/18fois31.wav
+SENT-START vingt six fois quarante sept SENT-END  ==  [367 frames] -81.0715 [Ac=-29753.2 LM=0.0] (Act=539.3)
+File: test/34x2.wav
+SENT-START soixante quinze moins sept SENT-END  ==  [329 frames] -84.3094 [Ac=-27737.8 LM=0.0] (Act=538.1)
+File: test/57-87.wav
+SENT-START cinquante sept moins vingt sept SENT-END  ==  [475 frames] -78.8115 [Ac=-37435.5 LM=0.0] (Act=541.8)
+File: test/84-68.wav
+SENT-START quatorze moins vingt sept SENT-END  ==  [374 frames] -84.5098 [Ac=-31606.7 LM=0.0] (Act=539.5)
+File: test/91sur24.wav
+SENT-START quatorze moins quarante sept SENT-END  ==  [430 frames] -78.6893 [Ac=-33836.4 LM=0.0] (Act=540.9)
