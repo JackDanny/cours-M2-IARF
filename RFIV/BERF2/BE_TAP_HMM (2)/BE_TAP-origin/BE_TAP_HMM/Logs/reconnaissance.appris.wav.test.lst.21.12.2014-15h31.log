@@ -1,6 +1,0 @@
-HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.test.lst Modeles/dictionnaire Modeles/liste-mots 
-Read 32 physical / 32 logical HMMs
-Read lattice with 33 nodes / 63 arcs
-Created network with 61 nodes / 91 links
-File: test/test.wav
-SENT-START pause huit diviser neuf SENT-END  ==  [295 frames] -52.7931 [Ac=-15574.0 LM=0.0] (Act=57.4)

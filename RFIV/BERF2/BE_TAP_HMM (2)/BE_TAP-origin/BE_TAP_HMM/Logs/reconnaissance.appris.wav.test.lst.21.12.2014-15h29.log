@@ -1,5 +1,0 @@
-HVite -T 1 -C Modeles/htk.conf -A -w Modeles/grammaire.htk -d Modeles/appris/ -l Resultats/ -S Listes/wav.test.lst Modeles/dictionnaire Modeles/liste-mots 
-Read 32 physical / 32 logical HMMs
-  ERROR [+8251]  ReadLattice: Word trois  not in dict
-  ERROR [+3210]  DoAlignment: ReadLattice failed
- FATAL ERROR - Terminating program HVite

@@ -1,5 +1,0 @@
-Aligned transcription: Labels/10dp50.lab vs Resultats/10dp50.rec
- LAB:                         10dp50 
- REC: vingt six fois quarante sept   
-  ERROR [+3331]  Index: Label 10dp50 not in list[0 of 32]
- FATAL ERROR - Terminating program HResults
