@@ -52,7 +52,13 @@ end
 %---------------------------------------------------------------
 % Longueur trajectoire
 %
-sAB=sqrt((A(1)-B(1))^2+(A(2)-B(2))^2)
+if TRAJEC == 'droite'
+sAB=sqrt((A(1)-B(1))^2+(A(2)-B(2))^2);
+end
+if TRAJEC == 'cercle'
+sAB=(sqrt((A(1)-B(1))^2+(A(2)-B(2))^2) / 2)*pi;
+end
+
 % ----------------------------------------------------------------
 %  Calcul de la loi de mouvement operationnel u(t)
 %  et des lois de variation de l'abcisse curviligne s(t)
@@ -68,6 +74,7 @@ tf = t2 + t1;
 Te = 0.01;
 dt=Te;
 t = [0 : Te : tf];
+
 if(sAB >= VAB^2/Amax)
     for i = 1 : length(t)
         if (t(i)>=0 && t(i)<=t1)
@@ -131,26 +138,42 @@ ssplot(t1,t2,tf,t,s,sd,sdd)
 %  Calcul de la trajectoire opérationnelle M(u)
 %   M(1,:)= x(u)
 % 	M(2,:)= y(u) 
-up = [0 : 0.1 : 1];
-centre = [B(1)+A(1)/2 B(2)+A(2)/2];
-dist = sqrt((A(1)-centre(1))^2+(A(2)-centre(2))^2);
-for i = 1 : length(up)
-x(i) = A(1) + up(i) * (B(1)-A(1));
-y(i) = A(2) + up(i) * (B(2)-A(2));
-end
+up = [0 : 0.01 : 1];
+
 if TRAJEC == 'droite'
+
+
+    for i = 1 : length(up)
+        x(i) = A(1) + up(i) * (B(1)-A(1));
+        y(i) = A(2) + up(i) * (B(2)-A(2));
+    end
 	Mi(1,:)=x;
 	Mi(2,:)=y;
 end
 if TRAJEC == 'cercle'
+
+    C = [(B(1)+A(1))/2 (B(2)+A(2))/2];
+    %dist = sqrt((A(1)-C(1))^2+(A(2)-C(2))^2);
+    %=sAB
+
     for i = 1 : length(up)
-        x(i) = dist * cos(up(i) * pi);
-        y(i) = dist * sin(up(i) * pi);
+        CM1(1,i)=cos(up(i) * pi)*( (A(1)-B(1)) /2 );
+        CM1(2,i)=cos(up(i) * pi)*( (A(2)-B(2)) /2 );
+    end
+    for i = 1 : length(up)
+        CM2(1,i)=sin(up(i) * pi)*( (B(2)-A(2))/2 );
+        CM2(2,i)=sin(up(i) * pi)*( (A(1)-B(1))/2 );
+    end
+
+
+    for i = 1 : length(up)
+        x(i) = C(1) + CM1(1,i) +  CM2(1,i);
+        y(i) = C(2) + CM1(2,i) +  CM2(2,i);
+
     end
     Mi(1,:)=x;
 	Mi(2,:)=y;
 end
-
 % ----------------------------------------------------------------
 %  Affichage de la trajectoire opérationnelle M(u)
 %
@@ -160,14 +183,51 @@ if TRAJEC == 'droite'
 	traj_ope(A,B,Mi)
 end
 if TRAJEC == 'cercle'
-	traj_ope(A,B,Mi,[0 0])
+	traj_ope(A,B,Mi,C)
 end
+
+
 % ----------------------------------------------------------------
 %  Calcul de X(t), Y(t), et des dérivées en vitesse et accélération
-for i = 1 : length(u)
-X(i) = A(1) + u(i) * (B(1)-A(1));
-Y(i) = A(2) + u(i) * (B(2)-A(2));
+if TRAJEC == 'droite'
+    for i = 1 : length(u)
+    X(i) = A(1) + u(i) * (B(1)-A(1));
+    Y(i) = A(2) + u(i) * (B(2)-A(2));
+    end
 end
+
+if TRAJEC == 'cercle'
+
+    CA(1) = (A(1)-B(1)) /2 ;    
+    CA(2) = (A(2)-B(2)) /2 ;
+
+    CD(1) = (B(2)-A(2))/2 ;
+    CD(2) = (A(1)-B(1))/2 ;
+    
+
+    for i = 1 : length(u)
+        CM1(1,i)=cos(u(i) * pi)*(  CA(1) );
+        CM1(2,i)=cos(u(i) * pi)*(  CA(2) );
+    end
+    for i = 1 : length(u)
+        CM2(1,i)=sin(u(i) * pi)*( CD(1) );
+        CM2(2,i)=sin(u(i) * pi)*( CD(2) );
+    end
+
+
+    for i = 1 : length(u)
+
+    X(i) = C(1) + CM1(1,i) +  CM2(1,i);
+    Y(i) = C(2) + CM1(2,i) +  CM2(2,i);
+
+    end
+
+    %dist = sqrt((A(1)-C(1))^2+(A(2)-C(2))^2);
+    %=sAB
+
+end
+
+
 if TRAJEC == 'droite'
 	M(1,:)=X;
 	M(2,:)=Y;
@@ -175,7 +235,27 @@ if TRAJEC == 'droite'
 	Md(2,:)= ud*(B(2)-A(2));
 	Mdd(1,:) = udd*(B(1)-A(1));
 	Mdd(2,:) = udd*(B(2)-A(2));
+
 end
+
+if TRAJEC == 'cercle'
+	M(1,:)=X;
+	M(2,:)=Y;
+    
+    for i=1:length(u)
+	Md(1,i)= - (CA(1)*pi*ud(i)*sin(u(i)*pi)) + (CD(1)*pi*ud(i)*cos(u(i)*pi));
+	Md(2,i)= - (CA(2)*pi*ud(i)*sin(u(i)*pi)) + (CD(2)*pi*ud(i)*cos(u(i)*pi));
+    end
+
+    for i=1:length(u)
+	Mdd(1,i)= - (CA(1)*pi) * ( (udd(i)*sin(u(i)*pi)) + ((ud(i)^2)*pi*cos(pi*u(i))) )  +  (CD(1)*pi) * (udd(i)*cos(u(i)*pi) - pi*(ud(i)^2) * sin(pi*u(i)) );
+	Mdd(2,i)= - (CA(2)*pi) * ( (udd(i)*sin(u(i)*pi)) + ((ud(i)^2)*pi*cos(pi*u(i))) )  +  (CD(2)*pi) * (udd(i)*cos(u(i)*pi) - pi*(ud(i)^2) * sin(pi*u(i)) );
+    end
+	
+end
+
+
+
 %
 % ----------------------------------------------------------------
 %  Affichage de X(t), Y(t), et des dérivées en vitesse et accélération
@@ -193,6 +273,7 @@ xxplot(t1,t2,tf,t,M,Md,Mdd)
 %  Affichage des trajectoires généralisées
 %
 % figure n5
+
 figure(5)
 nf = length(t)-1;
 traj_gen(qplus,qmoins,nf)
@@ -207,7 +288,7 @@ qqplot(t1,t2,tf,t,qmoins,qdmoins,qddmoins)
 % %
 for i =1:size(M,2)
     V(i)= sqrt(Md(1,i)^2+Md(2,i)^2);
-
+    %V(i) = sd(i);
 end
 figure(8)
 title('Graphe de vitesse')
