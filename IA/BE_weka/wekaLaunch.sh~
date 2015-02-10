@@ -1,0 +1,5 @@
+java -jar /home/jackdanny/Bureau/M2_Annexe/weka/weka-3-6-12/weka.jar
+
+
+export CLASSPATH=/home/jackdanny/Bureau/M2_Annexe/weka/weka-3-6-12/weka.jar
+
