@@ -9,5 +9,6 @@ for i=1:k
     
     L(i,1)=d;
     L(i,2)=b;
+    %on met  M(d,b) à zerro pour selectionner le prochain poit le plus vote
     M(d,b)=0;
 end
